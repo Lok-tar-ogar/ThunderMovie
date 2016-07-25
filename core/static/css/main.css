@@ -1,0 +1,413 @@
+body
+{
+    font-size: 15px;
+}
+.nav_color
+{
+    background-color: #428bca;
+    border-radius: 6px;
+}
+.main_wz
+{
+    color: #000000;
+}
+.padingg
+{
+    padding: 0px 0 0 15px;
+    margin-top: 10px;
+
+}
+.padingg1
+{
+    padding: 0px;
+
+}
+.padingg_left
+{
+    padding: 0px;
+    margin-top: 10px;
+/*    box-shadow: 3px 3px 10px #ebebeb;
+    -webkit-box-shadow: 3px 3px 10px #ebebeb;*/
+}
+.padingg_left h1
+{
+    width: 100%;
+    background-color: #428bca;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff  ;
+    line-height: 35px;
+    margin: 0px;
+    text-indent: 1em;
+}
+
+.padingg_left h2
+ {
+     width: 100%;
+     background-color: #428bca;
+     font-size: 14px;
+     font-weight: bold;
+     color: #ffffff  ;
+     line-height: 35px;
+     margin: 0px;
+     text-indent: 1em;
+ }
+.padingg_left h3
+{
+    width: 100%;
+    background-color: #428bca;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff  ;
+    line-height: 45px;
+    margin: 0px;
+    text-indent: 1em;
+    height: 45px;
+}
+.padingg_left h4
+{
+    width: 100%;
+    background-color: #428bca;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff  ;
+    line-height: 37px;
+    margin: 0px;
+    text-indent: 1em;
+}
+
+.padingg_left ul
+{
+    margin: 0px;
+    padding: 10px 0 0 10px;
+}
+.padingg_left ul li
+{
+    list-style: none;
+    line-height: 25px;
+
+}
+.padingg_left ul li a
+{
+    color: #000000;
+    margin-left: 10px;
+}
+.padingg_left ul li a:hover
+{
+    color: #428bca;
+    text-decoration: none;
+}
+.padingg_left.yybk
+{
+    box-shadow: 3px 3px 10px #ebebeb;
+    -webkit-box-shadow: 3px 3px 10px #ebebeb;
+    border: 1px solid #e5e5e5;
+}
+
+
+.tabe
+{
+    white-space:nowrap;
+    overflow:hidden;
+}
+.depand
+{
+    padding: 0px;
+}
+.ybk
+{
+    border-radius: 6px;
+}
+.mtop
+{
+    margin-top: 10px;
+    box-shadow: 3px 3px 10px #ebebeb;
+    -webkit-box-shadow: 3px 3px 10px #ebebeb;
+}
+.tablhight
+{
+    height: 350px;
+    overflow-x: auto;
+}
+.btxm
+{
+    color: #b21b1b;
+    line-height: 30px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+.wzcolor
+{
+    color: #ffffff;
+    background-color: #3598dc;
+}
+.xsbm
+{
+    height: 40px;
+    line-height: 25px;
+}
+.searc
+{
+    width: 100%;
+    font-size: 12px;
+}
+.sj
+{
+    margin-right: 10px;
+    text-indent: 1em;
+}
+.zsj
+{
+    margin-left: 40px;
+    border: 1px solid #c1c1c1;
+}
+
+.ysj
+{
+    margin-right: 15px;
+    border: 1px solid #c1c1c1;
+}
+.wzys
+{
+    color: #000000;
+}
+
+/* ��ul */
+.lightTreeview {
+    list-style: none;
+}
+/* �����¼��Ĳ˵� */
+.lightTreeview ul,.lightTreeview ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block;
+}
+/* ���е�li */
+.lightTreeview li {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 1px 0 1px 16px;
+    margin: 0;
+    background: url(../images/treeview-default-line.gif) 0 0 no-repeat;
+}
+/* li��֦���� */
+.lightTreeview li.branch-last {
+    background-position: 0 -1766px;
+}
+/* li�ڵ� */
+.lightTreeview li.node-normal {
+    background-position: 0 -176px;
+}
+
+/* li�ڵ����.Ĭ��Ϊ- */
+.lightTreeview li.node-last {
+    background: url(../images/treeview-default.gif) 0 -111px no-repeat;
+}
+.lightTreeview li.node-last-open {
+    background-position: 0 -111px;
+}
+.lightTreeview li.node-last-close {
+    background-position: -32px -67px;
+}
+
+/* liȥ��һ������ */
+.treeview-noline li {
+    background-image:none;
+}
+.treeview-noline li.node-last {
+    background: url(../images/treeview-default.gif) -16px -89px no-repeat;
+}
+.treeview-noline li.node-last-open {
+    background-position: -16px -89px;
+}
+.treeview-noline li.node-last-close {
+    background-position: -48px -45px;
+}
+
+
+/* �ڵ�+-ͼ�� */
+.lightTreeview li span.flex-ico {
+    background-image: url(../images/treeview-default.gif);
+    background-repeat: no-repeat;
+    float:left;
+    width:16px;
+    height:16px;
+    cursor:pointer;
+    margin:5px 0 0 -10px;
+    background-position: -64px -23px;
+}
+.lightTreeview li span.flex-open {
+    background-position: -64px -23px;
+}
+.lightTreeview li span.flex-close {
+    background-position: -80px -1px;
+}
+
+.lightTreeview li span.flex-none {
+    background-position: 0 0;
+}
+.treeview-noline li span.flex-close {
+    background-position: -48px -46px;
+}
+.treeview-noline li span.flex-open {
+    background-position: -16px -90px;
+}
+
+.wizard-steps li .bmlc
+{
+    border: 0px;
+    height: 80px;
+    line-height: 72px;
+    width: 80px;
+}
+.marg-top
+{
+    margin:80px 0;
+}
+.marg-top1
+{
+    margin:150px 0;
+}
+.marg-top2
+{
+    margin:30px 0;
+}
+.hwzdx
+{
+    font-size: 18px;
+}
+.wz_red
+{
+    color: #b21b1b;
+    font-size: 16px;
+    font-weight: bold;
+}
+.bmliuc
+{
+    text-align: center;
+    border: 1px solid #e5e5e5;
+}
+.bmliuc ul
+{
+    padding: 0px;
+    margin: 0px;
+}
+.bmliuc ul li
+{
+    list-style: none;
+}
+.bmliuc h1
+{
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px 0 ;
+}
+.bmliuc img
+{
+    width: 45px;
+    height: 45px;
+}
+.bmliuc ul li a
+{
+   margin: 0px;
+}
+.leftpading
+{
+    margin-top: 20px;
+    padding: 0px;
+}
+
+.mabott
+{
+  margin-bottom: 10px;
+}
+.botder
+{
+    border: 1px solid #e5e5e5;
+}
+
+.mtop1
+{
+    padding-top: 10px;
+    box-shadow: 3px 3px 10px #ebebeb;
+    -webkit-box-shadow: 3px 3px 10px #ebebeb;
+}
+.mtop2
+{
+    padding-top: 10px;
+}
+.marleft
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.buttleft
+{
+    margin-top: 10px;
+    margin-left: 400px;
+}
+.buttleft1
+{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.buttleft2
+{
+    margin-top: 10px;
+    margin-left: 30px;
+}
+.buttleft3
+{
+    margin-top: 10px;
+    margin-left: 45%;
+}
+.buttleft4
+{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.yybk1
+{
+    box-shadow: 3px 3px 10px #ebebeb;
+    -webkit-box-shadow: 3px 3px 10px #ebebeb;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    padding: 10px;
+}
+.info
+{
+    background-color: #ebf8ff;
+}
+.qsdy
+{
+    border: 1px solid #8caed1;
+    border-top: 4px solid #8caed1;
+    height: 50px;
+    padding: 0px;
+}
+.ztys
+{
+    border: 0px;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0px;
+    line-height: 30px;
+}
+.matobu
+{
+    margin: 10px 5px;
+}
+
+.tabbuot
+{
+    margin-bottom: 0px;
+    border: 0px;
+}
+.leftmar
+{
+    margin-left: 330px;
+}
