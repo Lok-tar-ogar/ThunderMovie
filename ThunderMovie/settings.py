@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'ThunderMovie.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'WUBI',
+        'NAME': 'pymovie',
         'USER': 'root',
         'PASSWORD': 'DSxrjk230',
         'HOST': '101.200.156.230',
