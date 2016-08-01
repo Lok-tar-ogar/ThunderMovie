@@ -1,8 +1,11 @@
 from django.db import models
-class   FILM(models.Model):
-    film_name=models.CharField(max_length=50,null=False)
+class FILM(models.Model):
+    film_name=models.CharField('电影名',max_length=50,null=False)
     tags=models.ManyToManyField(TAG_FILM)
-    download_link=models.CharField(max_length=500,null=True)
+    cover_img_link=models.CharField('封面图片链接',max_length=500,null=True)
+    download_link=models.CharField('下载链接',max_length=500,null=True)
+    film_html = models.CharField('电影详情页面html',max_length=50000, null=True)
+    film_disc= models.CharField('电影评论',max_length=5000, null=True)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
     def __str__(self):
         return self.film_name
@@ -12,14 +15,14 @@ class   FILM(models.Model):
         ordering = ['id']
 
 class TAG_FILM(models.Model):
-    tag_name=models.CharField(max_length=50,null=False)
+    tag_name=models.CharField('标签名称',max_length=50,null=False)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
     def __str__(self):
         return self.tag_name
 
     class Meta:
         verbose_name = "标签对照表"
-        verbose_name_plural = "电影表们"
+        verbose_name_plural = "标签对照们"
         ordering = ['id']
 
 # Create your models here.
