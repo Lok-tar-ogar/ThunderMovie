@@ -25,4 +25,4 @@ class FILM(models.Model):
     class Meta:
         verbose_name = "电影表"
         verbose_name_plural = "电影表们"
-        ordering = ['id']
+        ordering = ['-dim_date']

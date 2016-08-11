@@ -1,0 +1,66 @@
+
+{% extends 'master.html' %}
+{% block content %}
+	<div class="banner">
+		<div class="container">
+			<div class="span_1_of_1">
+			    <h2>  <br>&nbsp;</h2>
+			    <div class="search">
+			      <ul class="nav1">
+		            <li id="search">
+						<div >
+							<input id="search_text" type="text" name="search_text"  placeholder="Search"/>
+                            <input id="search_button" type="button" name="search_button"  >
+                            <script>
+                                $(document).ready(function(){
+                                    $('#search_text').keydown(function(e){
+                                        if(e.keyCode==13){
+                                            location.replace('/result/'+$('#search_text').val())
+                                        }
+                                    });
+                                    $("#search_button").click(
+                                            function(){
+
+                                                location.replace('/result/'+$('#search_text').val())
+
+                                            });
+
+
+                                });
+
+
+                            </script>
+                        </div>
+                    </li>
+					<li id="options">
+						<a href="#">所有电影</a>
+{#						<ul class="subnav">#}
+{#							<li><a href="#">欧美电影</a></li>#}
+{#							<li><a href="#">内地电影</a></li>#}
+{#							<li><a href="#">电视剧</a></li>#}
+{#						</ul>#}
+					</li>
+	              </ul>
+	            </div>
+			</div>
+		</div>
+	</div>
+	<div class="grid_1">
+		<h3>最新电影</h3>
+		<div class="container">
+            {% for film in films %}
+            <div class="col-xs-3 col-md-3">
+    <a href="/movie/{{ film.id }}" class="thumbnail">
+      <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}">
+    </a>
+                <div class="caption">
+        <p>{{ film.film_name }}</p>
+  </div>
+                </div>
+            {% endfor %}
+            </div>
+
+		<div class="clearfix"> </div>
+	</div>
+
+{% endblock %}
