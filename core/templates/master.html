@@ -15,65 +15,95 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--webfont-->
 <link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <style>
+        a:hover, a:focus
+        {
+            text-decoration: none;
+
+        }
+
+
+    </style>
 <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
 <script src="/static/js/menu_jquery.js"></script>
 </head>
 <body>
-	<div class="header">
-      <div class="container">
-  	     <div class="logo">
-			<h1><a href="/">屁眼电影网</a></h1>
-		 </div>
-		 <div class="top_right">
-		   <ul>
-			<li><a href="register.html">注册</a></li>|
-			<li class="login" >
-				 <div id="loginContainer"><a href="#" id="loginButton"><span>登录</span></a>
-					  <div id="loginBox">
-						  <form id="loginForm">
-			                <fieldset id="body">
-			                	<fieldset>
-			                          <label for="email">用户名</label>
-			                          <input type="text" name="email" id="email">
-			                    </fieldset>
-			                    <fieldset>
-			                            <label for="password">密码</label>
-			                            <input type="password" name="password" id="password">
-			                     </fieldset>
-			                    <input type="submit" id="login" value="Sign in">
-			                	<label for="checkbox"><input type="checkbox" id="checkbox"> <i>记住密码</i></label>
-			            	</fieldset>
-			                 <span><a href="#">忘记密码</a></span>
-						   </form>
-				        </div>
-			      </div>
-			  </li>
-		   </ul>
-	     </div>
-		 <div class="clearfix"></div>
-		</div>
-	</div>
+{#	<div class="header navbar-fixed-top">#}
+{#      <div class="container">#}
+{#  	     <div class="logo">#}
+{#			<h1><a href="/">屁眼电影网</a></h1>#}
+{#		 </div>#}
+{#		 <div class="search pull-right">#}
+{#			      <ul class="nav1">#}
+{#		            <li id="search">#}
+{#						<div >#}
+{#							<input id="search_text" type="text" name="search_text"  placeholder="Search"/>#}
+{#                            <input id="search_button" type="button" name="search_button"  >#}
+
+{#                        </div>#}
+{#                    </li>#}
+{##}
+{#	              </ul>#}
+{#	            </div>#}
+{#		 <div class="clearfix"></div>#}
+{#		</div>#}
+{#	</div>#}
+{##}
+<div class="header">
+  <div class="header-inner">
 
 
+
+        <div class="nav">
+            <ul class="navbar">
+                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>
+
+                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>
+
+                <li><a data-act="board-click" href="/">精选</a></li>
+
+            </ul>
+        </div>
+
+
+
+        <div id="form1">
+            <input id="search_text" type="search" placeholder="找影视剧、影人" maxlength="32" class="search" >
+            <input id="search_button" type="button" value="" class="submit" data-act="search-click">
+             <script>
+                                $(document).ready(function(){
+
+                                    $('#search_text').keydown(function(e){
+                                        if(e.keyCode==13){
+                                            location.replace('/result/'+$('#search_text').val())
+                                        }
+                                    });
+                                    $("#search_button").click(
+                                            function(){
+
+                                                location.replace('/result/'+$('#search_text').val())
+
+                                            });
+
+
+                                });
+
+
+                            </script>
+        </div>
+  </div>
+
+</div>
 {% block content %}
 
 {% endblock %}
 
 
-	<div class="grid_3">
-	  <div class="container">
-	  	 <ul id="footer-links">
-			<li><a href="#">Terms of Use</a></li>
-			<li><a href="#">Royalty Free License</a></li>
-			<li><a href="#">Extended License</a></li>
-			<li><a href="#">Privacy</a></li>
-			<li><a href="support.html">Support</a></li>
-			<li><a href="about.html">About Us</a></li>
-			<li><a href="faq.html">FAQ</a></li>
-			<li><a href="#">Categories</a></li>
-         </ul>
-         <p>屁眼电影网</p>
-	  </div>
-	</div>
+	<div class="footer" style="visibility: visible;">
+    <p>
+        &copy;2016
+        骚猪电影 dyhell.com
+
+</div>
 </body>
 </html>
