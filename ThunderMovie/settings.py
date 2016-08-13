@@ -80,9 +80,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'pymovie',
-        'USER': 'root',
-        'PASSWORD': 'DSxrjk230',
-        'HOST': '101.200.156.230',
+        'USER': 'arnold',
+        'PASSWORD': 'nuttertools0824',
+        'HOST': 'pyhelldb.cuiejbtb7cxp.ap-northeast-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
