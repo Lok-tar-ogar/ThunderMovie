@@ -8,7 +8,7 @@ def index(req):
 
 
 def search(req,keywords=''):
-    films=FILM.objects.filter(film_name__contains=keywords,film_html__contains=keywords)
+    films=FILM.objects.filter(film_intro__contains=keywords,film_intro__contains=keywords)
     return render(req, 'about.html', locals())
 
 def single(req,fid=0):
