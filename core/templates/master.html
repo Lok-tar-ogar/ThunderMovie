@@ -1,31 +1,37 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>电影</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<!-- Custom Theme files -->
-<link href="/static/css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<!--webfont-->
-<link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+    <title>电影</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="/static/css/style.css" rel='stylesheet' type='text/css'/>
+    <!-- Custom Theme files -->
+    <!--webfont-->
+    <link href='http://fonts.useso.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
     <style>
-        a:hover, a:focus
-        {
+        a:hover, a:focus {
             text-decoration: none;
 
         }
 
 
     </style>
-<script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
-<script src="/static/js/menu_jquery.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+    <script src="/static/js/menu_jquery.js"></script>
+    {% block head %}
+    {% endblock %}
 </head>
 <body>
 {#	<div class="header navbar-fixed-top">#}
@@ -50,8 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 {#	</div>#}
 {##}
 <div class="header">
-  <div class="header-inner">
-
+    <div class="header-inner">
 
 
         <div class="nav">
@@ -66,32 +71,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
 
 
-
         <div id="form1">
-            <input id="search_text" type="search" placeholder="找影视剧、影人" maxlength="32" class="search" >
+            <input id="search_text" type="search" placeholder="找影视剧、影人" maxlength="32" class="search">
             <input id="search_button" type="button" value="" class="submit" data-act="search-click">
-             <script>
-                                $(document).ready(function(){
+            <script>
+                $(document).ready(function () {
 
-                                    $('#search_text').keydown(function(e){
-                                        if(e.keyCode==13){
-                                            location.replace('/result/'+$('#search_text').val())
-                                        }
-                                    });
-                                    $("#search_button").click(
-                                            function(){
+                    $('#search_text').keydown(function (e) {
+                        if (e.keyCode == 13) {
+                            location.replace('/result/' + $('#search_text').val())
+                        }
+                    });
+                    $("#search_button").click(
+                            function () {
 
-                                                location.replace('/result/'+$('#search_text').val())
+                                location.replace('/result/' + $('#search_text').val())
 
-                                            });
-
-
-                                });
+                            });
 
 
-                            </script>
+                });
+            </script>
         </div>
-  </div>
+    </div>
 
 </div>
 {% block content %}
@@ -99,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 {% endblock %}
 
 
-	<div class="footer" style="visibility: visible;">
+<div class="footer" style="visibility: visible;">
     <p>
         &copy;2016
         骚猪电影 dyhell.com
