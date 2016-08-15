@@ -1,9 +1,14 @@
+# encoding:utf-8
 from django.shortcuts import render
 from core.models import *
 from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNotFound
 import random
 import os
 import json
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 def index(req):
     films=FILM.objects.all()[:50]
     return render(req,'index.html',locals())
@@ -19,9 +24,9 @@ def single(req,fid=0):
     try:
         film=FILM.objects.get(id=fid)
         tags=film.tags.all()
+        film.download_link = film.download_link.split('\n')
         return render(req,'single.html',locals())
     except Exception as e:
-
         return HttpResponseNotFound()
 
 def randomdy(req):
