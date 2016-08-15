@@ -5,10 +5,10 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNo
 import random
 import os
 import json
-import sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
+# import sys
+# 
+# reload(sys)
+# sys.setdefaultencoding('utf-8')
 def index(req):
     films=FILM.objects.all()[:50]
     return render(req,'index.html',locals())
