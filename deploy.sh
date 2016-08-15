@@ -1,2 +1,2 @@
-cd /users/ubuntu/ThunderMovie
+cd /home/ubuntu/ThunderMovie
 sudo git pull
