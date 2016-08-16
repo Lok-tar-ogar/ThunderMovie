@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
     url(r'^random$',views.randomdy),
+    url(r'^gitpu11$',views.gitpull),
     url(r'^result/(?P<keywords>\w+)$',views.search),
     url(r'^movie/(?P<fid>\d+)$',views.single),
+
 ]
