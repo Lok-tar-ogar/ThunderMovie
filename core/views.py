@@ -5,6 +5,7 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNo
 import random
 import os
 import json
+from django.views.decorators.csrf import csrf_exempt
 # import sys
 #
 # reload(sys)
@@ -12,6 +13,7 @@ import json
 def index(req):
     films=FILM.objects.all()[:50]
     return render(req,'index.html',locals())
+@csrf_exempt
 def gitpull(req):
     msg = os.popen('sudo sh /home/ubuntu/ThunderMovie/deploy.sh').read()
     return HttpResponse(json.dumps({'msg:': msg}))
