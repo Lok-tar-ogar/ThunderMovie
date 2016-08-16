@@ -30,6 +30,6 @@ def single(req,fid=0):
         return HttpResponseNotFound()
 
 def randomdy(req):
-    ran=random.randint(1,1000)
-    films = FILM.objects.all()[1*ran:50*ran]
+    ran=random.randint(1,10000)
+    films = FILM.objects.all()[ran:50+ran]
     return render(req, 'randomdy.html', locals())
