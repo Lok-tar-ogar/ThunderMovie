@@ -1,6 +1,9 @@
 {% extends 'master.html' %}
+{% block head %}
+ <meta name="baidu-site-verification" content="SNZu0GacqF" />
+{% endblock %}
 {% block content %}
-    <div class="banner">
+    <div class="banner1">
         <div class="container">
             <div class="span_1_of_1">
                 <h2><br>&nbsp;</h2>
@@ -18,7 +21,7 @@
             {% for film in films %}
                 <div class="col-xs-3 col-md-3" style="height: 450px;">
                     <a href="/movie/{{ film.id }}" class="thumbnail">
-                        <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}">
+                        <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%;">
                     </a>
                     <div class="caption">
                         <p>{{ film.film_name }}</p>

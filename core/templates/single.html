@@ -86,7 +86,9 @@
                 <h3>下载链接</h3>
             </div>
             <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
-               {{ film.download_link }}
+               {% for i in film.download_link  %}
+                   <p><a href="{{ i }}">{{ i }}</a><p>
+               {% endfor %}
 {#                {% for i in film.download_link %}#}
 {#                    <P>{{ i }}</P>#}
 {#                {% endfor %}#}
