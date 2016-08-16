@@ -1,5 +1,8 @@
 {% extends 'master.html' %}
 {% load poll_extras %}
+{% block title %}
+    {{ film.film_name }}
+    {% endblock %}
 {% block content %}
 {#    <div class="banner">#}
 {#        <div class="container">#}
