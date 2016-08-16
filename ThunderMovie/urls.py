@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^gitpu11$',views.gitpull),
     url(r'^result/(?P<keywords>\w+)$',views.search),
     url(r'^movie/(?P<fid>\d+)$',views.single),
-
+    url(r'^home$', views.homepage),
 ]

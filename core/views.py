@@ -5,10 +5,10 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404,HttpResponseNo
 import random
 import os
 import json
-# import sys
-#
-# reload(sys)
-# sys.setdefaultencoding('utf-8')
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 def index(req):
     films=FILM.objects.all()[:50]
     return render(req,'index.html',locals())
@@ -33,3 +33,8 @@ def randomdy(req):
     ran=random.randint(1,1000)
     films = FILM.objects.all()[1*ran:50*ran]
     return render(req, 'randomdy.html', locals())
+
+
+def homepage(request):
+    films=FILM.objects.all()[:5]
+    return render(request, 'Home.html', locals())

@@ -1,0 +1,80 @@
+{% extends 'master.html' %}
+
+{% load poll_extras %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/jquery.skidder.css">
+    <script src="/static/js/imagesloaded.js"></script>
+    <script src="/static/js/smartresize.js"></script>
+    <script src="/static/js/jquery.skidder.js"></script>
+{% endblock %}
+{% block content %}
+    <script>
+        $(document).ready(function () {
+            $('#home').prop('class', 'active');
+        });
+
+    </script>
+    <div class="slideshow" style="height:750px; margin-top:80px;overflow: hidden">
+          {% for i in films %}
+              <div class="slide" style="height:750px;"><img src="{{ i.cover_img_link }}" style="height:750px;"></div>
+          {% endfor %}
+{#          <div class="slide"><img src="/static/images/t1.jpg" style="height:750px;width:auto;"></div>#}
+{#          <div class="slide"><img src="/static/images/2.jpg" style="height:750px;width:auto;"></div>#}
+{#          <div class="slide"><img src="/static/images/3.jpg" style="height:750px;width:auto;"></div>#}
+{#          <div class="slide"><img src="/static/images/4.jpg" style="height:750px;width:auto;"></div>#}
+{#          <div class="slide"><img src="/static/images/5.jpg" style="height:750px;width:auto;"></div>#}
+    </div>
+    <script>
+          $('.slideshow').each( function() {
+		  var $slideshow = $(this);
+		  $slideshow.imagesLoaded( function() {
+			$slideshow.skidder({
+			  slideClass    : '.slide',
+			  animationType : 'css',
+			  scaleSlides   : true,
+			  maxWidth : 1300,
+			  maxHeight: 750,
+			  paging        : true,
+			  autoPaging    : true,
+			  pagingWrapper : ".skidder-pager",
+			  pagingElement : ".skidder-pager-dot",
+			  swiping       : true,
+			  leftaligned   : false,
+			  cycle         : true,
+			  jumpback      : false,
+			  speed         : 400,
+			  autoplay      : false,
+			  autoplayResume: false,
+			  interval      : 4000,
+			  transition    : "slide",
+			  afterSliding  : function() {},
+			  afterInit     : function() {}
+			});
+		  });
+	});
+	// $('.slideshow-nocycle').each( function() {
+	//   var $slideshow = $(this);
+	//   $slideshow.imagesLoaded( function() {
+	//     $slideshow.skidder({
+	//       slideClass    : '.slide',
+	//       scaleSlides   : true,
+	//       maxWidth : 1300,
+	//       maxHeight: 500,
+	//       leftaligned   : true,
+	//       cycle         : false,
+	//       paging        : true,
+	//       swiping       : true,
+	//       jumpback      : false,
+	//       speed         : 400,
+	//       autoplay      : false,
+	//       interval      : 4000,
+	//       afterSliding  : function() {}
+	//     });
+	//   });
+	// });
+    $(window).smartresize(function(){
+          $('.slideshow').skidder('resize');
+    });
+    </script>
+{% endblock %}
