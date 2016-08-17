@@ -29,6 +29,20 @@
                 </div>
             {% endfor %}
         </div>
+<ul class="web-paging" style="bottom: 10px;position:absolute; left: 40%">
+
+                    {% if filmpaged.has_previous %}
+           <li><a href="?page={{ filmpaged.previous_page_number }}">上一页</a></li>
+        {% endif %}
+
+        <span class="thisclass">
+            <li>第 {{ filmpaged.number }} 页, 共 {{ filmpaged.paginator.num_pages }} 页</li>
+        </span>
+
+        {% if filmpaged.has_next %}
+           <li> <a href="?page={{ filmpaged.next_page_number }}">下一页</a></li>
+        {% endif %}
+			 </ul>
 
         <div class="clearfix"></div>
     </div>

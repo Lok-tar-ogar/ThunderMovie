@@ -6,12 +6,28 @@ import random
 import os
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # import sys
 #
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
 def index(req):
+    argGet = req.GET
     films=FILM.objects.all()[:50]
+    try:
+        films = FILM.objects.filter(Clmid=id)
+        paginator = Paginator(films, 5)  # Show 5 contacts per page
+        page = argGet.get('page')
+        try:
+            filmpaged = paginator.page(page)
+        except PageNotAnInteger:
+            # If page is not an integer, deliver first page.
+            filmpaged = paginator.page(1)
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of results.
+            filmpaged = paginator.page(paginator.num_pages)
+    except:
+        return HttpResponseRedirect('/')
     return render(req,'index.html',locals())
 @csrf_exempt
 def gitpull(req):
