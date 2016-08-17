@@ -18,10 +18,10 @@ from django.contrib import admin
 from core import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',views.index),
+    url(r'^movies$',views.index),
     url(r'^random$',views.randomdy),
     url(r'^gitpu11$',views.gitpull),
     url(r'^result/(?P<keywords>\w+)$',views.search),
     url(r'^movie/(?P<fid>\d+)$',views.single),
-    url(r'^home$', views.homepage),
+    url(r'^$', views.homepage),
 ]
