@@ -18,7 +18,7 @@
     </script>
     <div class="grid_1">
         <div class="container">
-            {% for film in films %}
+            {% for film in filmpaged %}
                 <div class="col-xs-3 col-md-3" style="height: 450px;">
                     <a href="/movie/{{ film.id }}" class="thumbnail">
                         <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%;">
@@ -29,22 +29,47 @@
                 </div>
             {% endfor %}
         </div>
-<ul class="web-paging" style="bottom: 10px;position:absolute; left: 40%">
 
-                    {% if filmpaged.has_previous %}
-           <li><a href="?page={{ filmpaged.previous_page_number }}">上一页</a></li>
-        {% endif %}
-
-        <span class="thisclass">
-            <li>第 {{ filmpaged.number }} 页, 共 {{ filmpaged.paginator.num_pages }} 页</li>
-        </span>
-
-        {% if filmpaged.has_next %}
-           <li> <a href="?page={{ filmpaged.next_page_number }}">下一页</a></li>
-        {% endif %}
-			 </ul>
+{#<ul class="web-paging" style="bottom: 10px;position:absolute; left: 40%">#}
+{##}
+{#                    {% if filmpaged.has_previous %}#}
+{#           <li><a href="?page={{ filmpaged.previous_page_number }}">上一页</a></li>#}
+{#        {% endif %}#}
+{##}
+{#        <span class="thisclass">#}
+{#            <li>第 {{ filmpaged.number }} 页, 共 {{ filmpaged.paginator.num_pages }} 页</li>#}
+{#        </span>#}
+{##}
+{#        {% if filmpaged.has_next %}#}
+{#           <li> <a href="?page={{ filmpaged.next_page_number }}">下一页</a></li>#}
+{#        {% endif %}#}
+{#			 </ul>#}
 
         <div class="clearfix"></div>
     </div>
+<div class="movies-pager" style=" text-align: center;">
 
+
+  <ul class="list-pager">
+
+
+
+   {% if filmpaged.has_previous %}
+      <li><a href="?page={{ filmpaged.previous_page_number }}">上一页</a></li>
+        {% endif %}
+
+{#      <li class="active">#}
+{#    <a style="cursor: default" href="javascript:void(0);" class="page_1">{{ filmpaged.number }}</a>#}
+{##}
+{#</li>#}
+
+<li>第 {{ filmpaged.number }} 页, 共 {{ filmpaged.paginator.num_pages }} 页</li>
+
+{% if filmpaged.has_next %}
+           <li> <a href="?page={{ filmpaged.next_page_number }}">下一页</a></li>
+        {% endif %}
+</ul>
+
+
+    </div>
 {% endblock %}
