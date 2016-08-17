@@ -38,5 +38,6 @@ def randomdy(req):
 
 
 def homepage(request):
-    films=FILM.objects.all()[:5]
+    films = FILM.objects.all()[:7]
+    newfilmd = FILM.objects.all()[:8]
     return render(request, 'Home.html', locals())
