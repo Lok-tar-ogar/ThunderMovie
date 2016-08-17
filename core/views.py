@@ -13,10 +13,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 # sys.setdefaultencoding('utf-8')
 def index(req):
     argGet = req.GET
-    films=FILM.objects.all()[:50]
+    films=FILM.objects.all()
     try:
-        films = FILM.objects.filter(Clmid=id)
-        paginator = Paginator(films, 5)  # Show 5 contacts per page
+        paginator = Paginator(films, 20)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
             filmpaged = paginator.page(page)
@@ -27,7 +26,7 @@ def index(req):
             # If page is out of range (e.g. 9999), deliver last page of results.
             filmpaged = paginator.page(paginator.num_pages)
     except:
-        return HttpResponseRedirect('/')
+        return HttpResponse(page)
     return render(req,'index.html',locals())
 @csrf_exempt
 def gitpull(req):
