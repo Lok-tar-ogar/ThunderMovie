@@ -7,10 +7,20 @@ import os
 import json
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db import connection
 # import sys
 #
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
+def my_custom_sql(sql,*para):
+    cursor = connection.cursor()
+
+    cursor.execute(sql,*para)
+
+    #cursor.execute("SELECT foo FROM bar WHERE baz = %s", [self.baz])
+    row = cursor.fetchall()
+
+    return row
 def index(req):
     argGet = req.GET
     films=FILM.objects.all()
