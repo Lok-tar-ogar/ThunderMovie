@@ -6,12 +6,37 @@ import random
 import os
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db import connection
 # import sys
 #
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
+def my_custom_sql(sql,*para):
+    cursor = connection.cursor()
+
+    cursor.execute(sql,*para)
+
+    #cursor.execute("SELECT foo FROM bar WHERE baz = %s", [self.baz])
+    row = cursor.fetchall()
+
+    return row
 def index(req):
-    films=FILM.objects.all()[:50]
+    argGet = req.GET
+    films=FILM.objects.all()
+    try:
+        paginator = Paginator(films, 20)  # Show 5 contacts per page
+        page = argGet.get('page')
+        try:
+            filmpaged = paginator.page(page)
+        except PageNotAnInteger:
+            # If page is not an integer, deliver first page.
+            filmpaged = paginator.page(1)
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of results.
+            filmpaged = paginator.page(paginator.num_pages)
+    except:
+        return HttpResponse(page)
     return render(req,'index.html',locals())
 @csrf_exempt
 def gitpull(req):

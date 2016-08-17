@@ -1,12 +1,21 @@
 {% extends 'master.html' %}
 {% load poll_extras %}
-
 {% block title %}
     {{ film.film_name }}
-{% endblock %}
-{% block meta %}
-    <meta name="Keywords" content="{{ film.film_name }}，电影，迅雷下载，种子资源，百度网盘">
-    <meta name="Description" content="{{ film.film_name }}电影下载">
+    {% endblock %}
+{% block keywords %}
+    {{ film.film_name }}
+    {{ film.film_actors }}
+    {{ film.film_director }}
+    {{ film.film_pub_year }}
+    {{ film.film_intro }}
+    {% endblock %}
+{% block description %}
+{{ film.film_name }}
+    {{ film.film_actors }}
+    {{ film.film_director }}
+    {{ film.film_pub_year }}
+    {{ film.film_intro }}
 {% endblock %}
 {% block content %}
 {#    <div class="banner">#}

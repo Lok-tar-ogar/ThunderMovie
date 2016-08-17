@@ -644,6 +644,43 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
 	background-color:#ef4238
 }
 
+.list-pager {
+    list-style: outside none none;
+}
+.list-pager a {
+    font-size: 14px;
+}
+.list-pager li {
+    border: 1px solid #d8d8d8;
+    color: #999;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 4px;
+    text-align: center;
+}
+.list-pager li:hover {
+    border-color: #ef4238;
+}
+.list-pager li.sep {
+    padding: 0 12px;
+}
+.list-pager li.sep:hover {
+    border-color: #d8d8d8;
+}
+.list-pager a {
+    color: #333;
+    display: block;
+    padding: 0 12px;
+}
+.list-pager li.active {
+    background-color: #ef4238;
+    border-color: #ef4238;
+}
+.list-pager li.active a {
+    color: #fff;
+}
+
 .customnav {
     /*width: 1200px;*/
     margin: 0 auto 19px;
