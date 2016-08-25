@@ -63,5 +63,4 @@ target/
 ThunderMovie/settings.py
 .idea/
 
-*.xml
 *.iml
