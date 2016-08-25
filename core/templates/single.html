@@ -1,5 +1,22 @@
 {% extends 'master.html' %}
 {% load poll_extras %}
+{% block title %}
+    {{ film.film_name }}
+    {% endblock %}
+{% block keywords %}
+    {{ film.film_name }}
+    {{ film.film_actors }}
+    {{ film.film_director }}
+    {{ film.film_pub_year }}
+    {{ film.film_intro }}
+    {% endblock %}
+{% block description %}
+{{ film.film_name }}
+    {{ film.film_actors }}
+    {{ film.film_director }}
+    {{ film.film_pub_year }}
+    {{ film.film_intro }}
+{% endblock %}
 {% block content %}
 {#    <div class="banner">#}
 {#        <div class="container">#}

@@ -1,7 +1,10 @@
 {% extends 'master.html' %}
 {% load poll_extras %}
+{% block title %}
+    搜索结果
+    {% endblock %}
 {% block content %}
-<div class="banner">
+<div class="banner1">
 		<div class="container">
 			<div class="span_1_of_1">
 			    <h2>  <br>&nbsp;</h2>
@@ -22,7 +25,14 @@
         <h3>
             {{ film.film_name }}
         </h3>
-        <p>{{ film.film_intro | Brflen:500 }}</p>
+        <h4 style="margin-top: 10px;">{{ film.film_pub_year }}</h4>
+        {% if film.film_director %}
+            <h4 style="margin-top: 10px;">导演：{{ film.film_director }}</h4>
+        {% endif %}
+        {% if film.film_actors %}
+            <h4 style="margin-top: 10px;">演员：{{ film.film_actors }}</h4>
+        {% endif %}
+        <p style="margin-top: 10px;">{{ film.film_intro | Brflen:500 }}</p>
 
     </div>
 

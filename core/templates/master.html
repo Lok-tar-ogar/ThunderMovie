@@ -1,11 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>电影</title>
+    <title>Hell电影_免费电影_迅雷电影下载_高清电影_完整版_BD_HD_最新电影_百度网盘--{% block title %}
+    
+    {% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+{#    <meta name="keywords" content="Photo-Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,#}
+{#Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>#}
+
+    <meta name="keywords" content="免费电影下载,电影下载,最新电影{% block keywords %}
+
+    {% endblock %}">
+<meta name="description" content="最好的迅雷电影下载网，分享最新电影，高清电影、综艺、动漫、电视剧等下载！{% block description %}
+
+{% endblock %} ">
+<link rel="shortcut icon" href="/static/images/favicon.ico">
     <script>
 var _hmt = _hmt || [];
 (function() {
@@ -78,9 +88,9 @@ var _hmt = _hmt || [];
                 <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>
 
 {#                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>#}
-                <li><a id="dylist" data-act="movies-click"  href="/">电影库</a></li>
+                <li><a id="dylist" data-act="movies-click"  href="/movies">电影库</a></li>
 
-                <li><a data-act="board-click" href="/">精选</a></li>
+{#                <li><a data-act="board-click" href="/">精选</a></li>#}
 
             </ul>
         </div>

@@ -3,78 +3,122 @@
 {% load poll_extras %}
 
 {% block head %}
-    <link rel="stylesheet" href="/static/css/jquery.skidder.css">
-    <script src="/static/js/imagesloaded.js"></script>
-    <script src="/static/js/smartresize.js"></script>
-    <script src="/static/js/jquery.skidder.js"></script>
-{% endblock %}
-{% block content %}
+    <script src="/static/js/modernizr-custom.js"></script>
+    <link href="/static/css/mislider.css" rel="stylesheet">
+    <link href="/static/css/mislider-skin-cameo.css" rel="stylesheet">
+    <script src="/static/js/mislider.js"></script>
+    <link href="/static/css/c_styles.css" rel="stylesheet">
     <script>
         $(document).ready(function () {
             $('#home').prop('class', 'active');
         });
-
+        jQuery(function ($) {
+            var slider = $('.mis-stage').miSlider({
+                //  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+                stageHeight: 410,
+                //  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+                slidesOnStage: false,
+                //  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+                slidePosition: 'center',
+                //  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+                slideStart: 'mid',
+                //  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+                slideScaling: 150,
+                //  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+                offsetV: -5,
+                //  Center slide contents vertically - Boolean. Default: false
+                centerV: true,
+                //  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+                navButtonsOpacity: 1
+            });
+        });
     </script>
-    <div class="slideshow" style="height:750px; margin-top:80px;overflow: hidden">
-          {% for i in films %}
-              <div class="slide" style="height:750px;"><img src="{{ i.cover_img_link }}" style="height:750px;"></div>
-          {% endfor %}
-{#          <div class="slide"><img src="/static/images/t1.jpg" style="height:750px;width:auto;"></div>#}
-{#          <div class="slide"><img src="/static/images/2.jpg" style="height:750px;width:auto;"></div>#}
-{#          <div class="slide"><img src="/static/images/3.jpg" style="height:750px;width:auto;"></div>#}
-{#          <div class="slide"><img src="/static/images/4.jpg" style="height:750px;width:auto;"></div>#}
-{#          <div class="slide"><img src="/static/images/5.jpg" style="height:750px;width:auto;"></div>#}
+{% endblock %}
+{% block content %}
+    <div id="wrapper" style="margin-top: 80px;">
+        <figure>
+            <div class="mis-stage">
+                <!-- The element to select and apply miSlider to - the class is optional -->
+                <ol class="mis-slider">
+                    <!-- The slider element - the class is optional -->
+                    {% for i in films %}
+                        <li class="mis-slide">
+                            <!-- A slide element - the class is optional -->
+                            <a href="/movie/{{ i.id }}" class="mis-container">
+                                <!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+                                <figure>
+                                    <!-- Slide content - whatever you want -->
+                                    <img src="{{ i.cover_img_link }}" alt="{{ i.film_name }}">
+                                    <figcaption>{{ i.film_name }}</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </figure>
     </div>
-    <script>
-          $('.slideshow').each( function() {
-		  var $slideshow = $(this);
-		  $slideshow.imagesLoaded( function() {
-			$slideshow.skidder({
-			  slideClass    : '.slide',
-			  animationType : 'css',
-			  scaleSlides   : true,
-			  maxWidth : 1300,
-			  maxHeight: 750,
-			  paging        : true,
-			  autoPaging    : true,
-			  pagingWrapper : ".skidder-pager",
-			  pagingElement : ".skidder-pager-dot",
-			  swiping       : true,
-			  leftaligned   : false,
-			  cycle         : true,
-			  jumpback      : false,
-			  speed         : 400,
-			  autoplay      : false,
-			  autoplayResume: false,
-			  interval      : 4000,
-			  transition    : "slide",
-			  afterSliding  : function() {},
-			  afterInit     : function() {}
-			});
-		  });
-	});
-	// $('.slideshow-nocycle').each( function() {
-	//   var $slideshow = $(this);
-	//   $slideshow.imagesLoaded( function() {
-	//     $slideshow.skidder({
-	//       slideClass    : '.slide',
-	//       scaleSlides   : true,
-	//       maxWidth : 1300,
-	//       maxHeight: 500,
-	//       leftaligned   : true,
-	//       cycle         : false,
-	//       paging        : true,
-	//       swiping       : true,
-	//       jumpback      : false,
-	//       speed         : 400,
-	//       autoplay      : false,
-	//       interval      : 4000,
-	//       afterSliding  : function() {}
-	//     });
-	//   });
-	// });
-    $(window).smartresize(function(){
-          $('.slideshow').skidder('resize');
-    });
-    </script>
+    <div class="custitle col-xs-12" style="margin-top:47px;">
+        <div class ="col-xs-3 col-xs-offset-2"><i></i></div>
+        <div class ="col-xs-2"><h4 class="customtitle text-center">最近更新</h4></div>
+        <div class ="col-xs-3"><i></i></div>
+        <div class ="col-xs-2">&nbsp;</div>
+    </div>
+{#        <div class="customnav text-center">#}
+{#            <div class ="col-xs-2 col-xs-offset-1">#}
+{#                <i></i>#}
+{#            </div>#}
+{#            <div class="col-xs-2  text-center">#}
+{#                <a href="#">最新电影</a>#}
+{#            </div>#}
+{#            <div class="col-xs-2 text-center" style="border-left: 1px solid #e5e5e5;">#}
+{#                <a href="#">最新电视剧</a>#}
+{#            </div>#}
+{#            <div class="col-xs-2 text-center" style="border-left: 1px solid #e5e5e5;">#}
+{#                <a href="#">最新动画</a>#}
+{#            </div>#}
+{#            <div class="col-xs-2">#}
+{#                <i></i>#}
+{#            </div>#}
+{#        </div>#}
+
+{#    <div class="selectionregion">#}
+{#        <div class ="mselection">#}
+{#            <div class = "seltrailer">#}
+{#                <div style="float:right">#}
+{#                    <a href="#">更多></a>#}
+{#                </div>#}
+{#            </div>#}
+{#            <dl>#}
+{#                <dt>#}
+{#                    <a> </a>#}
+{#                </dt>#}
+{#                <dd>#}
+{##}
+{#                </dd>#}
+{#                <dd>#}
+{##}
+{#                </dd>#}
+{#                <dd>#}
+{##}
+{#                </dd>#}
+{#            </dl>#}
+{#        </div>#}
+{#    </div>#}
+    <div class="grid_1">
+        <div class="container">
+            {% for film in newfilmd %}
+                <div class="col-xs-3 col-md-3" style="height: 450px;">
+                    <a href="/movie/{{ film.id }}" class="thumbnail">
+                        <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%;height:auto">
+                    </a>
+                    <div class="caption" style="font-size: 14px;">
+                        <p><a href="/movie/{{ film.id }}"><strong>{{ film.film_name }}</strong></a></p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="clearfix"></div>
+    </div>
 {% endblock %}
