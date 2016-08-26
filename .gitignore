@@ -64,3 +64,5 @@ ThunderMovie/settings.py
 .idea/
 
 *.iml
+.idea/workspace.xml
+*.xml
