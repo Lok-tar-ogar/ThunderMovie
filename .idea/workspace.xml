@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3686451-74ad-4325-83ae-83ea8f05cdc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ThunderMovie.iws" />
@@ -148,8 +147,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
-    <option name="y" value="31" />
+    <option name="x" value="-109" />
+    <option name="y" value="274" />
     <option name="width" value="1920" />
     <option name="height" value="968" />
   </component>
@@ -521,7 +520,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="31" width="1920" height="968" extended-state="0" />
+    <frame x="-109" y="274" width="1920" height="968" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16774194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
