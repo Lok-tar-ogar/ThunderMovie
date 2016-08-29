@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e3686451-74ad-4325-83ae-83ea8f05cdc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/css/style.css" afterPath="$PROJECT_DIR$/core/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/single.html" afterPath="$PROJECT_DIR$/core/templates/single.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
-    </list>
+    <list default="true" id="e3686451-74ad-4325-83ae-83ea8f05cdc5" name="Default" comment="" />
     <ignored path="ThunderMovie.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
