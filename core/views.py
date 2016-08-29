@@ -8,6 +8,7 @@ import json
 from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
+from django.db.models import Q
 # import sys
 #
 # reload(sys)
@@ -44,7 +45,7 @@ def gitpull(req):
     return HttpResponse(json.dumps({'msg:': msg}))
 
 def search(req,keywords=''):
-    films=FILM.objects.filter(film_intro__contains=keywords,film_name__contains=keywords,film_actors__contains=keywords,film_director__contains=keywords,tags__tag_name__contains=keywords)
+    films=FILM.objects.filter(Q(film_intro__contains=keywords)|Q(film_name__contains=keywords)|Q(film_actors__contains=keywords)|Q(film_director__contains=keywords)|Q(tags__tag_name__contains=keywords))
     return render(req, 'about.html', locals())
 
 def single(req,fid=0):
