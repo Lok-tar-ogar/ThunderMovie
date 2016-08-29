@@ -74,5 +74,5 @@ def sitemap(req):
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
             f.write(line+"\n")
-    return HttpResponse('成功更新')
+    return HttpResponse('成功更新1111')
     # return render(req,'sitemap.html',locals())
