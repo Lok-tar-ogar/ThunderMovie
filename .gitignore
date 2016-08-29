@@ -63,5 +63,7 @@ target/
 ThunderMovie/settings.py
 .idea
 
+.idea/workspace.xml
+core/static/sitemap.txt
+
 .iml
-.log

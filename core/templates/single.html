@@ -66,20 +66,23 @@
                         {{ film.film_name }}
                     </h3>
                     {% if film.film_pub_year %}
-                        <div class ="ename ellipsis">{{ film.film_pub_year }}</div>
+                        <div class ="ename ellipsis">年代:{{ film.film_pub_year }}</div>
                     {% endif %}
-                    <ul>
+                    <ul >
                         {% if tags %}
                         <li class="ellipsis">
+                        标签:
                             {% for tag in tags %}
                                 <a href="/result/{{ tag }}" style="margin-right: 10px;">{{ tag }}</a></li>
                             {% endfor %}
                         </li>
                         {% endif %}
                         {% if film.film_director %}
+                            导演:
                             <li class="ellipsis">{{ film.film_director }}</li>
                         {% endif  %}
                         {% if film.film_actors %}
+                            演员表:
                             <li class="ellipsis">{{ film.film_actors }}</li>
                         {% endif %}
                     </ul>
