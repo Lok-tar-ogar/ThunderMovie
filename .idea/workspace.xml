@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e3686451-74ad-4325-83ae-83ea8f05cdc5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThunderMovie/urls.py" afterPath="$PROJECT_DIR$/ThunderMovie/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/static/css/style.css" afterPath="$PROJECT_DIR$/core/static/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/templates/single.html" afterPath="$PROJECT_DIR$/core/templates/single.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core/views.py" afterPath="$PROJECT_DIR$/core/views.py" />
     </list>
     <ignored path="ThunderMovie.iws" />
@@ -57,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+            <state relative-caret-position="328">
+              <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
               <folding>
                 <element signature="e#17#52#0" expanded="true" />
               </folding>
@@ -74,6 +75,26 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="134">
               <caret line="820" column="0" selection-start-line="820" selection-start-column="0" selection-end-line="820" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/templates/single.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/static/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="595" column="11" selection-start-line="595" selection-start-column="11" selection-end-line="595" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -99,11 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ThunderMovie/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="343">
-              <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="24" />
               <folding>
                 <element signature="e#645#677#0" expanded="true" />
               </folding>
@@ -130,9 +151,7 @@
         <option value="$PROJECT_DIR$/core/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/core/templates/randomdy.html" />
         <option value="$PROJECT_DIR$/core/static/css/movie_detail.css" />
-        <option value="$PROJECT_DIR$/core/static/css/style.css" />
         <option value="$PROJECT_DIR$/core/templates/index.html" />
-        <option value="$PROJECT_DIR$/core/templates/single.html" />
         <option value="$PROJECT_DIR$/ThunderMovie/settings.py" />
         <option value="$PROJECT_DIR$/ThunderMovie/sitemap.py" />
         <option value="$PROJECT_DIR$/core/templates/master.html" />
@@ -146,8 +165,10 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/core/models.py" />
         <option value="$PROJECT_DIR$/core/templates/sitemap.html" />
-        <option value="$PROJECT_DIR$/core/views.py" />
         <option value="$PROJECT_DIR$/ThunderMovie/urls.py" />
+        <option value="$PROJECT_DIR$/core/templates/single.html" />
+        <option value="$PROJECT_DIR$/core/static/css/style.css" />
+        <option value="$PROJECT_DIR$/core/views.py" />
       </list>
     </option>
   </component>
@@ -235,6 +256,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThunderMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThunderMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThunderMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThunderMovie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -784,24 +845,10 @@
     </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages/django/core/handlers/base.py" />
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/socketserver.py" />
-    <entry file="file://$PROJECT_DIR$/core/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12939">
-          <caret line="681" column="1" selection-start-line="681" selection-start-column="1" selection-end-line="681" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThunderMovie/sitemap.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/single.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -884,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/sitemap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/os.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -900,22 +939,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/views.py">
+    <entry file="file://$PROJECT_DIR$/ThunderMovie/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
-          <caret line="76" column="30" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="24" />
           <folding>
-            <element signature="e#17#52#0" expanded="true" />
+            <element signature="e#645#677#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ThunderMovie/urls.py">
+    <entry file="file://$PROJECT_DIR$/core/templates/sitemap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+        <state relative-caret-position="150">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templates/single.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="595" column="11" selection-start-line="595" selection-start-column="11" selection-end-line="595" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="75" column="28" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="28" />
           <folding>
-            <element signature="e#645#677#0" expanded="true" />
+            <element signature="e#17#52#0" expanded="true" />
           </folding>
         </state>
       </provider>

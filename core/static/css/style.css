@@ -592,7 +592,7 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
 }
 .ellipsis {
 	text-overflow:ellipsis;
-	overflow:hidden;
+	/*overflow:hidden;*/
 	white-space:nowrap
 }
 
