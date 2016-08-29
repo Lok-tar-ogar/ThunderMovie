@@ -44,7 +44,7 @@ def gitpull(req):
     return HttpResponse(json.dumps({'msg:': msg}))
 
 def search(req,keywords=''):
-    films=FILM.objects.filter(film_intro__contains=keywords,film_name__contains=keywords)
+    films=FILM.objects.filter(film_intro__contains=keywords,film_name__contains=keywords,film_actors__contains=keywords,film_director__contains=keywords,tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
 
 def single(req,fid=0):
