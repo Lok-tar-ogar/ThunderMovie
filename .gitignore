@@ -61,8 +61,7 @@ target/
 .ipynb_checkpoints
 
 ThunderMovie/settings.py
-.idea/
+.idea
 
-*.iml
-.idea/workspace.xml
-*.xml
+.iml
+.log
