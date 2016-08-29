@@ -71,4 +71,8 @@ def sitemap(req):
     films=FILM.objects.all()
     for film in films:
         sitemaplist.append('www.dyhell.com/movie/'+film.id)
-    return render(req,'sitemap.html',locals())
+    with open('core/static/sitemap.txt','w') as f:
+        for line in sitemaplist:
+            f.write(line)
+    return HttpResponse('成功更新')
+    # return render(req,'sitemap.html',locals())

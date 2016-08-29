@@ -24,5 +24,5 @@ urlpatterns = [
     url(r'^result/(?P<keywords>\w+)$',views.search),
     url(r'^movie/(?P<fid>\d+)$',views.single),
     url(r'^$', views.homepage),
-    url(r'^sitemap.txt$', views.sitemap),
+    url(r'^updatesitemap', views.sitemap),
 ]
