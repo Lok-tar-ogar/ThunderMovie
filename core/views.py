@@ -66,3 +66,9 @@ def homepage(request):
     films = FILM.objects.all()[:7]
     newfilmd = FILM.objects.all()[:8]
     return render(request, 'Home.html', locals())
+def sitemap(req):
+    sitemaplist=['www.dyhell.com','www.dyhell.com/random','www.dyhell.com/movies']
+    films=FILM.objects.all()
+    for film in films:
+        sitemaplist.append('www.dyhell.com/movie/'+film.id)
+    return render(req,'sitemap.html',locals())
