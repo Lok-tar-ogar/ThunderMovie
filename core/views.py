@@ -20,7 +20,7 @@ import http.client as httplib
 def postBaiDu(filecontent, domain):
     URL = "/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh"
     send_headers = {'Content-Type': 'text/plain'}
-    conn = httplib.HTTPConnection("http://data.zz.baidu.com")
+    conn = httplib.HTTPConnection("http://data.zz.baidu.com:80")
     # req = urllib2.Request(URL, data=data, headers=send_headers)
     conn.request(method="POST", url=URL, body=filecontent, headers=send_headers)
     response = conn.getresponse()
@@ -98,10 +98,10 @@ def sitemap(req):
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
             #urlmsg+=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',{line})+'\n'
-            postBaiDu(line,'')
+            #postBaiDu(line,'')
             f.write(line+"\n")
     #urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh', {'urls': "\n".join(sitemaplist)})
     #updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh',
     #      {'urls': "\n".join(sitemaplist)})
-    return HttpResponse('成功更新\n'+urlmsg)
-    # return render(req,'sitemap.html',locals())
+    os.popen(""" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/core/static/sitemap.txt "http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh" """)
+    return HttpResponse('成功更新\n')
