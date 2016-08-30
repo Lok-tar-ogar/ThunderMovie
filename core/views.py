@@ -11,11 +11,21 @@ from django.db import connection
 from django.db.models import Q
 import urllib.parse
 import urllib.request
-
+import http.client as httplib
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
 
+def postBaiDu(filecontent, domain):
+    URL = "/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh"
+    send_headers = {'Content-Type': 'text/plain'}
+    conn = httplib.HTTPConnection("http://data.zz.baidu.com:80")
+    # req = urllib2.Request(URL, data=data, headers=send_headers)
+    conn.request(method="POST", url=URL, body=filecontent, headers=send_headers)
+    response = conn.getresponse()
+    baiduresult = response.read()
+    conn.close()
+    return baiduresult
 def my_custom_sql(sql,*para):
     cursor = connection.cursor()
 
@@ -28,7 +38,6 @@ def my_custom_sql(sql,*para):
 def index(req):
     argGet = req.GET
     films=FILM.objects.all()
-
     try:
         paginator = Paginator(films, 20)  # Show 5 contacts per page
         page = argGet.get('page')
@@ -53,7 +62,12 @@ def search(req,keywords=''):
     #|Q(tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
 def post(url, data):#封装post方法
-    return urllib.request.urlopen(url, urllib.parse.urlencode(data).encode('utf-8')).read()
+    s=urllib.request.Request(url, urllib.parse.urlencode(data).encode('utf-8'))
+    #s.headers={}
+    # s.urlopen().read()
+    s.add_header('Content-Type', 'text/plain')
+    #s.add_header('Content-Type', 'text/plain')
+    return  urllib.request.urlopen(s).read().decode()
 
 def single(req,fid=0):
     try:
@@ -83,9 +97,22 @@ def sitemap(req):
         sitemaplist.append('www.dyhell.com/movie/'+str(film.id))
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
-            #post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',{'urls':line})
+            os.popen(" curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
             f.write(line+"\n")
-    urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original', {'urls': "\n".join(sitemaplist)})
-    updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',
-         {'urls': "\n".join(sitemaplist)})
-    return HttpResponse('成功更新\n'+urlsmsg+'\n'+updatemsg)
+    #i=0
+    # part=0
+    #allparts=[]
+    # with open('core/static/sitemap.txt', 'r') as f:
+    #     line=f.readline()
+    #     for i in range(0,2000):
+    #         line = f.readline()
+    #     if i%2000==1:
+    #         part+=1
+    #         f=open('core/static/curl'+part+'.txt','w')
+    #         f.write(line)
+    #         f.close()
+    #         #allparts.append('curl'+part+'.txt')
+    #         msg=os.popen(" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/'core/static/curl%s.txt' 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % part).read()
+    #     else:
+    #         f.write(line)
+    return HttpResponse('成功更新\n')
