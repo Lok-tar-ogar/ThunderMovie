@@ -9,6 +9,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db import connection
 from django.db.models import Q
+import urllib.parse
+import urllib.request
 # import sys
 #
 # reload(sys)
@@ -48,6 +50,8 @@ def search(req,keywords=''):
     films=FILM.objects.filter(Q(film_intro__contains=keywords)|Q(film_name__contains=keywords)|Q(film_actors__contains=keywords)|Q(film_director__contains=keywords))
     #|Q(tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
+def post(url, data):#封装post方法
+    return urllib.request.urlopen(url, urllib.parse.urlencode(data).encode('utf-8')).read()
 
 def single(req,fid=0):
     try:
@@ -75,6 +79,10 @@ def sitemap(req):
         sitemaplist.append('www.dyhell.com/movie/'+str(film.id))
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
+            #post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',{'urls':line})
             f.write(line+"\n")
-    return HttpResponse('成功更新1111')
+    urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original', {'urls': "\n".join(sitemaplist)})
+    updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',
+         {'urls': "\n".join(sitemaplist)})
+    return HttpResponse('成功更新\n'+urlsmsg+'\n'+updatemsg)
     # return render(req,'sitemap.html',locals())
