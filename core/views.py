@@ -98,7 +98,7 @@ def sitemap(req):
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
             #urlmsg+=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',{line})+'\n'
-            postBaiDu(line)
+            postBaiDu(line,'')
             f.write(line+"\n")
     #urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh', {'urls': "\n".join(sitemaplist)})
     #updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh',
