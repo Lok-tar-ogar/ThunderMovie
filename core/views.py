@@ -11,10 +11,11 @@ from django.db import connection
 from django.db.models import Q
 import urllib.parse
 import urllib.request
+
 # import sys
-#
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
+
 def my_custom_sql(sql,*para):
     cursor = connection.cursor()
 
@@ -27,6 +28,7 @@ def my_custom_sql(sql,*para):
 def index(req):
     argGet = req.GET
     films=FILM.objects.all()
+
     try:
         paginator = Paginator(films, 20)  # Show 5 contacts per page
         page = argGet.get('page')
@@ -72,6 +74,8 @@ def homepage(request):
     films = FILM.objects.all()[:7]
     newfilmd = FILM.objects.all()[:8]
     return render(request, 'Home.html', locals())
+
+
 def sitemap(req):
     sitemaplist=['www.dyhell.com','www.dyhell.com/random','www.dyhell.com/movies']
     films=FILM.objects.all()
@@ -85,4 +89,3 @@ def sitemap(req):
     updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',
          {'urls': "\n".join(sitemaplist)})
     return HttpResponse('成功更新\n'+urlsmsg+'\n'+updatemsg)
-    # return render(req,'sitemap.html',locals())

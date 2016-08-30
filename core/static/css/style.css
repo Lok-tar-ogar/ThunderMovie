@@ -736,3 +736,52 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
   top: 50%;
   margin-top:24px;
 }
+.tags-movie{
+    border: 1px solid #e5e5e5;
+}
+.tags-panel {
+    /*border: 1px solid #e5e5e5;*/
+    margin-top: 40px;
+    padding: 0 20px;
+}
+.tags-panel li, .tags-panel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.tags-lines {
+    padding: 10px 0 !important;
+}
+.tags-line-border{
+    border-top: 1px dotted #e5e5e5;
+}
+.tags-title {
+    color: #999;
+    float: left;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+.tags {
+    margin-left: 40px !important;
+}
+.tags a:hover {
+    color: #ef4238;
+}
+.tags li {
+    border-radius: 14px;
+    display: inline-block;
+    margin-left: 12px;
+    padding: 3px 9px;
+}
+.tags li.active {
+    background: #f34d41 none repeat scroll 0 0;
+    color: #fff;
+}
+.tags li a {
+    color: #333;
+    font-size: 14px;
+}
+.tags li.active a {
+    color: #fff;
+}
