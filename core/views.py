@@ -94,14 +94,24 @@ def sitemap(req):
     films=FILM.objects.all()
     for film in films:
         sitemaplist.append('www.dyhell.com/movie/'+str(film.id))
-    urlmsg=""
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
-            #urlmsg+=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh&type=original',{line})+'\n'
-            #postBaiDu(line,'')
+            os.popen(" curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
             f.write(line+"\n")
-    #urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh', {'urls': "\n".join(sitemaplist)})
-    #updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh',
-    #      {'urls': "\n".join(sitemaplist)})
-    msg=os.popen(""" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/core/static/sitemap.txt "http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh" """).read()
-    return HttpResponse('成功更新\n'+msg)
+    #i=0
+    # part=0
+    #allparts=[]
+    # with open('core/static/sitemap.txt', 'r') as f:
+    #     line=f.readline()
+    #     for i in range(0,2000):
+    #         line = f.readline()
+    #     if i%2000==1:
+    #         part+=1
+    #         f=open('core/static/curl'+part+'.txt','w')
+    #         f.write(line)
+    #         f.close()
+    #         #allparts.append('curl'+part+'.txt')
+    #         msg=os.popen(" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/'core/static/curl%s.txt' 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % part).read()
+    #     else:
+    #         f.write(line)
+    return HttpResponse('成功更新\n')
