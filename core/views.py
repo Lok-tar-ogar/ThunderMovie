@@ -103,5 +103,5 @@ def sitemap(req):
     #urlsmsg=post('http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh', {'urls': "\n".join(sitemaplist)})
     #updatemsg=post('http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh',
     #      {'urls': "\n".join(sitemaplist)})
-    os.popen(""" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/core/static/sitemap.txt "http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh" """)
-    return HttpResponse('成功更新\n')
+    msg=os.popen(""" curl -H 'Content-Type:text/plain' --data-binary @/home/ubuntu/ThunderMovie/core/static/sitemap.txt "http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh" """).read()
+    return HttpResponse('成功更新\n'+msg)
