@@ -109,7 +109,7 @@
             <div class="list-group">
 
                {% for i in film.download_link  %}
-                   {{ i | ispwd }}
+                   {{ i | ispwd | safe }}
                {% endfor %}
             </div>
 {#                {% for i in film.download_link %}#}
