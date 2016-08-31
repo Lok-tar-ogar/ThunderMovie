@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from core import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^niqinmabaozha/', admin.site.urls),
     url(r'^movies$',views.index),
     url(r'^random$',views.randomdy),
     url(r'^gitpu11$',views.gitpull),
