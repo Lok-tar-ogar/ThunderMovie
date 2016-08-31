@@ -98,6 +98,9 @@ def sitemap(req):
     with open('core/static/sitemap.txt','w') as f:
         for line in sitemaplist:
             os.popen(" curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+            os.popen(
+                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+
             f.write(line+"\n")
     #i=0
     # part=0
