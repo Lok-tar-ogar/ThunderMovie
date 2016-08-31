@@ -39,7 +39,7 @@ def index(req):
     argGet = req.GET
     films=FILM.objects.all()
     try:
-        paginator = Paginator(films, 50)  # Show 5 contacts per page
+        paginator = Paginator(films, 52)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
             filmpaged = paginator.page(page)
