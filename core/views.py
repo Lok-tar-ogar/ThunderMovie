@@ -101,9 +101,9 @@ def sitemap(req):
         for line in sitemaplist:
             f.write(line+"\n")
             fsh.write(
-                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
             fsh.write(
-                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
         msg=os.popen('sudo sh curlbaidu.sh').read()
     except Exception as e:
         return  HttpResponse(e)
