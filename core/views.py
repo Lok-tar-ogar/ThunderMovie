@@ -106,7 +106,7 @@ def sitemap(req):
                 " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
         f.close()
         fsh.close()
-        msg=os.popen('sudo sh curlbaidu.sh').read()
+        #msg=os.popen('sudo sh curlbaidu.sh').read()
     except Exception as e:
         return  HttpResponse(e)
-    return HttpResponse('成功更新\n'+msg)
+    return HttpResponse('成功更新\n')#+msg)
