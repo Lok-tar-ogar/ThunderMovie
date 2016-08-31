@@ -96,13 +96,16 @@ def sitemap(req):
     for film in films:
         sitemaplist.append('www.dyhell.com/movie/'+str(film.id))
     try:
-        with open('core/static/sitemap.txt','w') as f:
-            for line in sitemaplist:
-                # os.popen(" curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
-                # os.popen(
-                #     " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
 
+        for line in sitemaplist:
+            with open('core/static/sitemap.txt', 'w') as f:
                 f.write(line+"\n")
+            with open('curlbaidu.sh', 'w') as fsh:
+                fsh.write(
+                    " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+                fsh.write(
+                    " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' " % line)
+        msg=os.popen('sudo sh curlbaidu.sh').read()
     except Exception as e:
         return  HttpResponse(e)
-    return HttpResponse('成功更新\n')
+    return HttpResponse('成功更新\n'+msg)
