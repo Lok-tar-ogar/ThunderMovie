@@ -12,6 +12,7 @@ from django.db.models import Q
 import urllib.parse
 import urllib.request
 import http.client as httplib
+from ThunderMovie.status import *
 # import sys
 # reload(sys)
 # sys.setdefaultencoding('utf-8')
@@ -37,8 +38,41 @@ def my_custom_sql(sql,*para):
     return row
 def index(req):
     argGet = req.GET
-    films=FILM.objects.all()
+    # films=FILM.objects.all()
     try:
+        m_type = argGet.get('m_type', 'all')
+        country = argGet.get('area', 'all')
+        year = argGet.get('year', 'all')
+        movietype = movie_type.get(m_type)
+        moviearea = movie_area.get(country)
+        movieyear = year
+
+        if movietype != 0:
+            films = FILM.objects.filter(tags=movietype)
+        else:
+            films = FILM.objects.all()
+
+        if moviearea == 0:
+            pass
+        elif moviearea == 1:
+            films = films.filter(~Q(film_country__icontains='大陆') & ~Q(film_country__icontains='美国') & ~Q(film_country__icontains='法国') & ~Q(film_country__icontains='英国') & ~Q(film_country__icontains='日本') & ~Q(film_country__icontains='韩国') & ~Q(film_country__icontains='印度') & ~Q(film_country__icontains='泰国')& ~Q(film_country__icontains='香港')& ~Q(film_country__icontains='台湾')& ~Q(film_country__icontains='德国'))
+        else:
+            films = films.filter(film_country__icontains=moviearea)
+
+        if movieyear == 'all':
+            pass
+        if movieyear == '2016' or movieyear == '2015' or movieyear == '2014' or movieyear == '2013' or movieyear == '2012' or movieyear == '2011':
+            films =films.filter(film_pub_year=movieyear)
+        if movieyear == '10':
+            films = films.filter(film_pub_year__gte=2000, film_pub_year__lte=2010)
+        if movieyear == '90':
+            films = films.filter(film_pub_year__gte=1990, film_pub_year__lte=1999)
+        if movieyear == '80':
+            films = films.filter(film_pub_year__gte=1980, film_pub_year__lte=1989)
+        if movieyear == '70':
+            films = films.filter(film_pub_year__gte=1970, film_pub_year__lte=1979)
+        if movieyear == 'early':
+            films = films.filter(film_pub_year__lt=1970)
         paginator = Paginator(films, 52)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
