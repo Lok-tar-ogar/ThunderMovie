@@ -1,7 +1,7 @@
 {% extends 'master.html' %}
 {% load poll_extras %}
 {% block title %}
-    {{ film.film_name }}
+    [高清][HD-BD-DVD][{{ film.film_pub_year }}][{{ film.film_name }}][迅雷下载][百度网盘][中 英 字幕]
     {% endblock %}
 {% block keywords %}
     {{ film.film_name }}
@@ -112,9 +112,8 @@
                    {{ i | ispwd | safe }}
                {% endfor %}
             </div>
-{#                {% for i in film.download_link %}#}
-{#                    <P>{{ i }}</P>#}
-{#                {% endfor %}#}
+
+            
             </div>
 
         </div>
