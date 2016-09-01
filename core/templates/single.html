@@ -31,6 +31,10 @@
                         <div class ="ename ellipsis">年代:{{ film.film_pub_year }}</div>
                     {% endif %}
                     <ul >
+                    {% if film.film_country %}
+                            国家:
+                            <li class="ellipsis">{{ film.film_country }}</li>
+                        {% endif  %}
                         {% if tags %}
                         <li class="ellipsis">
                         标签:
