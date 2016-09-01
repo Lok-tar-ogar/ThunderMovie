@@ -17,6 +17,9 @@
     {{ film.film_pub_year }}
     {{ film.film_intro }}
 {% endblock %}
+{% block head %}
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
 {% block content %}
 {#    <div class="banner">#}
 {#        <div class="container">#}
@@ -96,6 +99,12 @@
 
     <div class ="container" style="margin-top: 80px;">
         <div class="module">
+        <div class="mod-title">
+                <h3>觉得资源好,就分享支持一个吧~</h3>
+            </div>
+        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
+        <wb:share-button appkey="3150087652" addition="full" type="button" default_text="骚猪电影网,dyhell.com-高清电影迅雷下载百度网盘资源，天天更新。"></wb:share-button>
+        </div>
             <div class="mod-title">
                 <h3>剧情介绍</h3>
             </div>
