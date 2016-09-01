@@ -38,6 +38,7 @@ def my_custom_sql(sql,*para):
 def index(req):
     argGet = req.GET
     films=FILM.objects.all()
+    FILM.objects.filter(tags__tag_name='动作')
     try:
         paginator = Paginator(films, 52)  # Show 5 contacts per page
         page = argGet.get('page')
