@@ -79,8 +79,9 @@ def single(req,fid=0):
         return HttpResponseNotFound()
 
 def randomdy(req):
-    ran=random.randint(1,10000)
-    films = FILM.objects.all().exclude(download_link=' \n')[ran:50+ran]
+    films=FILM.objects.all().exclude(download_link=' \n')
+    ran=random.randint(0,len(films)-50)
+    films = films[ran:50+ran]
 
     return render(req, 'randomdy.html', locals())
 
