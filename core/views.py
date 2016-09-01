@@ -37,8 +37,7 @@ def my_custom_sql(sql,*para):
     return row
 def index(req):
     argGet = req.GET
-    films=FILM.objects.all()
-    FILM.objects.filter(tags__tag_name='动作')
+    films=FILM.objects.all().exclude(download_link=' \n')
     try:
         paginator = Paginator(films, 52)  # Show 5 contacts per page
         page = argGet.get('page')
@@ -81,7 +80,8 @@ def single(req,fid=0):
 
 def randomdy(req):
     ran=random.randint(1,10000)
-    films = FILM.objects.all()[ran:50+ran]
+    films = FILM.objects.all().exclude(download_link=' \n')[ran:50+ran]
+
     return render(req, 'randomdy.html', locals())
 
 
