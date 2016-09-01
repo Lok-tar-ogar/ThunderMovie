@@ -13,9 +13,6 @@ import urllib.parse
 import urllib.request
 import http.client as httplib
 from ThunderMovie.status import *
-# import sys
-# reload(sys)
-# sys.setdefaultencoding('utf-8')
 
 def postBaiDu(filecontent, domain):
     URL = "/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh"
@@ -38,7 +35,7 @@ def my_custom_sql(sql,*para):
     return row
 def index(req):
     argGet = req.GET
-    # films=FILM.objects.all()
+    #films=FILM.objects.all().exclude(download_link=' \n')
     try:
         m_type = argGet.get('m_type', 'all')
         country = argGet.get('area', 'all')
@@ -50,7 +47,7 @@ def index(req):
         if movietype != 0:
             films = FILM.objects.filter(tags=movietype)
         else:
-            films = FILM.objects.all()
+            films = FILM.objects.all().exclude(download_link=' \n')
 
         if moviearea == 0:
             pass
@@ -113,8 +110,10 @@ def single(req,fid=0):
         return HttpResponseNotFound()
 
 def randomdy(req):
-    ran=random.randint(1,10000)
-    films = FILM.objects.all()[ran:50+ran]
+    films=FILM.objects.all().exclude(download_link=' \n')
+    ran=random.randint(0,len(films)-50)
+    films = films[ran:50+ran]
+
     return render(req, 'randomdy.html', locals())
 
 
