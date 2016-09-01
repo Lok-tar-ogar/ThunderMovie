@@ -31,3 +31,21 @@ class FILM(models.Model):
         verbose_name = "电影表"
         verbose_name_plural = "电影表们"
         ordering = ['-dim_date']
+class TVSERIES(models.Model):
+    tvseries_name=models.CharField('电视剧名',max_length=50,null=False)
+    tags=models.CharField('电视剧类型',max_length=50, null=True)
+    cover_img_link=models.CharField('封面图片链接',max_length=500,null=True)
+    download_link=models.CharField('下载链接',max_length=10000,null=True)
+    tvseries_intro = models.CharField('电视剧情简介',max_length=5000, null=True)
+    tvseries_director = models.CharField('导演', max_length=50, null=True)
+    tvseries_actors=models.CharField('演员们',max_length=500,null=True)
+    tvseries_disc= models.CharField('电视剧评论',max_length=5000, null=True)
+    tvseries_pub_year=models.CharField('电视剧发行年代',max_length=50, null=True)
+    tvseries_country=models.CharField('电视剧来自国家',max_length=50, null=True)
+    dim_date=models.DateTimeField(auto_now_add=True,null=True)
+    def __str__(self):
+        return self.film_name
+    class Meta:
+        verbose_name = "电视剧表"
+        verbose_name_plural = "电视剧表们"
+        ordering = ['-dim_date']
