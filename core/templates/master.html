@@ -53,7 +53,7 @@ var _hmt = _hmt || [];
     {% endblock %}
 </head>
 
-<body>
+<body style="min-height: 800px">
 {#	<div class="header navbar-fixed-top">#}
 {#      <div class="container">#}
 {#  	     <div class="logo">#}
@@ -102,13 +102,13 @@ var _hmt = _hmt || [];
 
                     $('#search_text').keydown(function (e) {
                         if (e.keyCode == 13) {
-                            location.replace('/result/' + $('#search_text').val())
+                            location.replace('/result?key' + $('#search_text').val())
                         }
                     });
                     $("#search_button").click(
                             function () {
 
-                                location.replace('/result/' + $('#search_text').val())
+                                location.replace('/result?key' + $('#search_text').val())
 
                             });
                 });

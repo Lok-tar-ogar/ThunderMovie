@@ -23,7 +23,7 @@ urlpatterns = [
     url(r'^tv/(?P<fid>\d+)$',views.singletvseries),
     url(r'^random$',views.randomdy),
     url(r'^gitpu11$',views.gitpull),
-    url(r'^result/(?P<keywords>\w+)$',views.search),
+    url(r'^result$',views.search),
     url(r'^movie/(?P<fid>\d+)$',views.single),
     url(r'^$', views.index),
     url(r'^updatesitemap', views.sitemap),

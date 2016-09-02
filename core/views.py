@@ -147,7 +147,8 @@ def gitpull(req):
     msg = os.popen('sudo sh /home/ubuntu/ThunderMovie/deploy.sh').read()
     return HttpResponse(json.dumps({'msg:': msg}))
 
-def search(req,keywords=''):
+def search(req):
+    keywords = req.GET.get('key','')
     films=FILM.objects.filter(Q(film_intro__contains=keywords)|Q(film_name__contains=keywords)|Q(film_actors__contains=keywords)|Q(film_director__contains=keywords))
     tvseriess = TVSERIES.objects.filter(
         Q(tvseries_intro__contains=keywords) | Q(tvseries_name__contains=keywords) | Q(tvseries_actors__contains=keywords) | Q(

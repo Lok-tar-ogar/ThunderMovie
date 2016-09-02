@@ -39,13 +39,13 @@
                         <li class="ellipsis">
                         标签:
                             {% for tag in tags %}
-                                <a href="/result/{{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
+                                <a href="/result?key={{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
                             {% endfor %}
                         </li>
                         {% endif %}
                         {% if film.film_director %}
                             导演:
-                            <li class="ellipsis">{{ film.film_director }}</li>
+                            <li class="ellipsis"><a href="/result?key={{ film.film_director }}" style="margin-right: 10px;">{{ film.film_director }}</a></li>
                         {% endif  %}
                         {% if film.film_actors %}
                             演员表:
