@@ -44,7 +44,7 @@ class TVSERIES(models.Model):
     tvseries_country=models.CharField('电视剧来自国家',max_length=50, null=True)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
     def __str__(self):
-        return self.film_name
+        return self.tvseries_name
     class Meta:
         verbose_name = "电视剧表"
         verbose_name_plural = "电视剧表们"
