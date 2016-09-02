@@ -138,7 +138,7 @@ def indextvseries(req):
             tvseriespaged = paginator.page(paginator.num_pages)
     except Exception as e:
         page=1
-        return HttpResponse(page)
+        return HttpResponse(e)
     return render(req,'indextvseries.html',locals())
 @csrf_exempt
 def gitpull(req):
