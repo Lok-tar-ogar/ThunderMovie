@@ -1,4 +1,5 @@
 {% extends 'master.html' %}
+{% load poll_extras %}
 {% block head %}
  <meta name="baidu-site-verification" content="SNZu0GacqF" />
     <meta property="wb:webmaster" content="42143a4a84219a4d" />
@@ -194,7 +195,7 @@
                         <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%;">
                     </a>
                     <div class="caption">
-                        <p>{{ film.film_name }}</p>
+                        <p>[{{ film | movietags }}][{{ film.film_pub_year }}][<font style="color: #F1665E">{{ film.film_name }}</font>][迅雷下载][百度网盘][中 英 字幕]</p>
                     </div>
                 </div>
             {% endfor %}

@@ -1,5 +1,5 @@
 from django import template
-
+from core.models import *
 register = template.Library()
 
 
@@ -17,6 +17,12 @@ def split_movie(value):
 def ispwd(value):
     try:
         return '<li class="list-group-item">百度网盘全集<a href='+value[0]+' target="_blank" >'+value[0]+'</a>'+value[1]+'</li>' if 'http://pan.' in value[0] else '<li class="list-group-item"><a href='+value[0]+' target="_blank" >'+value[1]+'</a></li>'
+    except:
+        return ''
+@register.filter(name="movietags")
+def ispwd(value):
+    try:
+        return "/".join([x.tag_name for x in value.tags.all()])
     except:
         return ''
 
