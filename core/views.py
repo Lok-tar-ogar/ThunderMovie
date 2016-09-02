@@ -147,6 +147,9 @@ def gitpull(req):
 
 def search(req,keywords=''):
     films=FILM.objects.filter(Q(film_intro__contains=keywords)|Q(film_name__contains=keywords)|Q(film_actors__contains=keywords)|Q(film_director__contains=keywords))
+    tvseriess = TVSERIES.objects.filter(
+        Q(tvseries_intro__contains=keywords) | Q(tvseries_name__contains=keywords) | Q(tvseries_actors__contains=keywords) | Q(
+            tvseries_director__contains=keywords) | Q(tags__contains=keywords))
 
     #|Q(tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
