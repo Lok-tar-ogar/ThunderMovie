@@ -19,6 +19,8 @@ from core import views
 urlpatterns = [
     url(r'^niqinmabaozha/', admin.site.urls),
     url(r'^movies$',views.index),
+    url(r'^tvseries',views.indextvseries),
+    url(r'^tv/(?P<fid>\d+)$',views.singletvseries),
     url(r'^random$',views.randomdy),
     url(r'^gitpu11$',views.gitpull),
     url(r'^result/(?P<keywords>\w+)$',views.search),

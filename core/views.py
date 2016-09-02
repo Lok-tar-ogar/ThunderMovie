@@ -80,9 +80,66 @@ def index(req):
         except EmptyPage:
             # If page is out of range (e.g. 9999), deliver last page of results.
             filmpaged = paginator.page(paginator.num_pages)
+
     except:
+        page = 1
         return HttpResponse(page)
     return render(req,'index.html',locals())
+def indextvseries(req):
+    argGet = req.GET
+    #tvseries=TVSERIES.objects.all().exclude(download_link=' \n')
+    try:
+        m_type = argGet.get('m_type', 'all')
+        country = argGet.get('area', 'all')
+        year = argGet.get('year', 'all')
+        tvtype = tv_type.get(m_type)
+        tvarea = tv_area.get(country)
+        tvyear = year
+
+        if tvtype != 0:
+            tvseriess = TVSERIES.objects.filter(tags_contains=tvtype)
+        else:
+            tvseriess = TVSERIES.objects.all().exclude(download_link=' \n')
+
+        if tvarea == 0:
+            pass
+        elif tvarea == 1:
+            tvseriess = tvseriess.filter(~Q(tvseries_country__icontains='大陆') & ~Q(tvseries_country__icontains='美国') & ~Q(
+                tvseries_country__icontains='法国') & ~Q(tvseries_country__icontains='英国') & ~Q(
+                tvseries_country__icontains='日本') & ~Q(tvseries_country__icontains='韩国') & ~Q(
+                tvseries_country__icontains='印度') & ~Q(tvseries_country__icontains='泰国') & ~Q(
+                tvseries_country__icontains='香港') & ~Q(tvseries_country__icontains='台湾') & ~Q(tvseries_country__icontains='德国'))
+        else:
+            tvseriess = tvseriess.filter(tvseries_country__icontains=tvarea)
+
+        if tvyear == 'all':
+            pass
+        if tvyear == '2016' or tvyear == '2015' or tvyear == '2014' or tvyear == '2013' or tvyear == '2012' or tvyear == '2011':
+            tvseriess = tvseriess.filter(tvseries_pub_year=tvyear)
+        if tvyear == '10':
+            tvseriess = tvseriess.filter(tvseries_pub_year__gte=2000, tvseries_pub_year__lte=2010)
+        if tvyear == '90':
+            tvseriess = tvseriess.filter(tvseries_pub_year__gte=1990, tvseries_pub_year__lte=1999)
+        if tvyear == '80':
+            tvseriess = tvseriess.filter(tvseries_pub_year__gte=1980, tvseries_pub_year__lte=1989)
+        if tvyear == '70':
+            tvseriess = tvseriess.filter(tvseries_pub_year__gte=1970, tvseries_pub_year__lte=1979)
+        if tvyear == 'early':
+            tvseriess = tvseriess.filter(tvseries_pub_year__lt=1970)
+        paginator = Paginator(tvseriess, 52)  # Show 5 contacts per page
+        page = argGet.get('page')
+        try:
+            tvseriespaged = paginator.page(page)
+        except PageNotAnInteger:
+            # If page is not an integer, deliver first page.
+            tvseriespaged = paginator.page(1)
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of results.
+            tvseriespaged = paginator.page(paginator.num_pages)
+    except Exception as e:
+        page=1
+        return HttpResponse(page)
+    return render(req,'indextvseries.html',locals())
 @csrf_exempt
 def gitpull(req):
     msg = os.popen('sudo sh /home/ubuntu/ThunderMovie/deploy.sh').read()
@@ -90,6 +147,7 @@ def gitpull(req):
 
 def search(req,keywords=''):
     films=FILM.objects.filter(Q(film_intro__contains=keywords)|Q(film_name__contains=keywords)|Q(film_actors__contains=keywords)|Q(film_director__contains=keywords))
+
     #|Q(tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
 def post(url, data):#封装post方法
@@ -104,8 +162,16 @@ def single(req,fid=0):
     try:
         film=FILM.objects.get(id=fid)
         tags=film.tags.all()
-        film.download_link = film.download_link.split('\n')
+        film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
         return render(req,'single.html',locals())
+    except Exception as e:
+        return HttpResponseNotFound()
+def singletvseries(req,fid=0):
+    try:
+        tvseries=TVSERIES.objects.get(id=fid)
+        tags=tvseries.tags.split(' ')
+        tvseries.download_link = [tuple(x.split(',')) for x in tvseries.download_link.split('\n')]
+        return render(req,'singletvseries.html',locals())
     except Exception as e:
         return HttpResponseNotFound()
 

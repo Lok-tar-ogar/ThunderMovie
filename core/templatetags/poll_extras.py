@@ -15,4 +15,14 @@ def split_movie(value):
 
 @register.filter(name="ispwd")
 def ispwd(value):
-    return value if '密码' in value else '<a href='+value+' target="_blank" class="list-group-item">'+value+'</a>'
+    try:
+        return '<li class="list-group-item">百度网盘全集<a href='+value[0]+' target="_blank" >'+value[0]+'</a>'+value[1]+'</li>' if 'http://pan.' in value[0] else '<li class="list-group-item"><a href='+value[0]+' target="_blank" >'+value[1]+'</a></li>'
+    except:
+        return ''
+
+@register.filter(name="ispwdtv")
+def ispwd(value):
+    try:
+        return '<li class="list-group-item">百度网盘全集<a href='+value[0]+' target="_blank" >'+value[0]+'</a>'+value[1]+'</li>' if 'http://pan.' in value[0] else '<li class="list-group-item"><a href='+value[0]+' target="_blank" >'+value[1]+'</a></li>'
+    except:
+        return ''

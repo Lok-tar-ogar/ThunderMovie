@@ -33,9 +33,9 @@ class FILM(models.Model):
         ordering = ['-dim_date']
 class TVSERIES(models.Model):
     tvseries_name=models.CharField('电视剧名',max_length=50,null=False)
-    tags=models.CharField('电视剧类型',max_length=50, null=True)
+    tags=models.CharField('电视剧类型',max_length=100, null=True)
     cover_img_link=models.CharField('封面图片链接',max_length=500,null=True)
-    download_link=models.CharField('下载链接',max_length=10000,null=True)
+    download_link=models.CharField('下载链接',max_length=30000,null=True)
     tvseries_intro = models.CharField('电视剧情简介',max_length=5000, null=True)
     tvseries_director = models.CharField('导演', max_length=50, null=True)
     tvseries_actors=models.CharField('演员们',max_length=500,null=True)
