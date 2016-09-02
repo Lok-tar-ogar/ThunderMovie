@@ -16,14 +16,14 @@
 {% for film in films %}
     <div class="col-xs-12">
      <div class="col-xs-3 col-md-3">
-    <a href="/movie/{{ film.id }}" class="thumbnail">
+    <a href="/movie/{{ film.id }}" target="_blank" class="thumbnail">
       <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}">
     </a>
 
                 </div>
     <div class="col-xs-9 col-md-9">
         <h3>
-            <a href="/movie/{{ film.id }}">{{ film.film_name }}</a>
+            <a href="/movie/{{ film.id }} " target="_blank">{{ film.film_name }}</a>
         </h3>
         <h4 style="margin-top: 10px;">{{ film.film_pub_year }}</h4>
         {% if film.film_director %}
@@ -41,14 +41,14 @@
 {% for tvseries in tvseriess %}
     <div class="col-xs-12">
      <div class="col-xs-3 col-md-3">
-    <a href="/tv/{{ tvseries.id }}" class="thumbnail">
+    <a href="/tv/{{ tvseries.id }}" target="_blank" class="thumbnail">
       <img src="{{ tvseries.cover_img_link }}" alt="{{ tvseries.tvseries_name }}">
     </a>
 
                 </div>
     <div class="col-xs-9 col-md-9">
         <h3>
-            <a href="/tv/{{ tvseries.id }}">{{ tvseries.tvseries_name }}</a>
+            <a href="/tv/{{ tvseries.id }}" target="_blank">{{ tvseries.tvseries_name }}</a>
         </h3>
         <h4 style="margin-top: 10px;">{{ tvseries.tvseries_pub_year }}</h4>
         {% if tvseries.tvseries_director %}
