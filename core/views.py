@@ -97,7 +97,7 @@ def indextvseries(req):
         tvyear = year
 
         if tvtype != 0:
-            tvseriess = TVSERIES.objects.filter(tags_contains=tvtype)
+            tvseriess = TVSERIES.objects.filter(tags__contains=tvtype)
         else:
             tvseriess = TVSERIES.objects.all().exclude(download_link=' \n')
 
