@@ -85,6 +85,8 @@ def index(req):
         page = 1
         return HttpResponse(page)
     return render(req,'index.html',locals())
+
+
 def indextvseries(req):
     argGet = req.GET
     #tvseries=TVSERIES.objects.all().exclude(download_link=' \n')
