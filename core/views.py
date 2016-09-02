@@ -164,6 +164,7 @@ def post(url, data):#封装post方法
 def single(req,fid=0):
     try:
         film=FILM.objects.get(id=fid)
+
         tags=film.tags.all()
         film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
         return render(req,'single.html',locals())
