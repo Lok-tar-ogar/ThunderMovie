@@ -245,7 +245,7 @@
 <li>第 {{ tvseriespaged.number }} 页, 共 {{ tvseriespaged.paginator.num_pages }} 页</li>
 
 {% if tvseriespaged.has_next %}
-           <li> <a href="?page={{ tvseriespaged.next_page_number }}">下一页</a></li>
+           <li> <a href="?page={{ tvseriespaged.next_page_number }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">下一页</a></li>
         {% endif %}
 </ul>
 
