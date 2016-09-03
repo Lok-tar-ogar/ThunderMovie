@@ -53,6 +53,7 @@ tv_type = {
     'motivational': '励志',
     'comic':'动画',
     'variety':'综艺',
+    'tvs':'电视剧',
     'all': 0,
 }
 
