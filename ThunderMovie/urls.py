@@ -19,6 +19,7 @@ from core import views
 urlpatterns = [
     url(r'^niqinmabaozha/', admin.site.urls),
     url(r'^movies$',views.index),
+    url(r'^movielist$',views.seolist),
     url(r'^tvseries',views.indextvseries),
     url(r'^tv/(?P<fid>\d+)$',views.singletvseries),
     url(r'^random$',views.randomdy),
