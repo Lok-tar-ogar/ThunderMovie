@@ -221,11 +221,14 @@ def sitemap(req):
         return  HttpResponse(e)
     return HttpResponse('成功更新\n')#+msg)
 
+
 def douban(request):
     '''
     id  from 18387 to 29120
     :param request:
     :return:
     '''
-    film = FILM.objects.get(id =18387)
+    film = FILM.objects.get(id=18387)
+
+
     return
