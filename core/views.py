@@ -13,6 +13,7 @@ import urllib.parse
 import urllib.request
 import http.client as httplib
 from ThunderMovie.status import *
+from ThunderMovie.douban import douban as doubanclass
 
 def postBaiDu(filecontent, domain):
     URL = "/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh"
@@ -222,13 +223,32 @@ def sitemap(req):
     return HttpResponse('成功更新\n')#+msg)
 
 
-def douban(request):
+def douban(req, start ,end):
     '''
     id  from 18387 to 29120
     :param request:
     :return:
     '''
-    film = FILM.objects.get(id=18387)
-
-
-    return
+    try:
+        for i in range(int(start), int(end)+1):
+            film = FILM.objects.get(id=i)
+            if film:
+                db = doubanclass()
+                douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
+                if douban_id == "":
+                    return  HttpResponse('未从' + film.film_name + '，电影id:' + str(film.id) + '获取豆瓣id')
+                while douban_id == "error":
+                    douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
+                douban_film = db.get_film_detail(douban_id)
+                film.stars = douban_film["rating"]["average"]
+                film.ratings_count = douban_film["ratings_count"]
+                film.reviews_count = douban_film["reviews_count"]
+                film.comments_count = douban_film["comments_count"]
+                film.wish_count = douban_film["wish_count"]
+                film.film_intro = douban_film["summary"]
+                film.save()
+            else:
+                continue
+    except Exception as e:
+        return HttpResponse(e)
+    return HttpResponse('获取豆瓣成功\n')

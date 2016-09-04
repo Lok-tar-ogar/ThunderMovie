@@ -24,11 +24,21 @@ class douban:
                                          headers={'Content-Type': 'application/x-www-form-urlencoded'})
 
             content = json.loads(str(content, encoding="utf-8"))
-            for item in content['subjects']:
-                if year == item['year']:
-                    douban_id = item['id']
-                    break
-        except:
+            if content["msg"]:
+                douban_id = "error"
+            else:
+                for item in content['subjects']:
+                    if year == item['year']:
+                        douban_id = item['id']
+                        break
+
+                if douban_id == "":
+                    for item in content['subjects']:
+                        if name == item['title']:
+                            douban_id = item['id']
+                            break
+
+        except Exception as e:
             pass
         return douban_id
 
