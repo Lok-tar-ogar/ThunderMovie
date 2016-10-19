@@ -299,3 +299,13 @@ def douban(req, start ,end):
     except Exception as e:
         return HttpResponse(e)
     return HttpResponse('获取豆瓣成功\n')
+
+
+def new_movie(request):
+    '''
+     新版电影页
+    :param request:
+    :return:
+    '''
+
+    return render(request, 'web/movie.html', locals())
