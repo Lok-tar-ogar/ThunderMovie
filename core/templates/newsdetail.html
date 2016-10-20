@@ -1,0 +1,493 @@
+{% extends 'master.html' %}
+{% block head %}
+
+    <link href="http://static1.mtime.cn/20160825145005/css/2014/publicpack.css" rel="stylesheet" media="all" type="text/css">
+    <link href="http://static1.mtime.cn/library/20160919164403/css/news.css" rel="stylesheet" media="all" type="text/css">
+{% endblock %}
+{% block content %}
+    <body>     <map class="none">
+        <dl>
+            <dt><a title="网站地图" href="http://www.mtime.com/sitemap.htm">网站地图</a></dt>
+            <dt><a title="首页" href="http://www.mtime.com/">首页</a></dt>
+            <dt><a title="电影" href="http://movie.mtime.com/">电影</a></dt>
+            <dd><a title="新闻" href="http://news.mtime.com/movie/">新闻</a></dd>
+            <dd><a title="新片" href="http://movie.mtime.com/new/">新片</a></dd>
+            <dd><a title="热映" href="http://movie.mtime.com/nowplaying/">热映</a></dd>
+            <dd><a title="排行榜" href="http://movie.mtime.com/top_ten/">排行榜</a></dd>
+            <dd><a title="影评" href="http://movie.mtime.com/comment/">影评</a></dd>
+            <dd><a title="专题" href="http://movie.mtime.com/special.html">专题</a></dd>
+            <dd><a title="电影查询" href="http://movie.mtime.com/section/">电影查询</a></dd>
+            <dt><a title="电影" href="http://www.mtime.com/tv/">电视</a></dt>
+            <dd><a title="新闻" href="http://news.mtime.com/tv/">新闻</a></dd>
+            <dd><a title="新剧" href="http://www.mtime.com/tv/new/">新剧</a></dd>
+            <dd><a title="热播" href="http://www.mtime.com/tv/hot/">热播</a></dd>
+            <dd><a title="排行榜" href="http://www.mtime.com/tv/top/">排行榜</a></dd>
+            <dd><a title="电视剧查询" href="http://www.mtime.com/tv/section/">电视剧查询</a></dd>
+            <dt><a title="人物" href="http://people.mtime.com/">人物</a></dt>
+            <dd><a title="新闻" href="http://news.mtime.com/people/">新闻</a></dd>
+            <dd><a title="新片" href="http://people.mtime.com/gossip/">八卦</a></dd>
+            <dd><a title="热映" href="http://people.mtime.com/interview/">人物访谈</a></dd>
+            <dd><a title="排行榜" href="http://people.mtime.com/top_ten/">排行榜</a></dd>
+            <dt><a title="视频" href="http://www.mtime.com/video/">视频</a></dt>
+            <dt><a title="图片" href="http://www.mtime.com/picture/">图片</a></dt>
+            <dt><a title="博客" href="http://i.mtime.com/">博客</a></dt>
+            <dd><a title="电影电视" href="http://i.mtime.com/movietalk.html">电影电视</a></dd>
+            <dd><a title="明星时尚" href="http://i.mtime.com/buzz.html">明星时尚</a></dd>
+            <dd><a title="文化生活" href="http://i.mtime.com/lifestyle.html">文化生活</a></dd>
+            <dd><a title="相册" href="http://i.mtime.com/photo/">相册</a></dd>
+            <dd><a title="会员" href="http://i.mtime.com/member.html">会员</a></dd>
+            <dt><a title="群组" href="http://group.mtime.com/">群组</a></dt>
+            <dd><a title="我的同城" href="http://www.mtime.com/city/">我的同城</a></dd>
+            <dd><a title="活动" href="http://group.mtime.com/event/">活动</a></dd>
+            <dd><a title="热门话题" href="http://group.mtime.com/topic_hot/">热门话题</a></dd>
+            <dd><a title="群组分类" href="http://group.mtime.com/class/">群组分类</a></dd>
+            <dd><a title="群组人气榜" href="http://group.mtime.com/top/">群组人气榜</a></dd>
+            <dt><a title="游戏" href="http://www.mtime.com/fun/">游戏</a></dt>
+            <dd><a title="问答游戏" href="http://www.mtime.com/fun/quiz/">问答游戏</a></dd>
+            <dd><a title="图片评分" href="http://www.mtime.com/fun/photo/">图片评分</a></dd>
+            <dt><a title="电影院" href="http://theater.mtime.com/">电影院</a></dt>
+            <dd><a title="北京影讯" href="http://theater.mtime.com/china_beijing/">北京影讯</a></dd>
+            <dd><a title="上海影讯" href="http://theater.mtime.com/china_shanghai/">上海影讯</a></dd>
+            <dd><a title="广州影讯" href="http://theater.mtime.com/China_Guangdong_Province_Guangzhou/">广州影讯</a></dd>
+            <dd><a title="深圳影讯" href="http://theater.mtime.com/China_Guangdong_Province_Shenzen/">深圳影讯</a></dd>
+            <dd><a title="成都影讯" href="http://theater.mtime.com/China_Sichuan_Province_Chengdu/">成都影讯</a></dd>
+        </dl>
+    </map>
+    <div id="top"></div>
+    <script type="text/javascript">
+        var channelService = "http://service.channel.mtime.com";
+    </script>
+
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='" + server + version + "/utility/detail/index/' type='text/javascript'%3E%3C/script%3E"))
+    </script><script src="http://static1.mtime.cn/20160825145005/utility/detail/index/" type="text/javascript"></script><div id="topbar" pn="M16_HeadNav"><div class="headbar head-mini" id="headbar"><h1 onclick="headTrackClick('M16_HeadNav_MiddleNav')" pan="M16_HeadNav_MiddleNav"><a title="Mtime时光网" href="http://www.mtime.com">Mtime时光网</a></h1><dl class="headbarnav"><dd class=""><a href="http://www.mtime.com/" onclick="headTrackClick('M16_HeadNav_LeftNav_Index')" pan="M16_HeadNav_LeftNav_Index">首页<i></i></a></dd><dd class=""><a href="http://theater.mtime.com/" onclick="headTrackClick('M16_HeadNav_LeftNav_Theater')" pan="M16_HeadNav_LeftNav_Theater">购票<i></i></a></dd><dd class=""><a href="http://mall.mtime.com/" onclick="headTrackClick('M16_HeadNav_LeftNav_Mall')" pan="M16_HeadNav_LeftNav_Mall">正版商城<i></i><em>hot</em></a></dd><dd class=""><a href="http://news.mtime.com/" onclick="headTrackClick('M16_HeadNav_LeftNav_News')" pan="M16_HeadNav_LeftNav_News">新闻<i></i></a></dd><dd class=""><a href="http://movie.mtime.com/" onclick="headTrackClick('M16_HeadNav_LeftNav_Recent')" pan="M16_HeadNav_LeftNav_Recent">发现<i></i></a></dd><dd class=""><a href="http://www.mtime.com/community/" onclick="headTrackClick('M16_HeadNav_LeftNav_Community')" pan="M16_HeadNav_LeftNav_Community">社区<i></i></a></dd></dl><div class="headcart" id="shopbox" onclick="headTrackClick('M16_HeadNav_MiniCart_Region')" pan="M16_HeadNav_MiniCart_Region"><i class="icocart"></i><b class="numcart" id="emGoodsCount" style="display:none;">0</b><div class="headtip headcart-tip" style="display:none;"><p class="tips">您的购物车还是空的，赶快选购哦。</p></div></div><div class="headtool" id="loginbox"><i class="line"></i><div class="headunlogin"><a href="javascript:void(0);" onclick="headTrackClick('M16_HeadNav_User_SignIn')" pan="M16_HeadNav_User_SignIn">登录<i></i></a><em></em><a href="javascript:void(0);" onclick="headTrackClick('M16_HeadNav_User_Reg')" pan="M16_HeadNav_User_Reg">注册</a></div><div class="headtip login-tip" style="display: none;"><dl class="logintool"><dt><strong>为爱电影的人</strong> For people who love movies</dt><dd class="userlogin"><ul><li class=""><label class="name">用户名：</label><input value="输入电子邮箱/手机号" class="tip c_a5" type="text"><i class="ico_false"></i></li><li class=""><label class="password">输入密码：</label><input value="" class="tip c_a5" type="password"><i class="ico_false"></i></li><li class="" style="display:none"><label class="code">输入验证码：</label><input value="输入验证码" class="tip c_a5" type="text"><i class="ico_false"></i></li></ul><p class="usertip"><a href="http://my.mtime.com/member/forget_password/" target="_blank" class="fr">忘记密码</a><i class="ico_m_check"></i>下次自动登录</p><div class="loginbtn"><a href="javascript:void(0);" class="btnblue __r_c_" pan="M16_HeadNav_User_SignInBtn">登录</a><a href="javascript:void(0);" class="btngrey __r_c_" pan="M16_HeadNav_User_RegBtn">成为会员</a></div></dd></dl><dl class="otherlogin"><dt>使用第三方登录</dt><dd><a href="http://passport.mtime.com/unitelogin/dispatch/weibo/web/" title="新浪" class="ico-sina __r_c_" pan="M16_HeadNav_User_SignInSina"></a><a href="http://passport.mtime.com/unitelogin/dispatch/qq/web/" title="QQ" class="ico-qq __r_c_" pan="M16_HeadNav_User_SignInQq"></a></dd></dl></div></div><div class="headtool" id="emailbox" style="display:none;"><i class="line"></i><a href="javascript:void(0)" class="headmessage" id="headmessage"><i></i><em class="ico-message"></em></a></div><div class="headtool" id="appDownloadbox"><i class="line"></i><a href="javascript:void(0)" class="headqr" onclick="headTrackClick('M16_HeadNav_Qrcode_Btn')" pan="M16_HeadNav_Qrcode_Btn"><i></i><em class="ico-app"></em><span>App下载</span><b></b></a><div class="headtip qrcode-tip" style="display:none;"><a href="http://feature.mtime.com/mobile/" target="_blank" onclick="headTrackClick('M16_HeadNav_Qrcode_Down')" pan="M16_HeadNav_Qrcode_Down"><i class="qrcode" id="qrcodeimg"><img src="http://img31.mtime.cn/mg/2016/08/24/134023.34374055.jpg" alt="扫描二维码下载APP"></i></a></div></div><div class="headtool" id="searchbox"><a href="javascript:void(0)" class="headzoom"><em class="zoom" title="搜索" pan="M16_HeadNav_Sreach_Tool_Zoom"></em></a><div class="headsearch" style="width:395px;display:none;"><div class="topsearch"><div class="searchshadow"><div class="selctsearch"><strong>全部</strong><i></i><span>|</span></div><div class="selectshow" style="display:none;"><ul><li searchtype="0" pan="M16_HeadNav_Search_type0" class="__r_c_">全部</li><li searchtype="1" pan="M16_HeadNav_Search_type1" class="__r_c_">电影</li><li searchtype="3" pan="M16_HeadNav_Search_type3" class="__r_c_">影人</li><li searchtype="2" pan="M16_HeadNav_Search_type2" class="__r_c_">影院</li><li searchtype="4" pan="M16_HeadNav_Search_type4" class="__r_c_">商品</li><li searchtype="5" pan="M16_HeadNav_Search_type5" class="__r_c_">新闻</li></ul></div><input class="text c_a5" value="" autocomplete="off" type="text"><a href="javascript:void(0);" class="button __r_c_" title="搜索" pan="M16_HeadNav_Search_Btn_0"><i></i></a></div><div class="showsearch" style="display:none;"></div></div></div></div></div></div><div id="managerHistoryRegion"></div>
+
+    <div class="newshead " style="background-color:; background-image:url();">	<div class="newsheader "><div class="" id="M14_B_CMSNews_Common_HeadTG"><div class="tc mt15">
+        <iframe src="http://static1.mtime.cn/tg/2011/2014_Specificnews_top_banner_1000x90.html" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" width="1000" height="90" frameborder="0"></iframe>
+    </div></div>    	<div class="newsheadtit">        	<h2>《奇异博士》曝一批新照及宣传片</h2>            <h3>首次出现幽默元素 10月抢映IMAX 3D选段</h3>        </div>        <p class="mt15 ml25 newstime ">2016-09-28 08:14:54 	<span class="ml15">        <a href="http://www.mtime.com/">来源：Mtime时光网</a>        </span> <span><a href="http://news.mtime.com/comment/news/?id=1560181&amp;order=1" class="icon_nbbs" title="评论"></a><a href="http://news.mtime.com/comment/news/?id=1560181&amp;order=1" id="commentCount">66</a></span></p>    </div>    <div class="vmticket none" pictype="h" id="showTimeInfo"></div></div>        <div class="newsalbumout">            <div class="newsimgbox">                <div class="newsimgtab" style="height: 414px; left: 0px;">		    <div class="db_picloading" style="height: 100%; z-index: 1; display: none;"><div class="load104 load104_b"><i class="logo"></i><i class="loadimg"></i></div></div>                    <dl id="pixSlidesRegion" style="width: 2100px;"><dd><img src="http://img5.mtime.cn/CMS/Gallery/2016/09/28/091815.14308850_1000.jpg" alt="" style="margin-top: 0px;" width="283" height="414"></dd></dl>                </div>                <a class="lastpic" id="pixPrev" href="javascript:void(0);" style="">                    <span style="display: none;">上一张</span>                </a>                <a class="nextpic" id="pixNext" href="javascript:void(0);" style="">                    <span style="display: none;">下一张</span>                </a>                <div class="newsallimg" id="showPixThumbnail" style="">                    <i class="bg"></i>                    <i class="icon_nallimg"></i>                    <span>查看全部</span>                </div>                <a title="查看原图" href="javascript:void(0);" class="piczoom" id="showPixOriginal" style="display: none;">                    <i></i>                    <em></em>                </a>                <div class="newsimgtit" style="">                    <span class="pagenum" id="pixPage">1 / 13<i></i></span>                    <div class="newsimgtiter">                       <span class="bg"></span>                       <p id="pixSummary">IMAX版海报</p>                    </div>                </div>                <div class="newsimglist" style="display:none;">                    <span class="bg"></span>                    <span class="close"></span>                    <div><dl id="pixThumbnailRegion"></dl></div>                <div class="endbox" id="pixCommendRegion">                <p class="endtit">已浏览完所有图片，您可以：<a class="activenext" href="javascript:void(0)" id="pixReplay" style="margin-right:7px;">重新浏览</a><a class="activenext" href="http://news.mtime.com" target="_blank">进入新闻频道</a></p>                <p class="line_soild">&nbsp;</p>	<div>
+        <h3 class="px14">热门图片：</h3>
+        <div class="tui_list">
+            <ul class="clearfix">
+                <li>
+                    <p> <a href="http://news.mtime.com/2016/08/19/1558850.html" title="欧美明星一周街拍 娜塔莉被白色&quot;袭击&quot;了" target="_blank"><img src="http://img31.mtime.cn/mg/2016/08/31/184814.87690633_200X150X4.jpg" alt="欧美明星一周街拍 娜塔莉被白色&quot;袭击&quot;了"></a> </p>
+                    <p class="mt3"> <a href="http://news.mtime.com/2016/08/19/1558850.html" target="_blank">欧美明星一周街拍 娜塔莉被白色"袭击"了</a> </p>
+                </li>
+                <li>
+                    <p> <a href="http://news.mtime.com/2016/08/24/1558993.html" title="劳伦斯蝉联福布斯2016最赚钱女演员" target="_blank"><img src="http://img31.mtime.cn/mg/2016/08/31/184832.52343978_200X150X4.jpg" alt="劳伦斯蝉联福布斯2016最赚钱女演员"></a> </p>
+                    <p class="mt3"> <a href="http://news.mtime.com/2016/08/24/1558993.html" target="_blank">劳伦斯蝉联福布斯2016最赚钱女演员</a> </p>
+                </li>
+                <li>
+                    <p> <a href="http://news.mtime.com/2016/08/31/1559225.html" title="百威风暴电音节上海站公布首批阵容" target="_blank"><img src="http://img31.mtime.cn/mg/2016/08/31/184735.52142493_200X150X4.jpg" alt="百威风暴电音节上海站公布首批阵容"></a> </p>
+                    <p class="mt3"> <a href="http://news.mtime.com/2016/08/31/1559225.html" target="_blank">百威风暴电音节上海站公布首批阵容</a> </p>
+                </li>
+                <li>
+                    <p> <a href="http://news.mtime.com/2016/08/24/1558985.html" title="《雷神3》片场照奥丁现身 霍普金斯调皮吐舌挥手" target="_blank"><img src="http://img31.mtime.cn/mg/2016/08/31/184558.11057573_200X150X4.jpg" alt="《雷神3》片场照奥丁现身 霍普金斯调皮吐舌挥手"></a> </p>
+                    <p class="mt3"> <a href="http://news.mtime.com/2016/08/24/1558985.html" target="_blank">《雷神3》片场照奥丁现身 霍普金斯调皮吐舌挥手</a> </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>                </div>            </div>        </div><div class="newsimgcont">        <div class="newscont"><div class="newsconter clearfix">                <div class="newsl">			<div class="newsnote"><i class="icon_note "></i>漫威近日曝光《奇异博士》一款新电视宣传片，以及一批新剧照、幕后工作照和角色海报。宣传片中首次出现幽默元素，奇异博士名字被拿来开涮。漫威将于10月10日提前试映该片的IMAX 3D选段。</div>			<div class="newstext" id="newsContent"><div><div class="newspictool left"><div><div class="newspictooler" style="font-weight: bold; height: 181px;"><div vid="62687" class="imgtool"><img src="http://img5.mtime.cn/mg/2016/09/28/072628.52246863_310X0X4.jpg" width="310"><em class="video" title="播放视频"></em></div></div><p>《奇异博士》电视宣传片</p></div></div><b>&#12288;&#12288;时光网讯</b> 漫威近日曝光<a href="http://movie.mtime.com/108737/" target="_blank" class="tagnews" method="movieidcard" movieid="108737">《奇异博士》</a>一款新电视宣传片，以及一批新剧照、幕后工作照和角色海报。宣传片中首次出现幽默元素，奇异博士的名字被拿来开涮。虽然漫威电影肯定会包含笑话，但《奇异博士》此前的预告片都极为严肃，尽力想表达这是第一部探索魔法领域的漫威电影。幽默元素能帮助展现角色们是如何看待自己的，以及他们是如何看待彼此的。而新曝光的这批照片则很好地展现了该片宽广的景观，从奇异博士的源起曼哈顿到喜马拉雅山上的古殿堂卡玛·泰姬都有呈现。</div><div><br></div><div>&#12288;&#12288;《奇异博士》将于11月4日在北美上映。漫威将在10月10日晚7点在北美超过115家影院举行《奇异博士》选段的IMAX 3D抢映，将展现“令人激动的、从未公开的3D片段。”据导演<a href="http://people.mtime.com/902827/" target="_blank" class="tagnews" method="personidcard" personid="902827">斯科特·德瑞克森</a>透露，成片将包含超过一个小时的特殊格式IMAX片段。</div><div><br></div><div>&#12288;&#12288;影片讲述出色的神经外科医生斯蒂芬·斯特兰奇（奇异博士）在遭遇了一次车祸悲剧之后，必须将自负抛在一边，学习一个不为人知的玄学、多维空间世界的秘密。在纽约的格林威治村，奇异博士将充当起现实世界和世外的中间人，利用浩瀚的超自然的能力和神器来保护漫威电影宇宙。</div><div><br></div><div>&#12288;&#12288;奇异博士由“卷福”<a href="http://people.mtime.com/938777/" target="_blank" class="tagnews" method="personidcard" personid="938777">本尼迪克特·康伯巴奇</a>饰演，其他主演包括<a href="http://people.mtime.com/912560/" target="_blank" class="tagnews" method="personidcard" personid="912560">蒂尔达·斯文顿</a>、<a href="http://people.mtime.com/915103/" target="_blank" class="tagnews" method="personidcard" personid="915103">切瓦特·埃加福特</a>、<a href="http://people.mtime.com/913686/" target="_blank" class="tagnews" method="personidcard" personid="913686">瑞秋·麦克亚当斯</a>、<a href="http://people.mtime.com/925272/" target="_blank" class="tagnews" method="personidcard" personid="925272">麦斯·米科尔森</a>、<a href="http://people.mtime.com/945118/" target="_blank" class="tagnews" method="personidcard" personid="945118">本尼迪特·王</a>等。</div><p class="newsediter">&nbsp;&nbsp;&nbsp;编辑：非洲小白脸</p></div>           <div class="newswarm">[ Mtime时光网专稿 未经许可不得转载 ]</div>			   <div class="newskeyword clearfix lh18">关键词：						<a href="/search/tag/index.html?t=漫威">漫威</a>						<a href="/search/tag/index.html?t=奇异博士">奇异博士</a>						<a href="/search/tag/index.html?t=电视宣传片">电视宣传片</a>						<a href="/search/tag/index.html?t=剧照">剧照</a>						<a href="/search/tag/index.html?t=海报">海报</a>						<a href="/search/tag/index.html?t=工作照">工作照</a>						<a href="/search/tag/index.html?t=IMAX">IMAX</a>						<a href="/search/tag/index.html?t=3D">3D</a>						<a href="/search/tag/index.html?t=抢映">抢映</a>			   </div>          <img src="http://static1.mtime.cn/feature/2015/news/code.jpg" class="mt15" alt="关注时光网微信" width="620" height="180">                        <div class="newslink3">        	        <h4>相关文章</h4>                    <ul>            	            <li><a href="http://news.mtime.com/2016/09/25/1560094.html" target="_blank">"小丑"莱托差点成了"奇异博士" "卷福"险因话剧《哈姆雷特》错失主演机会</a></li>            	            <li><a href="http://news.mtime.com/2016/09/19/1559886.html" target="_blank">《奇异博士》10月香港全球首站宣传 本尼、斯文顿将赴港 大陆还未定档</a></li>            	            <li><a href="http://news.mtime.com/2016/09/18/1559754.html" target="_blank">《奇异博士》推出1：6珍藏人偶 康伯巴奇蜡像级头雕 服饰100%还原电影细节</a></li>                    </ul>                </div>                </div>                        <div class="newsr">        <div id="M14_B_CMSNews_Common_SquareTG1"></div>        <div id="newsECommerceInfo"><div class="storelinks"><div class="clearfix"><a class="fr px14" href="http://mall.mtime.com" target="_blank">更多商品<i class="gt"></i></a><h4>推荐商品</h4></div><div class="storeboxer __r_c_" id="storyRegion" pan="M14_B_CMSNews_Common_Commodity Recommendation"><dl style="width: 1600px; left: -600px;" class="clearfix" id="goodsRegion"><dd><ul class="clearfix"><li goodsid="100621"><a title="Hot Toys反浩克装甲" target="_blank" href="http://item.mall.mtime.com/100621/"><img alt="Hot Toys反浩克装甲" src="http://img31.mtime.cn/mg/2015/03/04/151504.58318303_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/100621/">Hot Toys反浩克装甲</a></h3><p class="c_red" data-selector="price">￥<em>4700</em></p></li><li goodsid="102422"><a title="HT美队3美国队长" target="_blank" href="http://item.mall.mtime.com/102422/"><img alt="HT美队3美国队长" src="http://img31.mtime.cn/mg/2016/02/22/153317.32637326_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102422/">HT美队3美国队长</a></h3><p class="c_red" data-selector="price">￥<em>1330</em></p></li><li goodsid="103291"><a title="哆啦A梦毛绒公仔" target="_blank" href="http://item.mall.mtime.com/103291/"><img alt="哆啦A梦毛绒公仔" src="http://img31.mtime.cn/mg/2016/07/20/115039.11325333_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103291/">哆啦A梦毛绒公仔</a></h3><p class="c_red" data-selector="price">￥<em>29</em></p></li><li goodsid="101832"><a title="星战光剑充电宝" target="_blank" href="http://item.mall.mtime.com/101832/"><img alt="星战光剑充电宝" src="http://img31.mtime.cn/mg/2015/12/09/220736.96001968_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/101832/">星战光剑充电宝</a></h3><p class="c_red" data-selector="price">￥<em>249</em></p></li></ul></dd><dd><ul class="clearfix"><li goodsid="103282"><a title="HTMark42 1:4豪华版" target="_blank" href="http://item.mall.mtime.com/103282/"><img alt="HTMark42 1:4豪华版" src="http://img31.mtime.cn/mg/2016/07/08/102149.81150653_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103282/">HTMark42 1:4豪华版</a></h3><p class="c_red" data-selector="price">￥<em>3460</em></p></li><li goodsid="103221"><a title="HT死侍Cosbaby套装" target="_blank" href="http://item.mall.mtime.com/103221/"><img alt="HT死侍Cosbaby套装" src="http://img31.mtime.cn/mg/2016/06/17/195320.80903540_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103221/">HT死侍Cosbaby套装</a></h3><p class="c_red" data-selector="price">￥<em>265</em></p></li><li goodsid="103404"><a title="HT小丑&amp;小丑女" target="_blank" href="http://item.mall.mtime.com/103404/"><img alt="HT小丑&amp;小丑女" src="http://img31.mtime.cn/mg/2016/08/03/171051.55090076_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103404/">HT小丑&amp;小丑女</a></h3><p class="c_red" data-selector="price">￥<em>180</em></p></li><li goodsid="102354"><a title="蝙蝠侠随行咖啡杯" target="_blank" href="http://item.mall.mtime.com/102354/"><img alt="蝙蝠侠随行咖啡杯" src="http://img31.mtime.cn/mg/2016/02/01/180459.48318731_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102354/">蝙蝠侠随行咖啡杯</a></h3><p class="c_red" data-selector="price">￥<em>59</em></p></li></ul></dd><dd><ul class="clearfix"><li goodsid="100571"><a title="钢铁侠3豪华套装" target="_blank" href="http://item.mall.mtime.com/100571/"><img alt="钢铁侠3豪华套装" src="http://img31.mtime.cn/mg/2015/02/06/173927.75319116_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/100571/">钢铁侠3豪华套装</a></h3><p class="c_red" data-selector="price">￥<em>320</em></p></li><li goodsid="103283"><a title="HT生化1:6王艾达" target="_blank" href="http://item.mall.mtime.com/103283/"><img alt="HT生化1:6王艾达" src="http://img31.mtime.cn/mg/2016/07/07/104455.30627541_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103283/">HT生化1:6王艾达</a></h3><p class="c_red" data-selector="price">￥<em>1300</em></p></li><li goodsid="102435"><a title="蝙蝠侠战机小夜灯" target="_blank" href="http://item.mall.mtime.com/102435/"><img alt="蝙蝠侠战机小夜灯" src="http://img31.mtime.cn/mg/2016/03/15/113932.92260081_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102435/">蝙蝠侠战机小夜灯</a></h3><p class="c_red" data-selector="price">￥<em>128</em></p></li><li goodsid="102149"><a title="蝙蝠侠黑暗骑士抱枕" target="_blank" href="http://item.mall.mtime.com/102149/"><img alt="蝙蝠侠黑暗骑士抱枕" src="http://img31.mtime.cn/mg/2016/03/03/154128.29013294_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102149/">蝙蝠侠黑暗骑士抱枕</a></h3><p class="c_red" data-selector="price">￥<em>39</em></p></li></ul></dd><dd><ul class="clearfix"><li goodsid="103276"><a title="HT1:6汉索罗&amp;楚巴卡" target="_blank" href="http://item.mall.mtime.com/103276/"><img alt="HT1:6汉索罗&amp;楚巴卡" src="http://img31.mtime.cn/mg/2016/07/08/100633.91015474_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103276/">HT1:6汉索罗&amp;楚巴卡</a></h3><p class="c_red" data-selector="price">￥<em>3150</em></p></li><li goodsid="103316"><a title="GSC木之本樱-天使冠" target="_blank" href="http://item.mall.mtime.com/103316/"><img alt="GSC木之本樱-天使冠" src="http://img31.mtime.cn/mg/2016/07/26/142708.68639535_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103316/">GSC木之本樱-天使冠</a></h3><p class="c_red" data-selector="price">￥<em>192</em></p></li><li goodsid="103404"><a title="HT小丑女&amp;小丑" target="_blank" href="http://item.mall.mtime.com/103404/"><img alt="HT小丑女&amp;小丑" src="http://img31.mtime.cn/mg/2016/08/03/171051.55090076_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103404/">HT小丑女&amp;小丑</a></h3><p class="c_red" data-selector="price">￥<em>180</em></p></li><li goodsid="102173"><a title="兔子警官IP手机壳" target="_blank" href="http://item.mall.mtime.com/102173/"><img alt="兔子警官IP手机壳" src="http://img31.mtime.cn/mg/2016/02/06/113059.42741144_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102173/">兔子警官IP手机壳</a></h3><p class="c_red" data-selector="price">￥<em>78</em></p></li></ul></dd><dd><ul class="clearfix"><li goodsid="103337"><a title="超能敢死队印花T恤" target="_blank" href="http://item.mall.mtime.com/103337/"><img alt="超能敢死队印花T恤" src="http://img31.mtime.cn/mg/2016/07/29/175431.65562833_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103337/">超能敢死队印花T恤</a></h3><p class="c_red" data-selector="price">￥<em>299</em></p></li><li goodsid="102647"><a title="美国队长炫酷充电宝" target="_blank" href="http://item.mall.mtime.com/102647/"><img alt="美国队长炫酷充电宝" src="http://img31.mtime.cn/mg/2016/08/22/201757.90296644_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102647/">美国队长炫酷充电宝</a></h3><p class="c_red" data-selector="price">￥<em>60</em></p></li><li goodsid="103265"><a title="KITTY奶瓶型保温杯" target="_blank" href="http://item.mall.mtime.com/103265/"><img alt="KITTY奶瓶型保温杯" src="http://img31.mtime.cn/mg/2016/07/07/151851.60956042_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/103265/">KITTY奶瓶型保温杯</a></h3><p class="c_red" data-selector="price">￥<em>268</em></p></li><li goodsid="102419"><a title="HT蝙超Cosbaby套装" target="_blank" href="http://item.mall.mtime.com/102419/"><img alt="HT蝙超Cosbaby套装" src="http://img31.mtime.cn/mg/2016/02/19/105031.65208000_142X142X4.jpg" width="142" height="142"></a><h3><a target="_blank" href="http://item.mall.mtime.com/102419/">HT蝙超Cosbaby套装</a></h3><p class="c_red" data-selector="price">￥<em>175</em></p></li></ul></dd></dl></div><div class="per_expnav"><a id="goodsPreBtn" class="" href="#" onclick="return false;">&lt;</a><strong id="presentNumber">3</strong><span id="sumNumber">/5</span><a id="goodsNextBtn" class="next">&gt;</a></div></div></div>    	    	        <div class="newslinks">        	        <h4>相关电影/影人</h4>                    <dl id="relatedInfos">                            <dd style="">                	            <a href="http://movie.mtime.com/108737/" target="_blank" title="奇异博士"><img src="http://img31.mtime.cn/mt/2016/09/09/094012.65710141_96X128.jpg" alt="奇异博士"></a>                                    <h3><a href="http://movie.mtime.com/108737/" target="_blank">奇异博士 (2016)</a></h3>                                    <div class="mt9 pb6 none"><span class="db_point" id="newsRelatedMovieId_108737">-1.0</span></div>                                        <p>导演：<a href="http://people.mtime.com/902827/" target="_blank">斯科特·德瑞克森</a></p>                                                <p>主演：<a href="http://people.mtime.com/938777/" target="_blank">本尼迪克特·康..</a></p>                            </dd>                            <dd style="">                	            <a href="http://people.mtime.com/902827/" target="_blank" title="斯科特·德瑞克森"><img src="http://img31.mtime.cn/ph/2014/02/22/194024.33296532_96X128.jpg" alt="斯科特·德瑞克森"></a>                                    <h3><a href="http://people.mtime.com/902827/" target="_blank">斯科特·德瑞克森</a></h3>                                    <p class="engname">Scott Derrickson</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_902827"><i></i>73%</span></div>                                    <div class="mt15">职业：导演 | 编剧 | 制作人 | 演员 | 剪辑</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/938777/" target="_blank" title="本尼迪克特·康伯巴奇"><img src="http://img31.mtime.cn/ph/2014/03/16/200855.52534638_96X128.jpg" alt="本尼迪克特·康伯巴奇"></a>                                    <h3><a href="http://people.mtime.com/938777/" target="_blank">本尼迪克特·康伯巴奇</a></h3>                                    <p class="engname">Benedict Cumberbatch</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_938777"><i></i>89%</span></div>                                    <div class="mt15">职业：演员 | 制作人</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/912560/" target="_blank" title="蒂尔达·斯文顿"><img src="http://img31.mtime.cn/ph/2014/10/29/103606.63235048_96X128.jpg" alt="蒂尔达·斯文顿"></a>                                    <h3><a href="http://people.mtime.com/912560/" target="_blank">蒂尔达·斯文顿</a></h3>                                    <p class="engname">Tilda Swinton</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_912560"><i></i>89%</span></div>                                    <div class="mt15">职业：演员 | 制作人</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/915103/" target="_blank" title="切瓦特·埃加福特"><img src="http://img31.mtime.cn/ph/2016/08/29/141636.91526872_96X128.jpg" alt="切瓦特·埃加福特"></a>                                    <h3><a href="http://people.mtime.com/915103/" target="_blank">切瓦特·埃加福特</a></h3>                                    <p class="engname">Chiwetel Ejiofor</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_915103"><i></i>82%</span></div>                                    <div class="mt15">职业：演员</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/913686/" target="_blank" title="瑞秋·麦克亚当斯"><img src="http://img31.mtime.cn/ph/2014/03/14/200200.57045741_96X128.jpg" alt="瑞秋·麦克亚当斯"></a>                                    <h3><a href="http://people.mtime.com/913686/" target="_blank">瑞秋·麦克亚当斯</a></h3>                                    <p class="engname">Rachel McAdams</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_913686"><i></i>90%</span></div>                                    <div class="mt15">职业：演员</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/925272/" target="_blank" title="麦斯·米科尔森"><img src="http://img31.mtime.cn/ph/2014/02/22/200755.24765397_96X128.jpg" alt="麦斯·米科尔森"></a>                                    <h3><a href="http://people.mtime.com/925272/" target="_blank">麦斯·米科尔森</a></h3>                                    <p class="engname">Mads Mikkelsen</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_925272"><i></i>87%</span></div>                                    <div class="mt15">职业：演员</div>                            </dd>                            <dd style="display:none;">                	            <a href="http://people.mtime.com/945118/" target="_blank" title="本尼迪特·王"><img src="http://img31.mtime.cn/ph/2014/04/30/114750.12674683_96X128.jpg" alt="本尼迪特·王"></a>                                    <h3><a href="http://people.mtime.com/945118/" target="_blank">本尼迪特·王</a></h3>                                    <p class="engname">Benedict Wong</p>                                    <div class="px14 mt12"><span class="db_perpoint" style="margin-left:0;" id="newsRelatedPersonId_945118"><i></i>68%</span></div>                                    <div class="mt15">职业：演员</div>                            </dd>                            <dt><a href="javascript:void(0);" id="showMoreRelatedInfos">显示更多∨</a></dt>                    </dl>                </div>                <div id="M14_B_CMSNews_Common_SquareTG2"></div>                    </div>        </div>    </div>        <div id="M14_B_CMSNews_CommentAboveTG"></div></div>    <div class="ele_bbscont ">    <div class="ele_bbsconter clearfix">
+        <div class="ele_bbsleft " id="commentRegion">
+            <a name="comment"></a>
+            <h3>会员评论 <span id="totalCountRegion" class="">(<a id="totalComments" href="http://news.mtime.com/comment/news/?id=1560181&amp;order=1">66</a>)</span></h3>
+
+            <div class="ele_bbsarea clearfix">
+                <div class="ele_bbsuser" id="userArea"><img alt="匿名" src="http://img1.mtime.cn/images/default/head_48X48.gif" width="48" height="48"><p class="mt5">匿名</p></div>
+                <div class="ele_bbstextarea" id="commentBoxArea">
+                    <textarea class="c_a5 ele_textarea" id="commentConTextArea"></textarea>
+                    <p class="mt9 clearfix"><span class="c_red fl ml9 pt6" id="msg"></span>
+                    </p><p class="mb12" style="" id="vArea">验证码：<input style="width:120px;" id="vText" method="code" value="点击获取验证码" class="c_a5" type="text"><span id="vimgArea"></span></p>
+                    <span style="display:none;" id="synTwitter"></span>
+                    <a href="javascript:void(0);" method="submit" class="btn_dblue">发表</a>
+                    <p></p>
+                </div>
+            </div>
+
+
+            <div class="ele_bbslist" style="">
+                <dl id="commentList">
+                    <dd commentid="4324936" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 16:20:45">51分钟前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">不愿等的话那你们就坐飞机去台湾或者香港看好了，台湾今年10.26上，香港10.27就上！内地么明年1月4号</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324936" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324936">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>1</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                        <li commentid="4324942">
+                                            <div class="user_box"><img src="http://img2.mtime.cn/images/default/head_32X32.gif" alt="匿名" width="32" height="32"></div>
+                                            <p class="px14">匿名<span class="ml15" entertime="2016-09-28 16:27:02">45分钟前</span></p>
+                                            <p class="lh18 mt3">这位匿名兄你真可爱，几层楼刷屏一样发这个，你是哪里来的消息源说明年才上呢，真是好奇得不得了</p>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324934" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 16:18:08">54分钟前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">反正国内的朋友们今年就别指望了，内地今年上不了了已经改档到2017年01月04号了！等明年吧！</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324934" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324934">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324918" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <a href="http://my.mtime.com/16495954/" target="_blank" title="终于想了个好名字"><img src="http://img32.mtime.cn/up/2016/08/01/103059.47642224_48X48.jpg" alt="终于想了个好名字" width="48" height="48"></a><p class="mt5"><a href="http://my.mtime.com/16495954/" target="_blank">终于想了个好名字</a></p>
+                            <p class="mt6" entertime="2016-09-28 16:02:00">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">期待，好久定档？</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324918" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324918">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324905" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 15:50:52">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">漫威就是抄袭dc的垃圾货</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324905" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324905">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324904" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 15:49:59">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">毫无疑问的大烂片，漫威就是被dc吊打的垃圾</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324904" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324904">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324903" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 15:49:10">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">漫威已经彻底在竞争中输给dc了</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324903" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324903">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324898" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <img src="http://img2.mtime.cn/images/default/head_48X48.gif" alt="匿名" width="48" height="48"><p class="mt5">匿名</p>
+                            <p class="mt6" entertime="2016-09-28 15:48:32">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">垃圾烂片一部。漫威已经彻底被dc踩在脚下了</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324898" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324898">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324866" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <a href="http://my.mtime.com/2247529/" target="_blank" title="shien"><img src="http://img22.mtime.cn/up/2011/06/13/122737.92027096_48X48.jpg" alt="shien" width="48" height="48"></a><p class="mt5"><a href="http://my.mtime.com/2247529/" target="_blank">shien</a></p>
+                            <p class="mt6" entertime="2016-09-28 15:15:48">1小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">上次的WIFI密码不算幽默元素？？？</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324866" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324866">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324863" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <a href="http://my.mtime.com/257571/" target="_blank" title="普罗米修斯A"><img src="http://img22.mtime.cn/up/2011/10/07/221431.42750309_48X48.jpg" alt="普罗米修斯A" width="48" height="48"></a><p class="mt5"><a href="http://my.mtime.com/257571/" target="_blank">普罗米修斯A</a></p>
+                            <p class="mt6" entertime="2016-09-28 15:11:38">2小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">这特效夜太没新意了吧，满满的扑街像</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324863" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324863">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dd commentid="4324859" expend="0" loaded="0">
+                        <i class="line"></i>
+                        <div class="user_box">
+                            <a href="http://my.mtime.com/12743347/" target="_blank" title="jazine"><img src="http://img32.mtime.cn/up/2014/08/29/123227.79876665_48X48.jpg" alt="jazine" width="48" height="48"></a><p class="mt5"><a href="http://my.mtime.com/12743347/" target="_blank">jazine</a></p>
+                            <p class="mt6" entertime="2016-09-28 15:05:23">2小时前</p>
+                        </div>
+                        <div class="user_cont">
+                            <div class="user_conter">
+                                <p class="px14 lh18">魔法还得看哈利波特。</p>
+                                <div class="ele_replay clearfix">
+                                    <div class="textarea" style="height: 30px;">
+                                        <textarea method="comment" id="tbox4324859" class="c_a5" toggle="0" style="height: 30px;">发表评论</textarea>
+                                        <i></i>
+                                    </div>
+                                    <div tweetid="22533531" class="db_comtool tr mt20" commentid="4324859">
+                                        <a href="#" method="praise" onclick="return false;" title="赞" class="com_good"><i title="赞"></i>0</a>
+                                        <a href="#" method="share" onclick="return false;" title="转发" class="com_share"><i title="转发"></i>0</a>
+                                        <a href="#" onclick="return false;" title="评论" class="com_bbs"><i title="评论"></i>0</a>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <ul class="my_replies" style=";">
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </dd>
+                    <dt><a method="more" id="moreCommentUrl" href="http://news.mtime.com/comment/news/?id=1560181&amp;order=1">更多 <em>66</em> 条评论 <i class="gt"></i></a></dt>
+                </dl>
+
+            </div>
+        </div><div class="ele_bbsright">    <div id="M14_B_CMSNews_Common_SquareTG3"></div>    <div id="weekHotRegion" class="news_weekhot">
+        <h4 class="news_tvtit">本周热读</h4>
+        <dl class="__r_c_" pan="M14_NewsIndex_WeekHot">
+            <dd>
+                <i class="num">1</i>
+                <h3>
+                    <a href="http://news.mtime.com/2016/09/22/1559972.html" target="_blank">景甜确认出演《环太平洋2》</a>
+                </h3>
+                <p>搭档《星战7》黑人男星 影片2018年2月北美开画</p>
+
+                <div class="weekhotvideo">
+                    <div class="news_imgctrl">
+                        <a href="http://news.mtime.com/2016/09/22/1559972.html" target="_blank"><img src="http://img5.mtime.cn/mg/2016/09/22/085450.29890159_143X80X4.jpg" width="143" height="80">
+                        </a>
+                    </div>
+                    <div>传奇影业9月21日宣布，中国女演员景甜将搭档约翰·波耶..</div>
+                </div>
+            </dd>
+            <dd>
+                <i class="num">2</i>
+                <h3>
+                    <a href="http://news.mtime.com/2016/09/23/1560023.html" target="_blank">《乌玛卡㻝》首曝预告 又一部国产科幻来了</a>
+                </h3>
+                <p>王珞丹主演  2018年网剧播出  2019年电影上映</p>
+
+                <div class="weekhotvideo">
+                    <div class="news_imgctrl">
+                        <a href="http://news.mtime.com/2016/09/23/1560023.html" target="_blank"><img src="http://img5.mtime.cn/mg/2016/09/23/100431.82172611_143X80X4.jpg" width="143" height="80">
+                            <i class="video" title="视频"></i>
+                        </a>
+                    </div>
+                    <div>国产科幻片《乌玛卡㻝》首曝10分钟的先导预告，王珞丹作..</div>
+                </div>
+            </dd>
+            <dd>
+                <i class="num">3</i>
+                <h3>
+                    <a href="http://news.mtime.com/2016/09/23/1560049.html" target="_blank">欧美明星一周街拍</a>
+                </h3>
+                <p>小李&amp;蕾哈娜继续约 温斯莱特片场扛把子?</p>
+
+                <div class="weekhotvideo">
+                    <div class="news_imgctrl">
+                        <a href="http://news.mtime.com/2016/09/23/1560049.html" target="_blank"><img src="http://img5.mtime.cn/mg/2016/09/23/150433.17652800_143X80X4.jpg" width="143" height="80">
+                            <i class="images">24</i>
+                        </a>
+                    </div>
+                    <div>在这个分手的季节，本周街拍明星云集，俊男美女个个养眼..</div>
+                </div>
+            </dd>
+            <dd>
+                <i class="num">4</i>
+                <h3>
+                    <a href="http://news.mtime.com/2016/09/21/1559961.html" target="_blank">戏谑跟风刷新底线</a>
+                </h3>
+                <p>盘点美队十大出糗事迹</p>
+
+                <div class="weekhotvideo">
+                    <div class="news_imgctrl">
+                        <a href="http://news.mtime.com/2016/09/21/1559961.html" target="_blank"><img src="http://img5.mtime.cn/mg/2016/09/25/092425.72531896_143X80X4.jpg" width="143" height="80">
+                        </a>
+                    </div>
+                    <div>时光网带你扒一扒美国队长这75年来，10大尴尬糗事和高能..</div>
+                </div>
+            </dd>
+            <dd>
+                <i class="num">5</i>
+                <h3>
+                    <a href="http://news.mtime.com/2016/09/24/1560076.html" target="_blank">《变形金刚5》新片场照惹争议</a>
+                </h3>
+                <p>丘吉尔故居变纳粹大本营 梅林魔法源自汽车人？</p>
+
+                <div class="weekhotvideo">
+                    <div class="news_imgctrl">
+                        <a href="http://news.mtime.com/2016/09/24/1560076.html" target="_blank"><img src="http://img5.mtime.cn/mg/2016/09/24/145335.32706773_143X80X4.jpg" width="143" height="80">
+                            <i class="images">3</i>
+                        </a>
+                    </div>
+                    <div>《变形金刚5》剧组在丘吉尔首相的故居布莱尼姆宫外挂上..</div>
+                </div>
+            </dd>
+        </dl>
+        <p class="tr mt12"><a href="http://news.mtime.com/hot/7/#nav" class="__r_c_" pan="M14_NewsIndex_WeekHot_MoreLink">查看更多</a></p>
+    </div>
+    </div>    </div></div><div id="M14_B_CMSNews_FooterTopTG" class="newsbotpop" style=""><div class="tc pb15 pt15">
+        <iframe src="http://static1.mtime.cn/tg/2011/2014_Specificnews_footer_banner_1000x90.html" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="true" width="1000" height="90" frameborder="0"></iframe>
+    </div></div><div id="bottom"><div class="footout"><span class="topline"></span><div class="footinner clearfix"><div class="fotlogo"><dl><dt><a href="http://www.mtime.com" title="Mtime时光网">Mtime时光网</a></dt><dd class="clearfix"><a href="http://jobs.mtime.com/">加入我们</a><a href="http://feature.mtime.com/help/contact.htm" class="ml30">联系我们</a></dd><dd class="clearfix"><a href="http://group.mtime.com/help/">站务论坛</a><a href="http://my.mtime.com/reportError/" class="ml30">问题反馈</a></dd><dd class="clearfix"><a href="http://feature.mtime.com/help/rules.htm">社区准则</a><a href="http://www.mtime.com/sitemap.htm" class="ml30">网站地图</a></dd><dd class="clearfix"><a href="http://feature.mtime.com/help/privacy.htm">隐私政策</a><a href="http://en.mtime.com/" class="ml30">English</a></dd></dl><i class="line"></i></div><div class="fotmap"><dl style="width:42px;"><dt>栏目</dt><dd><a href="http://news.mtime.com/">新闻</a></dd><dd><a href="http://theater.mtime.com/">影院</a></dd><dd><a href="http://mall.mtime.com">商城</a></dd><dd><a href="http://www.mtime.com/community/">社区</a></dd></dl><dl style="width:185px;"><dt>推荐</dt><dd><a href="http://movie.mtime.com/recent/">观影指南</a><a href="http://movie.mtime.com/boxoffice/" class="ml30">电影票房</a></dd><dd><a href="http://news.mtime.com/conversation/">时光对话</a><a href="http://video.mtime.com/trailer/" class="ml30">新片预告</a></dd><dd><a href="http://movie.mtime.com/all/list/index.html">特色榜单</a><a href="http://my.mtime.com/app/quiz/" class="ml30">电影猜猜猜</a></dd><dd><a href="http://news.mtime.com/fun/">全球拾趣</a><a href="http://my.mtime.com/app/card/" class="ml30">卡片大富翁</a></dd></dl><dl><dt>关注我们</dt><dd><a href="http://weibo.com/movietime?topnav=1&amp;wvr=5&amp;topsug=1" target="_blank" class="sina" title="新浪">新浪</a></dd><dd><a id="aWeiXinPicButton" href="javascript:void(0)" class="weixin" title="微信">微信</a></dd><dd><a href="http://www.mtime.com/rss/" target="_blank" class="rss" title="RSS">RSS</a></dd></dl><i class="line"></i><div id="divWeiXinPicContainer" class="my_layer" style="display: none;"> <em class="l_arrow">&nbsp;</em><div class="inner p15" style="width:195px;"><i></i><p>扫描二维码，微信实时关注时光网</p></div></div></div><div class="fotweek"><dl><dt class="clearfix"><span class="fr">第179期</span><strong>时光周刊</strong></dt>
+        <dd><a href="http://www.mtime.com/weekly/" target="_blank" title="时光周刊"><img src="http://img31.mtime.cn/mg/2016/08/19/103904.79768090.jpg" alt="时光周刊" width="170"></a></dd><dd class="input"><input id="iptEMail" value="邮箱地址" class="c_a5" type="text"><a id="btnSubscribe" href="javascript:void(0)">订阅</a></dd></dl></div><div class="fothr"><dl><dt><strong>手机购票</strong> 方便 实惠</dt><dd><a href="http://feature.mtime.com/mobile/" target="_blank"><i></i></a></dd><dd>扫描二维码 下载客户端</dd></dl></div></div></div><div class="db_foot"><p><span class="mr12">北京动艺时光网络科技有限公司</span>Copyright 2006-2016 Mtime.com Inc. All rights reserved.<br><a href="http://feature.mtime.com/help/icp.htm" target="_blank" class="mr12 ml12">京ICP证050715号</a> <a href="http://feature.mtime.com/help/videolicence.htm" target="_blank" class="mr12">网络视听许可证0108265号</a><a href="http://feature.mtime.com/help/network.htm" target="_blank" class="mr12">网络文化经营许可证</a><a href="http://feature.mtime.com/help/tvlicence.htm" target="_blank" class="mr12">广播电视节目制作经营许可证(京)字第1435号</a><span>京公网安备：110105000744号</span></p><div class="credible"><a href="http://feature.mtime.com/help/credible.htm" target="_blank" title="可信网站" class="credibler"></a><a href="http://feature.mtime.com/help/goodfaith.htm" target="_blank" title="诚信网站" class="goodfaith"></a></div></div></div>
+    <script type="text/javascript">  document.write(unescape("%3Cscript src='" + jsServer + "/js/systemall2014.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="http://static1.mtime.cn/20160825145005/js/systemall2014.js" type="text/javascript"></script><embed type="application/x-shockwave-flash" src="http://static1.mtime.cn/20160825145005/flash/MtimeCallback.swf?rnd=31433963" id="flashCallback" name="flashCallback" quality="high" menu="false" allowfullscreen="false" allowscriptaccess="always" wmode="transparent" width="1" height="1">
+        <script type="text/javascript">  document.write(unescape("%3Cscript src='" + subJsServer + "/js/newspagepack.js' type='text/javascript'%3E%3C/script%3E"));</script><script src="http://static1.mtime.cn/library/20160919164403/js/newspagepack.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            //页尾 导航
+            //  静态文件初始化类
+            new StaticManager({
+            });
+        </script>
+        <div style="display: none">
+            <script type="text/javascript">
+                var tracker = new Tracker();
+                tracker.trackPageView();
+            </script>
+        </div>
+        <script type="text/javascript">    var mtimeStufs = [{id:"M14_B_CMSNews_CommentAboveTG",type:"mtime",content:""},{id:"M14_B_CMSNews_Common_HeadTG",type:"mtime",content:"&lt;div class=\"tc mt15\"&gt;\n&lt;iframe  \nsrc=\"http://static1.mtime.cn/tg/2011/2014_Specificnews_top_banner_1000x90.html\" width=\"1000\" height=\"90\" frameborder=\"0\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" allowtransparency=\"true\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;"},{id:"M14_B_CMSNews_Common_SquareTG1",type:"mtime",content:""},{id:"M14_B_CMSNews_Common_SquareTG2",type:"mtime",content:""},{id:"M14_B_CMSNews_Common_SquareTG3",type:"mtime",content:""},{id:"M14_B_CMSNews_FooterTopTG",type:"mtime",content:"&lt;div class=\"tc pb15 pt15\"&gt;\n&lt;iframe  src=\"http://static1.mtime.cn/tg/2011/2014_Specificnews_footer_banner_1000x90.html\" width=\"1000\" height=\"90\" frameborder=\"0\" border=\"0\" marginwidth=\"0\" marginheight=\"0\" scrolling=\"no\" allowtransparency=\"true\"&gt;&lt;/iframe&gt;\n&lt;/div&gt;"}];    var newsID = 1560181;;    var allowAnonymousComment = true;    var synTwitter = false;    var moreCommentUrl = "http://news.mtime.com/comment/news/?id=1560181&amp;order=1";    var newsRelatedMovieIds = "108737";    var newsRelatedPersonIds = "902827,938777,912560,915103,913686,925272,945118";    var galleryImages = [{"ImageID":521229,"Title":"","Content":"IMAX版海报","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/091815.14308850_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/091815.14308850_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/091815.14308850_1280.jpg"},{"ImageID":521217,"Title":"","Content":"至尊魔法师（左）与莫度男爵","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081557.64851488_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081557.64851488_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081557.64851488_1280.jpg"},{"ImageID":521218,"Title":"","Content":"莫度男爵（左）与奇异博士","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081701.34320857_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081701.34320857_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081701.34320857_1280.jpg"},{"ImageID":521219,"Title":"","Content":"奇异博士（中）","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081757.20949380_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081757.20949380_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081757.20949380_1280.jpg"},{"ImageID":521220,"Title":"","Content":"莫度男爵（中）","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081857.31685688_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081857.31685688_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081857.31685688_1280.jpg"},{"ImageID":521221,"Title":"","Content":"奇异博士与外科护士克里斯蒂娜·帕尔默（右）","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081950.35546292_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081950.35546292_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/081950.35546292_1280.jpg"},{"ImageID":521222,"Title":"","Content":"至尊魔法师（左）与奇异博士","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082108.88504261_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082108.88504261_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082108.88504261_1280.jpg"},{"ImageID":521223,"Title":"","Content":"奇异博士本尼迪克特·康伯巴奇（左）与导演斯科特·德瑞克森","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082159.28975588_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082159.28975588_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082159.28975588_1280.jpg"},{"ImageID":521224,"Title":"","Content":"导演斯科特·德瑞克森","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082245.30771415_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082245.30771415_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082245.30771415_1280.jpg"},{"ImageID":521225,"Title":"","Content":"奇异博士本尼迪克特·康伯巴奇（左）与导演斯科特·德瑞克森","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082349.85806617_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082349.85806617_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082349.85806617_1280.jpg"},{"ImageID":521226,"Title":"","Content":"外科护士克里斯蒂娜·帕尔默角色海报","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082448.51225256_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082448.51225256_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082448.51225256_1280.jpg"},{"ImageID":521227,"Title":"","Content":"Wong（本尼迪特·王 饰）角色海报","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082516.86200113_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082516.86200113_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082516.86200113_1280.jpg"},{"ImageID":521228,"Title":"","Content":"奇异博士角色海报","SmallPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082546.72744645_160X160.jpg","MiddlePicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082546.72744645_1000.jpg","OriginalPicUrl":"http://img5.mtime.cn/CMS/Gallery/2016/09/28/082546.72744645_1280.jpg"}];    $loadSubJs(["/js/2014/share.js", "/js/2014/favorite.js", "/js/2014/ToolBanner.js","/news/NewsTemplateCommon.js"], function () {        new NewsTemplateCommonClient();    });</script>
+        <div class="mtimebar"><div class="searchbar" title="搜索" method="search" style=""><b class="baron" method="search">搜索</b></div><div class="sharebar" title="分享" method="share"><b class="baron" method="share">分享</b></div><div class="collectbar" title="收藏" method="favorite"><b class="baron" method="favorite">收藏</b></div><div class="messagebar" title="留言" method="message"><b class="baron" method="message">留言</b></div><div class="codebar" title="二维码" method="code"><b class="baron" method="code">二维码</b></div><div class="topbar" title="返回顶部" method="backtop" style="visibility: visible;"><b class="baron" method="backtop">返回顶部</b></div><div class="sharebox" style="display:none;"></div><div class="collectbox" style="display:none;"></div><div class="codebox" style="display:none;"></div></div></body>
+{% endblock %}

@@ -1,0 +1,7435 @@
+
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, textarea, th, tr, td, em {
+    margin: 0;
+    padding: 0;
+}
+iframe {
+    cursor: pointer;
+}
+body {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/html_bg.jpg") repeat scroll 0 0;
+    color: #333;
+    font: 12px/150% helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+    min-width: 1200px;
+    padding-bottom: 0;
+}
+body {
+}
+.submiting, .swfupload {
+    background: #fff url("http://static1.mtime.cn/static/images08/submiting.gif") no-repeat scroll center center;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10000;
+}
+.submiting {
+    display: inline-block;
+    opacity: 0.6;
+}
+a {
+    color: #08c;
+    cursor: pointer;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: underline;
+}
+input, textarea {
+    font-family: "微软雅黑","microsoft yahei";
+    font-size: 12px;
+    outline: 0 none;
+    padding: 2px;
+    vertical-align: middle;
+}
+textarea {
+    line-height: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+select {
+    font: 12px arial,helvetica,sans-serif,宋体;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+address, caption, cite, code, dfn, th, var, b, i, em {
+    font-style: normal;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol, ul {
+    list-style: outside none none;
+}
+:focus {
+    outline: 0 none;
+}
+fieldset, img {
+    border: 0 none;
+}
+caption, th {
+    text-align: left;
+}
+q::before, q::after {
+    content: "";
+}
+.clearfix::after, .fix::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix, .fix {
+    display: inline-block;
+}
+.clearfix, .fix {
+    display: block;
+}
+.yahei {
+    font-family: "microsoft yahei",arial,helvetica,sans-serif,"黑体";
+}
+.verdana {
+    font-family: verdana;
+}
+.arial {
+    font-family: arial;
+}
+.zoom {
+}
+.p_r {
+    position: relative;
+}
+.normal {
+    font-style: normal;
+    font-weight: normal;
+}
+.bold {
+    font-weight: bold;
+}
+.none {
+    display: none;
+}
+.block {
+    display: block;
+}
+.v_m {
+    vertical-align: middle;
+}
+.o_h {
+    overflow: hidden;
+}
+.gt {
+    color: #2f688c;
+    font-family: "宋体";
+    font-size: 0.9em;
+    margin-left: 3px;
+}
+.time {
+    color: #a5a5a5;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+.wbr {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.tl {
+    text-align: left;
+}
+.tc {
+    text-align: center;
+}
+.tr {
+    text-align: right;
+}
+.px12 {
+    font-size: 12px;
+}
+.px11 {
+    font-size: 11px;
+}
+.px14 {
+    font-size: 14px;
+}
+.px16 {
+    font-size: 16px;
+}
+.px20 {
+    font-size: 20px;
+}
+.px22 {
+    font-size: 22px;
+}
+.px24 {
+    font-size: 24px;
+}
+.px18 {
+    font-size: 18px;
+}
+.px28 {
+    font-size: 28px;
+}
+.px38 {
+    font-size: 38px;
+    line-height: 1em;
+}
+.wp49 {
+    width: 49.5%;
+}
+.t_2em {
+    text-indent: 2em;
+}
+.img_box {
+    border: 1px solid #000;
+}
+.img_pbox {
+    border: 1px solid #ccc;
+    padding: 1px;
+}
+.img_box_fff {
+    border: 1px solid #fff;
+}
+.img_box_696 {
+    border: 1px solid #696;
+}
+.img_box_69c {
+    border: 1px solid #69c;
+}
+.lh10 {
+    line-height: 100%;
+}
+.lh15 {
+    line-height: 150%;
+}
+.lh16 {
+    line-height: 160%;
+}
+.lh20 {
+    line-height: 200%;
+}
+.lh25 {
+    line-height: 250%;
+}
+.lh18 {
+    line-height: 180%;
+}
+.lh30 {
+    line-height: 300%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.line_dot {
+    border-bottom: 1px dashed #cecece;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.line_solid {
+    border-bottom: 1px solid #cecece;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.line_soild2 {
+    background: #000 none repeat scroll 0 0;
+    height: 3px;
+    overflow: hidden;
+}
+.line_solid_black {
+    border-bottom: 1px solid #000;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.line_both {
+    border-bottom: 1px dashed #cecece;
+    border-top: 1px dashed #cecece;
+}
+.bg_f5 {
+    background: #f5f5f5 none repeat scroll 0 0;
+}
+.m0 {
+    margin: 0;
+}
+.p0 {
+    padding: 0;
+}
+.mauto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.m3 {
+    margin: 3px;
+}
+.mt3 {
+    margin-top: 3px;
+}
+.mr3 {
+    margin-right: 3px;
+}
+.mb3 {
+    margin-bottom: 3px;
+}
+.ml3 {
+    margin-left: 3px;
+}
+.m6 {
+    margin: 6px;
+}
+.mt6 {
+    margin-top: 6px;
+}
+.mr6 {
+    margin-right: 6px;
+}
+.mb6 {
+    margin-bottom: 6px;
+}
+.ml6 {
+    margin-left: 6px;
+}
+.m9 {
+    margin: 9px;
+}
+.mt9 {
+    margin-top: 9px;
+}
+.mr9 {
+    margin-right: 9px;
+}
+.mb9 {
+    margin-bottom: 9px;
+}
+.ml9 {
+    margin-left: 9px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.m12 {
+    margin: 12px;
+}
+.mt12 {
+    margin-top: 12px;
+}
+.mr12 {
+    margin-right: 12px;
+}
+.mb12 {
+    margin-bottom: 12px;
+}
+.ml12 {
+    margin-left: 12px;
+}
+.m15 {
+    margin: 15px;
+}
+.mt15 {
+    margin-top: 15px;
+}
+.mr15 {
+    margin-right: 15px;
+}
+.mb15 {
+    margin-bottom: 15px;
+}
+.ml15 {
+    margin-left: 15px;
+}
+.m18 {
+    margin: 18px;
+}
+.mt18 {
+    margin-top: 18px;
+}
+.mr18 {
+    margin-right: 18px;
+}
+.mb18 {
+    margin-bottom: 18px;
+}
+.ml18 {
+    margin-left: 18px;
+}
+.m30 {
+    margin: 30px;
+}
+.mt30 {
+    margin-top: 30px;
+}
+.mr30 {
+    margin-right: 30px;
+}
+.mb30 {
+    margin-bottom: 30px;
+}
+.ml30 {
+    margin-left: 30px;
+}
+.p3 {
+    padding: 3px;
+}
+.pt3 {
+    padding-top: 3px;
+}
+.pr3 {
+    padding-right: 3px;
+}
+.pb3 {
+    padding-bottom: 3px;
+}
+.pl3 {
+    padding-left: 3px;
+}
+.p6 {
+    padding: 6px;
+}
+.pt6 {
+    padding-top: 6px;
+}
+.pr6 {
+    padding-right: 6px;
+}
+.pb6 {
+    padding-bottom: 6px;
+}
+.pl6 {
+    padding-left: 6px;
+}
+.p9 {
+    padding: 9px;
+}
+.pt9 {
+    padding-top: 9px;
+}
+.pr9 {
+    padding-right: 9px;
+}
+.pb9 {
+    padding-bottom: 9px;
+}
+.pl9 {
+    padding-left: 9px;
+}
+.p12 {
+    padding: 12px;
+}
+.pt12 {
+    padding-top: 12px;
+}
+.pr12 {
+    padding-right: 12px;
+}
+.pb12 {
+    padding-bottom: 12px;
+}
+.pl12 {
+    padding-left: 12px;
+}
+.p15 {
+    padding: 15px;
+}
+.pt15 {
+    padding-top: 15px;
+}
+.pr15 {
+    padding-right: 15px;
+}
+.pb15 {
+    padding-bottom: 15px;
+}
+.pl15 {
+    padding-left: 15px;
+}
+.p18 {
+    padding: 18px;
+}
+.pt18 {
+    padding-top: 18px;
+}
+.pr18 {
+    padding-right: 18px;
+}
+.pb18 {
+    padding-bottom: 18px;
+}
+.pl18 {
+    padding-left: 18px;
+}
+.plr18 {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+.mt5 {
+    margin-top: 5px;
+}
+.mr4 {
+    margin-right: 4px;
+}
+.mt4 {
+    margin-top: 4px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mlr10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.ml25 {
+    margin-left: 25px;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mr20 {
+    margin-right: 20px;
+}
+.ml62 {
+    margin-left: 62px;
+}
+.mr35 {
+    margin-right: 35px;
+}
+.mr25 {
+    margin-right: 25px;
+}
+.plr15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.pt20 {
+    padding-top: 20px;
+}
+.pr20 {
+    padding-right: 20px;
+}
+.pr25 {
+    padding-right: 25px;
+}
+.pl25 {
+    padding-left: 25px;
+}
+.pb20 {
+    padding-bottom: 20px;
+}
+.pb30 {
+    padding-bottom: 30px;
+}
+.pt35 {
+    padding-top: 35px;
+}
+.pt25 {
+    padding-top: 25px;
+}
+.pb10 {
+    padding-bottom: 10px;
+}
+.p20 {
+    padding: 20px;
+}
+.mtb10 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.mtb20 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.mt25 {
+    margin-top: 25px;
+}
+.mr8 {
+    margin-right: 8px;
+}
+.mr26 {
+    margin-right: 26px;
+}
+.mlr15 {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.mlr18 {
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.mb25 {
+    margin-bottom: 25px;
+}
+.mlr5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.c_fff, a.c_fff:hover {
+    color: #fff;
+}
+.c_000, a.c_000:hover {
+    color: #000;
+}
+.c_ce, a.c_ce:hover {
+    color: #cecece;
+}
+.c_a5, a.c_a5:hover {
+    color: #a5a5a5;
+}
+.c_666, a.c_666:hover {
+    color: #666;
+}
+.c_shadow, a.c_shadow:hover {
+    color: #d1d1d1;
+}
+.c_brown, a.c_brown:hover {
+    color: #7a3f01;
+}
+.c_red, a.c_red:hover {
+    color: #ca4004;
+}
+.c_blue, a.c_blue:hover {
+    color: #2f688c;
+}
+.c_green, a.c_green:hover {
+    color: #4b860b;
+}
+.c_orange, a.c_orange:hover {
+    color: #f78404;
+}
+.c_8e, a.c_8e:hover {
+    color: #8e8e8e;
+}
+.c_333, a.c_333:hover {
+    color: #333;
+}
+.c_2b, a.c_2b:hover {
+    color: #2b2b2b;
+}
+.gray, a.gray:hover {
+    color: #a5a5a5;
+}
+a.afalse {
+    color: #8e8e8e;
+    cursor: default;
+}
+a.afalse:hover {
+    text-decoration: none;
+}
+.pagenav {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.pagenav a, .pagesize span {
+    border: 0 none;
+    border-radius: 3px;
+    color: #909090;
+    display: inline-block;
+    font-family: helvetica,"微软雅黑","microsoft yahei";
+    font-size: 12px;
+    height: 25px;
+    line-height: 26px;
+    margin: 0 3px;
+    padding: 0 10px;
+}
+.pagenav a.on, .pagenav a:hover {
+    background: #909090 none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    text-decoration: none;
+}
+.pagenav a.false {
+    display: none;
+}
+.pagenav a.next {
+    font-size: 12px;
+    margin: 0 3px;
+    padding: 0 10px;
+}
+.icon_video, .icon_gt, .icon_dot, .icon_mvp, .m_svp10, .icon_piclist, .db_loading, .icon_picsucces, .icon_picfalse, .m_svp, .m_svp1, .m_svp2, .m_svp3, .m_svp4, .m_svp5, .m_svp6, .m_svp7, .m_svp8, .m_svp9, .m_svp10, .m_svp11 {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 20px;
+    margin-right: 6px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 20px;
+}
+.icon_video {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon24.png") no-repeat scroll 0 -325px;
+}
+.icon_gt {
+    background-position: 0 -20px;
+}
+.icon_dot {
+    background-position: 0 -40px;
+    margin-top: 1px;
+}
+.icon_mvp, .m_svp10, .m_svp, .m_svp1, .m_svp2, .m_svp3, .m_svp4, .m_svp5, .m_svp6, .m_svp7, .m_svp8, .m_svp9, .m_svp10, .m_svp11 {
+    background-position: -100px 0;
+    border-radius: 2px;
+    font-size: 0;
+    height: 16px;
+    line-height: 0;
+    margin-left: 6px;
+    width: 16px;
+}
+.icon_picsucces {
+    background-position: -100px -34px;
+    height: 16px;
+    margin-top: 5px;
+    width: 16px;
+}
+.icon_picfalse {
+    background-position: -100px -51px;
+    height: 14px;
+    margin-top: 5px;
+    width: 18px;
+}
+.icon_piclist {
+    background-position: -92px -230px;
+    height: 14px;
+    width: 14px;
+}
+.db_loading {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/static/images/2011/loading2.gif") no-repeat scroll 0 0;
+    height: 16px;
+    width: 16px;
+}
+.btn_dblue, .btn_dblue:hover, .btn_plots, .btn_plots:hover, .btn_dgray, .btn_dgray:hover {
+    background: #0081bc none repeat scroll 0 0;
+    border-radius: 14px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    position: relative;
+    text-decoration: none;
+}
+.btn_dblue {
+    background: #0081bc none repeat scroll 0 0;
+}
+.btn_dblue:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    text-decoration: none;
+}
+.btn_dgray, .btn_dgray:hover {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #d8d8d8;
+    color: #333;
+}
+.db_point {
+    background: #679c21 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+    overflow: hidden;
+    padding: 4px 5px;
+    position: relative;
+    vertical-align: bottom;
+}
+.db_perpoint {
+    color: #d11438;
+    font-size: 14px;
+    margin-left: 15px;
+}
+.db_perpoint i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll -155px -33px;
+    display: inline-block;
+    height: 15px;
+    margin-right: 3px;
+    position: relative;
+    vertical-align: middle;
+    width: 17px;
+}
+.c_94 {
+    color: #949494;
+}
+.transition2, .transition {
+    transition: all 0.2s ease 0s;
+}
+.transition3 {
+    transition: all 0.3s ease 0s;
+}
+.transition4 {
+    transition: all 0.4s ease 0s;
+}
+.transition5 {
+    transition: all 0.5s ease 0s;
+}
+.transition6 {
+    transition: all 0.6s ease 0s;
+}
+.transition7 {
+    transition: all 0.7s ease 0s;
+}
+.transition8 {
+    transition: all 0.8s ease 0s;
+}
+.transition9 {
+    transition: all 0.9s ease 0s;
+}
+.transition10 {
+    transition: all 0.1s ease 0s;
+}
+.line_dot {
+    border-bottom: 1px dotted #ccc;
+}
+.gt {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll -125px 0;
+    display: inline-block;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 11px;
+}
+.w295 {
+    width: 315px;
+}
+.ele_videobg {
+    background: #000 none repeat scroll 0 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.6;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.ele_videoinner {
+    height: 563px;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -281px;
+    position: fixed;
+    top: 50%;
+    width: 1000px;
+    z-index: 101;
+}
+.ele_videoinner .close {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon24.png") no-repeat scroll 0 -522px;
+    font-size: 0;
+    height: 46px;
+    line-height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 46px;
+    z-index: 3;
+}
+.db_firstphoto {
+    background: #000 none repeat scroll 0 0;
+    overflow: auto;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.db_imgclose {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon24.png") no-repeat scroll 0 -522px;
+    height: 46px;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    width: 46px;
+    z-index: 101;
+}
+.simg {
+    cursor: url("http://static1.mtime.cn/static/images/mytime/big.cur"), auto;
+}
+.bimg {
+    cursor: url("http://static1.mtime.cn/static/images/mytime/small.cur"), auto;
+}
+.db_selbox {
+    font-size: 12px;
+    height: 25px;
+    margin-right: 5px;
+    position: relative;
+    width: 80px;
+    z-index: 5;
+}
+.db_selinner {
+    color: #7a7a7a;
+    height: 25px;
+    line-height: 25px;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 80px;
+}
+.db_selon {
+    cursor: pointer;
+    height: 25px;
+    padding-left: 25px;
+    position: relative;
+}
+.db_selinner i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon.gif") no-repeat scroll 0 -95px;
+    display: inline-block;
+    height: 20px;
+    opacity: 0.6;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    vertical-align: middle;
+    width: 20px;
+}
+.db_selinner.open {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    border: 1px solid #666;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #666;
+    color: #0093f7;
+    transition: all 0.2s ease 0s;
+}
+.db_seldrop {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+}
+.db_seldrop p {
+    color: #7a7a7a;
+    cursor: pointer;
+    height: 25px;
+    padding-left: 25px;
+    position: relative;
+}
+.db_seldrop p em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon.gif") no-repeat scroll -30px -155px;
+    display: none;
+    height: 10px;
+    left: 15px;
+    opacity: 0.6;
+    overflow: hidden;
+    position: absolute;
+    top: 7px;
+    width: 5px;
+}
+.db_seldrop p.active em {
+    display: block;
+}
+.db_seldrop p:hover {
+    background: #0093f7 none repeat scroll 0 0;
+    color: #fff;
+}
+.db_comment h3 {
+    color: #999;
+    font-size: 24px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 1em;
+}
+.db_comment h3 a {
+    color: #999;
+}
+.db_comment_box {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.db_comment_box .db_bg {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #a6a6a6;
+    height: 250px;
+    left: 0;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.db_comment_area {
+    margin: 35px 40px;
+    padding-left: 65px;
+    position: relative;
+    text-align: right;
+    z-index: 2;
+}
+.db_comment_user {
+    left: 0;
+    overflow-wrap: break-word;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    word-break: break-all;
+}
+.db_comment_user img {
+    border: 1px solid #ccc;
+    text-align: center;
+}
+.db_comment_areabox {
+    text-align: right;
+}
+.db_comment_areabox textarea {
+    border: 1px solid #ccc;
+    font-size: 14px;
+    height: 60px;
+    line-height: 1.6em;
+    padding: 3px 5px;
+    resize: none;
+    width: 98%;
+}
+.db_comment_list .db_comment_areabox textarea {
+    width: 97%;
+}
+.db_comment_areabox .btn_dblue, .db_comment_areabox .btn_dgray {
+    margin-left: 15px;
+    text-align: center;
+    width: 66px;
+}
+.db_comment_list {
+    background: #fff none repeat scroll 0 0;
+    margin-bottom: -32767px;
+    margin-top: 6px;
+    padding: 10px 40px 32767px;
+    position: relative;
+}
+.db_comment_list dd {
+    border-bottom: 1px solid #ccc;
+    clear: both;
+    margin-top: 30px;
+    min-height: 70px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    padding: 0 0 25px;
+    position: relative;
+    word-break: break-all;
+}
+.db_comment_list dd .user_box {
+    display: inline;
+    float: left;
+    overflow-wrap: break-word;
+    position: relative;
+    text-align: center;
+    width: 50px;
+    word-break: break-all;
+    z-index: 2;
+}
+.db_comment_list dd .user_box img {
+    border: 1px solid #ccc;
+}
+.db_comment_list .user_cont {
+    display: inline;
+    float: right;
+    margin-left: -65px;
+    position: relative;
+    width: 100%;
+}
+.db_comment_list .user_conter {
+    margin-left: 65px;
+}
+.db_comment_list ul {
+    overflow: hidden;
+    position: relative;
+}
+.db_comment_list li {
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    padding: 20px 0 20px 45px;
+    position: relative;
+}
+.db_comment_list li .user_box {
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 32px;
+}
+.db_comment_list li .user_box img {
+    border: 0 none;
+}
+.db_comment_list .user_conter .db_comment_areabox {
+    padding-top: 20px;
+}
+.db_concomment .db_comment_areabox textarea {
+    width: 98.5%;
+}
+.db_comment_list dt {
+    font-size: 14px;
+    padding: 30px 0;
+    text-align: right;
+}
+.db_comment_list dt em {
+    font-size: 24px;
+}
+.ele_commoretop {
+    background: #fff none repeat scroll 0 0;
+    font-size: 14px;
+    padding: 85px 0 30px;
+    position: relative;
+}
+.ele_commoretop .sharp {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon24.png") no-repeat scroll 0 -350px;
+    bottom: -45px;
+    height: 45px;
+    left: 50%;
+    margin-left: -385px;
+    position: absolute;
+    width: 119px;
+}
+.ele_commoretit {
+    margin: 0 auto;
+    width: 1000px;
+}
+.ele_commoretit a {
+    text-decoration: none;
+}
+.ele_commoretit h2 {
+    font-size: 36px;
+    line-height: 1em;
+}
+.ele_commorecont {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/html_bg.jpg") repeat scroll 0 0;
+    overflow: hidden;
+    padding-top: 65px;
+}
+.ele_commore {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    margin: 0 auto;
+    width: 1000px;
+}
+.ele_commore .db_comment_list {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+}
+.ele_commore .db_comment_areabox textarea {
+    width: 988px;
+}
+.ele_commore .db_comment_list .db_comment_areabox textarea {
+    width: 843px;
+}
+.ele_replay .textarea {
+    background: #fbfbfb none repeat scroll 0 0;
+    border: 1px solid #d6d6d6;
+    height: 30px;
+    padding: 3px 10px;
+    position: relative;
+}
+.ele_replay .textarea i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll -110px 0;
+    bottom: 2px;
+    height: 13px;
+    position: absolute;
+    right: 2px;
+    width: 12px;
+    z-index: 2;
+}
+.ele_replay .textarea textarea {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    color: #878787;
+    font-size: 13px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0;
+    resize: none;
+    width: 100%;
+}
+.ele_replay .focus {
+    border: 2px solid #0087e2;
+    height: 60px;
+    padding: 5px 0 5px 8px;
+}
+.ele_replay .focus textarea {
+    color: #333;
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.ele_replay .focus i {
+    display: none;
+}
+.ele_replay .replaybtn {
+    background: #0081bc none repeat scroll 0 0;
+    border-radius: 13px;
+    color: #fff;
+    display: inline;
+    float: right;
+    font-size: 13px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+    width: 68px;
+}
+.i_bbsmod .ele_replay .replaybtn:hover, .ele_replay .replaybtn:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    color: #fff;
+}
+.w660 {
+    width: 660px;
+}
+.share_tip {
+    background-image: url("http://static1.mtime.cn/static/images/bg/000000_40.png");
+    background-repeat: repeat;
+    border-radius: 8px;
+    padding: 10px;
+}
+.share_tiper {
+    background: #fff url("http://static1.mtime.cn/20160825145005/images/2012/new_ticket_ico.png") no-repeat scroll right 0;
+    border: 0 none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.btn_close {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -123px 0;
+    cursor: pointer;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+}
+.share_tiper .ele_colorline {
+    display: none;
+}
+.share_tiper .share_tit {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border-bottom: 1px solid #ababab;
+    font-family: "microsoft yahei",arial,helvetica,sans-serif,"黑体";
+    font-size: 22px;
+    font-weight: bold;
+    height: auto;
+    line-height: 120%;
+    margin: 0 14px;
+    overflow: hidden;
+    padding-bottom: 19px;
+    padding-left: 0;
+    padding-top: 15px;
+}
+.tip_btnbox {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    height: auto;
+    padding: 20px 0 30px;
+    position: relative;
+    text-align: center;
+}
+.myray {
+    border-top: 1px solid #e6e6e6;
+    margin: 0 14px;
+    min-height: 60px;
+    padding: 20px 0 0;
+}
+.my_overall {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    margin-top: -10px;
+    min-height: 150px;
+    width: 618px;
+}
+.my_editor {
+    margin: 0 auto;
+    padding: 20px 0 9px;
+    width: 620px;
+}
+.my_overall .my_textarea_region {
+    background: #fff url("http://static1.mtime.cn/20160825145005/images/mytime/my_text_rate.gif") repeat-y scroll -620px 0;
+    border: 1px solid #000;
+    border-radius: 7px;
+    box-shadow: 0 3px 6px #999 inset;
+    height: 132px;
+    padding: 6px;
+    position: relative;
+}
+.my_overall .my_textarea_region .my_textarea {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    font-family: tahoma,arial;
+    font-size: 14px;
+    height: 132px;
+    left: 4px;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    padding: 0;
+    position: absolute;
+    resize: none;
+    top: 5px;
+    width: 609px;
+}
+.success_layer .conts {
+    height: 18px;
+    left: 50%;
+    margin: -9px -46px;
+    position: absolute;
+    top: 50%;
+    width: 92px;
+}
+.ico_admovie, .ico_adimg, .ico_adface, .ico_advideo, .ico_adtopic, .ico_set, .ico_adadd, .ico_adclose, .ico_bup, .ico_bdown, .ico_twen, .ico_tclose, .ico_tjtb, .ico_tjtt, .ico_tjtr, .ico_treply, .ico_treturn, .ico_tvote, .ico_twen, .ico_tadd, .ico_tright, .ico_tzk, .ico_tsq, .ico_tjubao, .ico_tshanchu, .ico_tag, .ico_lock, .ico_modify, .ico_find, .ico_delete, .ico_cytopic, .ico_gztopic, .ico_addgreen, .ico_tpos {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -15px 0;
+    display: -moz-inline-stack;
+    font-size: 0;
+    height: 15px;
+    line-height: 2em;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 16px;
+}
+.ico_tright {
+    background-position: -40px -60px;
+    height: 14px;
+    width: 16px;
+}
+.my_post {
+    position: absolute;
+}
+.my_options {
+    left: -8px;
+    position: relative;
+}
+.my_options ul li {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 67px;
+}
+.my_options ul li a {
+    color: #000;
+}
+.select_movie, .select_image, .select_faces, .select_video, .select_topic, .select_url {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll 0 0;
+    display: block;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.face_1, .face_2, .face_3, .face_4, .face_5, .face_6, .face_7, .face_8, .face_9, .face_10, .face_11, .face_12, .face_13, .face_14, .face_15, .face_16, .face_17, .face_18, .face_19, .face_20, .face_21, .face_22, .face_23, .face_24, .face_25, .face_26, .face_27, .face_28, .face_29, .face_30, .face_31, .face_32, .face_33, .face_34, .face_35, .face_36, .face_37, .face_38 {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/my_big_face.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 36px;
+    position: relative;
+    vertical-align: middle;
+    width: 36px;
+}
+.face_list {
+    position: relative;
+    width: 324px;
+}
+.face_list i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/my_face.gif") no-repeat scroll 0 0;
+    border: 1px solid #e8e8e8;
+    float: left;
+    height: 26px;
+    margin: -1px 0 0 -1px;
+    width: 26px;
+}
+.face_list i:hover, .face_list i.hover {
+    border: 1px solid #2e6a7d;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+.face_show i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/my_show_face.jpg") no-repeat scroll 0 0;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    width: 80px;
+}
+.face_show i:hover, .face_show i.hover {
+    cursor: default;
+}
+.face_left, .face_right {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e8e8e8;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+    position: absolute;
+    top: -1px;
+    width: 80px;
+}
+.face_left {
+    left: -1px;
+}
+.face_right {
+    right: 0;
+}
+.face_2 {
+    background-position: -36px 0;
+}
+.face_3 {
+    background-position: -72px 0;
+}
+.face_4 {
+    background-position: -108px 0;
+}
+.face_5 {
+    background-position: -144px 0;
+}
+.face_6 {
+    background-position: -180px 0;
+}
+.face_7 {
+    background-position: -216px 0;
+}
+.face_8 {
+    background-position: -252px 0;
+}
+.face_9 {
+    background-position: -288px 0;
+}
+.face_10 {
+    background-position: -324px 0;
+}
+.face_11 {
+    background-position: -360px 0;
+}
+.face_12 {
+    background-position: -396px 0;
+}
+.face_13 {
+    background-position: 0 -36px;
+}
+.face_14 {
+    background-position: -36px -36px;
+}
+.face_15 {
+    background-position: -72px -36px;
+}
+.face_16 {
+    background-position: -108px -36px;
+}
+.face_17 {
+    background-position: -144px -36px;
+}
+.face_18 {
+    background-position: -180px -36px;
+}
+.face_19 {
+    background-position: -216px -36px;
+}
+.face_20 {
+    background-position: -252px -36px;
+}
+.face_21 {
+    background-position: -288px -36px;
+}
+.face_22 {
+    background-position: -324px -36px;
+}
+.face_23 {
+    background-position: -360px -36px;
+}
+.face_24 {
+    background-position: -396px -36px;
+}
+.face_25 {
+    background-position: 0 -72px;
+}
+.face_26 {
+    background-position: -36px -72px;
+}
+.face_27 {
+    background-position: -72px -72px;
+}
+.face_28 {
+    background-position: -108px -72px;
+}
+.face_29 {
+    background-position: -144px -72px;
+}
+.face_30 {
+    background-position: -180px -72px;
+}
+.face_31 {
+    background-position: -216px -72px;
+}
+.face_32 {
+    background-position: -252px -72px;
+}
+.face_33 {
+    background-position: -288px -72px;
+}
+.face_34 {
+    background-position: -324px -72px;
+}
+.face_35 {
+    background-position: -360px -72px;
+}
+.face_36 {
+    background-position: -396px -72px;
+}
+.face_37 {
+    background-position: 0 -108px;
+}
+.face_38 {
+    background-position: -36px -108px;
+}
+.face_list .face_2 {
+    background-position: -27px 0;
+}
+.face_list .face_3 {
+    background-position: -54px 0;
+}
+.face_list .face_4 {
+    background-position: -81px 0;
+}
+.face_list .face_5 {
+    background-position: -108px 0;
+}
+.face_list .face_6 {
+    background-position: -135px 0;
+}
+.face_list .face_7 {
+    background-position: -162px 0;
+}
+.face_list .face_8 {
+    background-position: -189px 0;
+}
+.face_list .face_9 {
+    background-position: -216px 0;
+}
+.face_list .face_10 {
+    background-position: -243px 0;
+}
+.face_list .face_11 {
+    background-position: -270px 0;
+}
+.face_list .face_12 {
+    background-position: -297px 0;
+}
+.face_list .face_13 {
+    background-position: 0 -27px;
+}
+.face_list .face_14 {
+    background-position: -27px -27px;
+}
+.face_list .face_15 {
+    background-position: -54px -27px;
+}
+.face_list .face_16 {
+    background-position: -81px -27px;
+}
+.face_list .face_17 {
+    background-position: -108px -27px;
+}
+.face_list .face_18 {
+    background-position: -135px -27px;
+}
+.face_list .face_19 {
+    background-position: -162px -27px;
+}
+.face_list .face_20 {
+    background-position: -189px -27px;
+}
+.face_list .face_21 {
+    background-position: -216px -27px;
+}
+.face_list .face_22 {
+    background-position: -243px -27px;
+}
+.face_list .face_23 {
+    background-position: -270px -27px;
+}
+.face_list .face_24 {
+    background-position: -297px -27px;
+}
+.face_list .face_25 {
+    background-position: 0 -54px;
+}
+.face_list .face_26 {
+    background-position: -27px -54px;
+}
+.face_list .face_27 {
+    background-position: -54px -54px;
+}
+.face_list .face_28 {
+    background-position: -81px -54px;
+}
+.face_list .face_29 {
+    background-position: -108px -54px;
+}
+.face_list .face_30 {
+    background-position: -135px -54px;
+}
+.face_list .face_31 {
+    background-position: -162px -54px;
+}
+.face_list .face_32 {
+    background-position: -189px -54px;
+}
+.face_list .face_33 {
+    background-position: -216px -54px;
+}
+.face_list .face_34 {
+    background-position: -243px -54px;
+}
+.face_list .face_35 {
+    background-position: -270px -54px;
+}
+.face_list .face_36 {
+    background-position: -297px -54px;
+}
+.face_list .face_37 {
+    background-position: 0 -81px;
+}
+.face_list .face_38 {
+    background-position: -27px -81px;
+}
+.face_show .face_2 {
+    background-position: -80px 0;
+}
+.face_show .face_3 {
+    background-position: -160px 0;
+}
+.face_show .face_4 {
+    background-position: -240px 0;
+}
+.face_show .face_5 {
+    background-position: -320px 0;
+}
+.face_show .face_6 {
+    background-position: -400px 0;
+}
+.face_show .face_7 {
+    background-position: -480px 0;
+}
+.face_show .face_8 {
+    background-position: -560px 0;
+}
+.face_show .face_9 {
+    background-position: -640px 0;
+}
+.face_show .face_10 {
+    background-position: -720px 0;
+}
+.face_show .face_11 {
+    background-position: -800px 0;
+}
+.face_show .face_12 {
+    background-position: -880px 0;
+}
+.face_show .face_13 {
+    background-position: 0 -80px;
+}
+.face_show .face_14 {
+    background-position: -80px -80px;
+}
+.face_show .face_15 {
+    background-position: -160px -80px;
+}
+.face_show .face_16 {
+    background-position: -240px -80px;
+}
+.face_show .face_17 {
+    background-position: -320px -80px;
+}
+.face_show .face_18 {
+    background-position: -400px -80px;
+}
+.face_show .face_19 {
+    background-position: -480px -80px;
+}
+.face_show .face_20 {
+    background-position: -560px -80px;
+}
+.face_show .face_21 {
+    background-position: -640px -80px;
+}
+.face_show .face_22 {
+    background-position: -720px -80px;
+}
+.face_show .face_23 {
+    background-position: -800px -80px;
+}
+.face_show .face_24 {
+    background-position: -880px -80px;
+}
+.face_show .face_25 {
+    background-position: 0 -160px;
+}
+.face_show .face_26 {
+    background-position: -80px -160px;
+}
+.face_show .face_27 {
+    background-position: -160px -160px;
+}
+.face_show .face_28 {
+    background-position: -240px -160px;
+}
+.face_show .face_29 {
+    background-position: -320px -160px;
+}
+.face_show .face_30 {
+    background-position: -400px -160px;
+}
+.face_show .face_31 {
+    background-position: -480px -160px;
+}
+.face_show .face_32 {
+    background-position: -560px -160px;
+}
+.face_show .face_33 {
+    background-position: -640px -160px;
+}
+.face_show .face_34 {
+    background-position: -720px -160px;
+}
+.face_show .face_35 {
+    background-position: -800px -160px;
+}
+.face_show .face_36 {
+    background-position: -880px -160px;
+}
+.face_show .face_37 {
+    background-position: 0 -240px;
+}
+.face_show .face_38 {
+    background-position: -80px -240px;
+}
+.eject_outer, .eject_delete {
+    min-width: 252px;
+    position: absolute;
+}
+.eject_outer, .eject_delete {
+    min-width: 252px;
+    position: absolute;
+}
+.eject {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #707070;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px #b2b2b2;
+    padding: 10px;
+    position: relative;
+}
+.directiontl {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -198px -140px;
+    height: 17px;
+    left: 30px;
+    position: absolute;
+    top: -17px;
+    width: 17px;
+}
+.directiontr {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -214px -140px;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    top: -17px;
+    width: 17px;
+}
+.directionbl, .directiontag {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -165px -140px;
+    bottom: -17px;
+    height: 17px;
+    left: 30px;
+    position: absolute;
+    width: 17px;
+}
+.directionbr {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -181px -140px;
+    bottom: -17px;
+    height: 17px;
+    position: absolute;
+    right: 30px;
+    width: 17px;
+}
+.directiontag {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -181px -140px;
+    bottom: -17px;
+    height: 17px;
+    left: 30px;
+    position: absolute;
+    width: 17px;
+}
+.backtop {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/backtop.gif") no-repeat scroll 0 0;
+    bottom: 200px;
+    display: block;
+    height: 37px;
+    left: 50%;
+    margin-left: 480px;
+    position: fixed;
+    text-indent: -9999px;
+    width: 29px;
+    z-index: 10;
+}
+.backtop:hover {
+    background-position: 0 -37px;
+}
+.my_boxs em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll 0 -20px;
+    display: block;
+    height: 7px;
+    margin-left: 60px;
+    overflow: hidden;
+    position: relative;
+    top: 1px;
+    width: 13px;
+    z-index: 500;
+}
+.my_boxs .inner {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 2px 1px #193d49;
+    min-width: 232px;
+    overflow-wrap: break-word;
+    padding: 15px;
+    position: relative;
+    word-break: break-all;
+}
+.my_boxs .inner .title {
+    border-bottom: 1px dashed #cfcfcf;
+    padding-bottom: 13px;
+}
+.my_boxs .inner .itext {
+    border: 1px solid #99bed0;
+    color: #a5a5a5;
+    padding: 4px 2px;
+}
+.my_boxs .my_leftbtn, .my_boxs .my_rightbtn {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll -32px 0;
+    display: inline-block;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 13px;
+}
+.my_boxs .my_rightbtn {
+    background-position: -46px 0;
+}
+.my_boxs .close_btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.my_boxs .ok_btn {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll 0 -80px;
+    color: #000;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: middle;
+    width: 65px;
+}
+.my_movie {
+    background: #a0c170 none repeat scroll 0 0;
+    border: 1px solid #638e47;
+    padding: 12px 13px;
+    position: relative;
+    z-index: 2;
+}
+.my_movie dt img {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #000;
+    display: block;
+    padding: 1px;
+}
+.my_movie dd {
+    padding-left: 12px;
+    width: 84.5%;
+}
+.my_movie dd a.btn_gz {
+    display: inline-block;
+}
+.my_movie .close_btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.my_movie em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll -85px -20px;
+    display: block;
+    height: 10px;
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: -10px;
+    width: 20px;
+}
+.select_movie {
+    background-position: -201px -240px;
+    height: 17px;
+    width: 19px;
+}
+.select_image {
+    background-position: -200px -258px;
+    height: 17px;
+    width: 20px;
+}
+.select_faces {
+    background-position: -203px -312px;
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+}
+.select_video {
+    background-position: -202px -275px;
+    height: 17px;
+    width: 18px;
+}
+.select_topic {
+    background-position: -201px -294px;
+    height: 17px;
+    width: 18px;
+}
+.my_options ul li .hover {
+    background: #f0efb7 none repeat scroll 0 0;
+    border: 1px solid #728a6a;
+    border-radius: 4px;
+    box-shadow: 1px 2px 1px #67913f;
+    left: 4px;
+    padding: 1px;
+    position: absolute;
+    text-align: center;
+    top: -5px;
+    width: 63px;
+}
+.my_options ul li .uploads {
+    background: #afd29a none repeat scroll 0 0;
+    border-radius: 5px;
+    left: 0;
+    line-height: 18px;
+    padding: 0 25px 1px 5px;
+    position: absolute;
+    text-align: left;
+    top: 42px;
+    white-space: nowrap;
+    width: auto;
+    z-index: 11;
+}
+.my_options ul li .hover p {
+    padding: 3px 0 4px;
+}
+.my_options ul li .hover .select_image {
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.my_options ul li .hover .hover_upload {
+    height: 27px;
+    left: 1px;
+    position: absolute;
+    top: 1px;
+    width: 63px;
+}
+.my_loading {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/loading.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 16px;
+    margin: 0 2px;
+    vertical-align: middle;
+    width: 16px;
+}
+.my_options ul li .uploads i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/my_component.gif") no-repeat scroll -210px -345px;
+    display: block;
+    height: 5px;
+    left: 28px;
+    position: absolute;
+    top: -5px;
+    width: 10px;
+}
+.new_btn_gray, .t_btn_blue_i, .btn_orange_n, .tip_btnbox .btn_blue, .t_btn_gray_i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2012/new_ticket_ico.png") repeat-x scroll 0 -188px;
+    border: 1px solid #c5590a;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    height: 33px;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 0 12px;
+    vertical-align: middle;
+    width: 130px;
+}
+.tip_btnbox .btn_gray, .tip_btnbox .btn_gray2, .tip_btnbox .btn_square {
+    background: rgba(0, 0, 0, 0) none repeat scroll -78px -199px;
+    border: 0 none #d9d9d9;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "宋体";
+    font-size: 14px;
+    height: 27px;
+    letter-spacing: 3px;
+    overflow: hidden;
+    padding: 0 12px;
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+}
+.my_addmovie .inner {
+    width: 435px;
+}
+.face_list {
+    position: relative;
+    width: 324px;
+}
+.my_topic .inner {
+    width: 200px;
+}
+.t_btn_b, .t_btn_b:hover, .t_btn_b2, .t_btn_b2:hover, .t_btn_g, .t_btn_g:hover, .t_btn_g2, .t_btn_g2:hover, .t_btn_h, .t_btn_h:hover, .t_btn_h2, .t_btn_h2:hover, .btn_false, .btn_false2 {
+    background: #2e8ddf url("http://static1.mtime.cn/20160825145005/images/mytime/public_bg.jpg") no-repeat scroll -362px -168px;
+    border: 1px solid #2785cf;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "宋体";
+    font-size: 14px;
+    height: 27px;
+    line-height: 27px;
+    overflow: visible;
+    padding: 0 12px;
+    vertical-align: middle;
+    width: auto;
+}
+.t_btn_g, .t_btn_g2 {
+    background-position: -78px -230px;
+    border-color: #68972f;
+}
+.t_btn_b:hover, .t_btn_b2:hover {
+    background-position: -362px -199px;
+}
+.t_btn_g, .t_btn_g2 {
+    background-position: -78px -230px;
+    border-color: #68972f;
+}
+.t_btn_g:hover, .t_btn_g2:hover {
+    background-position: -220px -230px;
+    border-color: #68972f;
+}
+.t_btn_h, .t_btn_h2 {
+    background-position: -78px -168px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.t_btn_h:hover, .t_btn_h2:hover {
+    background-position: -78px -199px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.btn_false, .btn_false2 {
+    background: #f6f6f6 none repeat scroll 0 0;
+    border: 1px solid #dfdfdf;
+    color: #bcbcbc;
+    cursor: default;
+}
+.my_conn_word li {
+    border-bottom: 1px dashed #c4c4c4;
+    color: #000;
+    cursor: pointer;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+}
+.my_boxs, .my_layer {
+    position: absolute;
+}
+.my_towebi ul li {
+    margin: 4px 0;
+}
+.my_boxs .inner .title {
+    border-bottom: 1px dashed #cfcfcf;
+    padding-bottom: 13px;
+}
+.bind-error .inner {
+    border: 1px solid #dadada;
+    min-height: auto;
+    text-align: left;
+}
+.w510 .tip_btnbox .btn_square {
+    display: inline-block;
+    font-size: 14px;
+    height: 36px;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin: 0 5px;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+.share_word {
+    overflow: hidden;
+}
+.share_textarea {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #a5a5a5;
+}
+.share_textarea textarea {
+    border: 0 none;
+    float: none;
+    height: 60px;
+    width: 98%;
+}
+.share_word .img_box {
+    float: left;
+}
+.share_imgbox {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: 1px solid #a5a5a5;
+    margin-top: -1px;
+    min-height: 30px;
+    position: relative;
+}
+.share_imgbox .share_num {
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.share_imgtab {
+    background: #e1e1e1 none repeat scroll 0 0;
+    border-bottom: 1px solid #a5a5a5;
+    padding-top: 5px;
+}
+.share_imgtab li {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 16px;
+    margin-bottom: -1px;
+    margin-left: 10px;
+    padding: 6px 0 5px;
+    position: relative;
+    text-align: center;
+    width: 110px;
+}
+.share_imgtab li.on {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #f0f0f0 none repeat scroll 0 0;
+    border-color: #a5a5a5 #a5a5a5 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    padding: 5px 0;
+}
+.share_imgtab li span {
+    display: inline-block;
+    margin: 0 6px 0 0;
+}
+.share_imgtab li span.select_video {
+    height: 14px;
+}
+.share_imglistout {
+    position: relative;
+}
+.share_imglistout .turnleft, .share_imglistout .turnright {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/icon_png24.png") no-repeat scroll -23px 0;
+    height: 26px;
+    left: 5px;
+    margin-top: -13px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -999em;
+    top: 50%;
+    width: 25px;
+}
+.share_imglistout .turnright {
+    background-position: -48px 0;
+    left: auto;
+    right: 5px;
+}
+.share_imglistin {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 344px;
+}
+.share_imglistin ul {
+    margin-left: -5px;
+}
+.share_imglist li {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    padding: 8px 0 8px 8px;
+    position: relative;
+    text-align: center;
+    width: 78px;
+}
+.share_imglist li span {
+    display: none;
+}
+.share_imglist li.on span {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll -40px -60px;
+    bottom: 18px;
+    display: block;
+    font-size: 0;
+    height: 14px;
+    line-height: 2em;
+    overflow: hidden;
+    position: absolute;
+    right: 5px;
+    width: 16px;
+}
+.share_imglist li.on img {
+    box-shadow: 1px 1px 5px #000;
+}
+.share_imglist li strong {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/mytime/ico.png") no-repeat scroll 0 -225px;
+    bottom: 15px;
+    height: 18px;
+    left: 12px;
+    opacity: 0.8;
+    position: absolute;
+    width: 18px;
+}
+.share_textarea {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #a5a5a5;
+}
+.share_textarea textarea {
+    border: 0 none;
+}
+.share_input {
+    position: relative;
+}
+.share_input input {
+    color: #a5a5a5;
+    height: 18px;
+    width: 97%;
+}
+.share_input em {
+    color: #f00;
+    font-style: normal;
+    position: absolute;
+    right: 3%;
+    top: 3px;
+}
+.w420 {
+    width: 420px;
+}
+.tip_foculist {
+    border-top: 1px solid #979797;
+    margin-top: 12px;
+}
+.ico_twen {
+    background-position: -195px -20px;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+.ico_tadd {
+    background-position: -210px -20px;
+    height: 9px;
+    overflow: hidden;
+    width: 9px;
+}
+.w420 .t_text {
+    border: 1px solid #9abed0;
+    height: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.w200 {
+    width: 200px;
+}
+.tip_foculist {
+    border-top: 1px solid #979797;
+    margin-top: 12px;
+}
+.tip_foculist li {
+    display: inline;
+    float: left;
+    margin-top: 9px;
+    width: 49%;
+}
+.box_yellow {
+    background: #fffbd6 none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    padding: 6px 9px;
+}
+matched css rules .tl_link .btn_gray:hover, .btn_gray:hover, .btn_square, .btn_gray2:hover, .tl_link .btn_gray2:hover {
+    background-color: #fefefe;
+    background-position: -78px -199px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.tl_link .btn_gray, .btn_gray, .btn_square, .btn_gray2, .tl_link .btn_gray2 {
+    background-color: #f0f0f0;
+    background-position: -78px -168px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.btn_blue, .btn_blue2, .btn_blue6, .btn_gray, .btn_gray2, .tl_link .btn_blue, .tl_link .btn_blue2, .tl_link .btn_gray, .tl_link .btn_gray2, .btn_false, .btn_false2, .btn_square_hover, .btn_square, .btn_yellow, .btn_yellow2, .btn_green, .btn_green2 {
+    background: #2e8ddf url("http://static1.mtime.cn/20160825145005/images/mytime/public_bg.jpg") no-repeat scroll -362px -168px;
+    border: 1px solid #2785cf;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+    font-size: 14px;
+    height: 27px;
+    line-height: 27px;
+    overflow: visible;
+    padding: 0 12px;
+    vertical-align: middle;
+    width: auto;
+}
+.tl_link .btn_gray, .btn_gray, .btn_square, .btn_gray2, .tl_link .btn_gray2 {
+    background-color: #f0f0f0;
+    background-position: -78px -168px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.tl_link .btn_gray:hover, .btn_gray:hover, .btn_square, .btn_gray2:hover, .tl_link .btn_gray2:hover {
+    background-color: #fefefe;
+    background-position: -78px -199px;
+    border-color: #d9d9d9;
+    color: #6e6e6e;
+}
+.t_message {
+    margin-bottom: 15px;
+}
+.t_message .wp99 {
+}
+.w580 {
+    width: 580px;
+}
+.wp99 {
+    width: 98%;
+}
+.t_message .t_txt {
+    left: 0;
+    position: absolute;
+    width: 50px;
+}
+.t_message li {
+    padding-left: 50px;
+    position: relative;
+}
+.my_ttab {
+    margin-top: 0;
+}
+.my_ttab li {
+    display: inline;
+    float: left;
+    margin-right: 12px;
+    padding: 0 0 7px;
+    position: relative;
+}
+.my_ttab li.on a {
+    background: #fff none repeat scroll 0 0;
+    color: #000;
+    font-weight: bold;
+}
+.my_ttab li a {
+    border-radius: 5px;
+    float: left;
+    padding: 3px 7px;
+}
+.my_ttab li.on span {
+    display: block;
+}
+.my_ttab li span {
+    border-color: -moz-use-text-color #fff #a8a8a8;
+    border-style: none solid solid;
+    border-width: 0 5px 6px;
+    bottom: 0;
+    display: none;
+    height: 0;
+    left: 50%;
+    margin-left: -5px;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+.line_both {
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #979797;
+    height: 0;
+    overflow: hidden;
+}
+.bg_fff {
+    background: #fff none repeat scroll 0 0;
+}
+.p12 {
+    padding: 12px;
+}
+.mt12 {
+    margin-top: 12px;
+}
+.wbr {
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+.w500 dt.fl, .w500 dd.fl {
+    margin-top: 10px;
+}
+.box_yellow .t_text {
+    margin-bottom: 0;
+}
+.mtimebar {
+    bottom: 5px;
+    position: fixed;
+    right: 0;
+    width: 50px;
+    z-index: 100;
+}
+.mtimebar a:hover {
+    text-decoration: none;
+}
+.sharebar, .collectbar, .messagebar, .codebar, .topbar, .searchbar {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll 0 0;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    margin: 1px 0 0;
+    opacity: 0.9;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 50px;
+}
+.searchbar {
+    background-position: -55px -201px;
+}
+.searchbar:hover {
+    background-position: 0 0;
+}
+.sharebar {
+    background-position: -55px -252px;
+}
+.sharebar:hover {
+    background-position: 0 -51px;
+}
+.collectbar {
+    background-position: -55px -303px;
+}
+.collectbar:hover, .curron {
+    background-position: 0 -102px;
+}
+.messagebar {
+    background-position: -55px -354px;
+}
+.messagebar:hover {
+    background-position: 0 -153px;
+}
+.codebar {
+    background-position: -55px -405px;
+}
+.codebar:hover {
+    background-position: 0 -204px;
+}
+.topbar {
+    background-position: -55px -456px;
+}
+.topbar:hover {
+    background-position: 0 -255px;
+}
+.baron, .curron, .curron:hover {
+    display: none;
+    font-size: 13px;
+    opacity: 1;
+}
+.curron, .curron:hover {
+    display: block;
+}
+.searchbar:hover, .sharebar:hover, .collectbar:hover, .messagebar:hover, .codebar:hover, .topbar:hover {
+    opacity: 1;
+}
+.curr .baron, .curr {
+    display: block;
+    opacity: 1;
+}
+.sharebar .baron {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #ececec #ececec #ececec #fff;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid;
+    border-width: 1px;
+    height: 50px;
+    position: relative;
+    width: 50px;
+    z-index: 1;
+}
+.sharebox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ececec;
+    border-radius: 5px 0 0 5px;
+    bottom: 62px;
+    height: 190px;
+    position: absolute;
+    right: 49px;
+    width: 127px;
+}
+.sharebox ul {
+    padding: 3px 0 0 3px;
+}
+.sharebox li, .sharebox p {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #f4f4f4 -moz-use-text-color -moz-use-text-color #f4f4f4;
+    border-image: none;
+    border-style: solid none none solid;
+    border-width: 1px 0 0 1px;
+    display: inline;
+    float: left;
+    height: 58px;
+    padding: 1px 0 0 1px;
+    width: 58px;
+}
+.sharebox li a, .sharebox p a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    height: 58px;
+    line-height: 200px;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    width: 58px;
+}
+.sharebox li a:hover, .sharebox p a:hover {
+    line-height: 58px;
+    opacity: 1;
+}
+.sharebox li.sinaweibo {
+    border-top: 0 none;
+    padding: 2px 0 0;
+}
+.sharebox li.qq {
+    border-left: medium none;
+    padding: 0;
+}
+.sharebox li.qzone {
+    padding-left: 2px;
+}
+.sharebox li.email {
+    border-left: medium none;
+}
+.sharebox li.weixin {
+    border: 0 none;
+    padding: 2px 0 0;
+}
+.sharebox li.sinaweibo a {
+    background-position: -64px 0;
+}
+.sharebox li.qq a {
+    background-position: -123px 0;
+}
+.sharebox li.qzone a {
+    background-position: -182px 0;
+}
+.sharebox li.qqweibo a {
+    background-position: -241px 0;
+}
+.sharebox li.email a {
+    background-position: -300px 0;
+}
+.sharebox li.mytime a {
+    background-position: -359px 0;
+}
+.sharebox li.weixin a {
+    background-position: -120px -201px;
+}
+.sharebox li.sinaweibo a:hover {
+    background-position: -64px -60px;
+}
+.sharebox li.qq a:hover {
+    background-position: -123px -60px;
+}
+.sharebox li.qzone a:hover {
+    background-position: -182px -60px;
+}
+.sharebox li.qqweibo a:hover {
+    background-position: -241px -60px;
+}
+.sharebox li.email a:hover {
+    background-position: -300px -60px;
+}
+.sharebox li.mytime a:hover {
+    background-position: -359px -60px;
+}
+.sharebox li.weixin a:hover {
+    background-position: -120px -260px;
+}
+.collectbar .baron {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #ececec #ececec #ececec #fff;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid;
+    border-width: 1px;
+    height: 50px;
+    position: relative;
+    width: 50px;
+    z-index: 1;
+}
+.collectbox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ececec;
+    border-radius: 5px 0 0 5px;
+    bottom: 110px;
+    height: 124px;
+    position: absolute;
+    right: 49px;
+    width: 163px;
+}
+.collectbox p {
+    font-size: 14px;
+    padding: 10px 10px 0;
+    text-align: center;
+}
+.collectbox .ico_t_coll {
+    margin-right: 5px;
+}
+.ico_t_coll, .ico_t_collsec, .ico_t_add {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.ico_t_coll {
+    background-position: -432px 0;
+    height: 26px;
+    width: 26px;
+}
+.ico_t_collsec {
+    background-position: -480px -3px;
+    height: 18px;
+    width: 17px;
+}
+.ico_t_add {
+    background-position: -503px 0;
+    height: 7px;
+    width: 8px;
+}
+.collectbox dl {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    left: 50%;
+    margin-left: -65px;
+    position: absolute;
+    top: 50px;
+    width: 130px;
+}
+.collectbox dl.curr {
+    border-radius: 5px 5px 0 0;
+}
+.collectbox dt .ico_t_collsec {
+    margin-top: -9px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+.collectbox dl.curr dt .ico_t_collsec {
+    background-position: -461px -3px;
+}
+.collectbox dt {
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    padding: 8px 0 8px 20px;
+    position: relative;
+}
+.collectbox dd a {
+    color: #333;
+    display: block;
+    padding: 8px 0 8px 20px;
+}
+.collectbox dd li {
+    border-top: 1px solid #ccc;
+}
+.collectbox dd a:hover {
+    background: #e5f2fb none repeat scroll 0 0;
+    color: #0084d1;
+}
+.collectbox dd {
+    display: none;
+    height: 140px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.collectbox dl.curr dd {
+    display: block;
+}
+.collectbox .ico_t_add {
+    margin-right: 5px;
+}
+.collectbox a:hover .ico_t_add {
+    background-position: -512px 0;
+}
+.addcollsec {
+    padding: 5px;
+}
+.addcollsec input {
+    display: inline;
+    float: left;
+}
+.addcollsec .colltxt {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #ddd -moz-use-text-color #ddd #ddd;
+    border-image: none;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    height: 38px;
+    padding: 0 5px;
+    width: 60px;
+}
+.addcollsec .btn {
+    background: #0084d1 url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll -524px -70px;
+    border: 0 none;
+    cursor: pointer;
+    height: 40px;
+    width: 32px;
+}
+.codebar .baron {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #ececec #ececec #ececec #fff;
+    border-image: none;
+    border-radius: 0 5px 5px 0;
+    border-style: solid;
+    border-width: 1px;
+    height: 48px;
+    position: relative;
+    width: 48px;
+    z-index: 1;
+}
+.codebox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ececec;
+    border-radius: 5px 0 0 5px;
+    bottom: -3px;
+    height: 211px;
+    position: absolute;
+    right: 49px;
+    width: 156px;
+}
+.codebox dl {
+    margin: auto;
+    padding: 20px 0 0;
+    width: 115px;
+}
+.codebox dd {
+    font-size: 13px;
+    line-height: 22px;
+    padding: 5px 0 0;
+    text-align: center;
+}
+.messagebar .baron, .topbar .baron, .searchbar .baron {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    height: 48px;
+    width: 48px;
+}
+.smtimebar a:hover {
+    text-decoration: none;
+}
+.smtimebar {
+    position: absolute;
+    right: 0;
+    top: -1px;
+    z-index: 5;
+}
+.smtimebar .sharebar, .smtimebar .collectbar, .smtimebar .messagebar {
+    border-radius: 0 0 5px 5px;
+    display: inline;
+    float: left;
+    height: 35px;
+    margin-right: 5px;
+    margin-top: 0;
+    opacity: 0.9;
+    overflow: hidden;
+    width: 35px;
+}
+.smtimebar .sharebar:hover, .smtimebar .collectbar:hover, .smtimebar .messagebar:hover {
+    opacity: 1;
+}
+.smtimebar .sharebar {
+    background-position: 0 -511px;
+}
+.smtimebar .curron, .smtimebar .curron hover {
+    opacity: 0.9;
+}
+.smtimebar .collectbar, .smtimebar .curron {
+    background-position: -47px -511px;
+}
+.smtimebar .messagebar {
+    background-position: -92px -511px;
+}
+.smtimebar .baron {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f4f4f4;
+    border-radius: 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    height: 36px;
+    line-height: 33px;
+    margin: auto;
+    position: inherit;
+    width: 33px;
+}
+.smtimebar .curr {
+    border-radius: 0;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+.smtimebar .sharebox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    height: 36px;
+    right: -10px;
+    top: 34px;
+    width: 228px;
+    z-index: 0;
+}
+.smtimebar .sharebox ul {
+    padding: 0;
+}
+.smtimebar .sharebox p {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #f4f4f4;
+    border-image: none;
+    border-style: none none none solid;
+    border-width: 0 0 0 1px;
+    padding: 1px;
+}
+.smtimebar .sharebox p, .smtimebar .sharebox p a {
+    font-size: 12px;
+    height: 33px;
+    width: 34px;
+}
+.smtimebar .sharebox p.sinaweibo {
+    border-left: medium none;
+    margin-left: 1px;
+}
+.smtimebar .sharebox p a:hover {
+    line-height: 133px;
+    text-decoration: none;
+}
+.smtimebar .sharebox p.sinaweibo a {
+    background-position: 0 -567px;
+}
+.smtimebar .sharebox p.qq a {
+    background-position: -34px -567px;
+}
+.smtimebar .sharebox p.qzone a {
+    background-position: -102px -567px;
+}
+.smtimebar .sharebox p.qqweibo a {
+    background-position: -68px -567px;
+}
+.smtimebar .sharebox p.email a {
+    background-position: -136px -567px;
+}
+.smtimebar .sharebox p.mytime a {
+    background-position: -170px -567px;
+}
+.smtimebar .sharebox p.weixin a {
+    background-position: -204px -567px;
+}
+.smtimebar .sharebox p.sinaweibo a:hover {
+    background-position: 0 -601px;
+}
+.smtimebar .sharebox p.qq a:hover {
+    background-position: -34px -601px;
+}
+.smtimebar .sharebox p.qzone a:hover {
+    background-position: -68px -601px;
+}
+.smtimebar .sharebox p.qqweibo a:hover {
+    background-position: -102px -601px;
+}
+.smtimebar .sharebox p.email a:hover {
+    background-position: -136px -601px;
+}
+.smtimebar .sharebox p.mytime a:hover {
+    background-position: -170px -601px;
+}
+.smtimebar .sharebox p.weixin a:hover {
+    background-position: -204px -601px;
+}
+.smtimebar .collectbox {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    height: 100px;
+    right: 0;
+    top: 34px;
+    width: 150px;
+    z-index: 0;
+}
+.smtimebar .collectbox p {
+    padding: 10px 0 0 10px;
+    text-align: left;
+}
+.smtimebar .collectbox .showcoll {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    left: 50%;
+    margin-left: -65px;
+    position: absolute;
+    top: 40px;
+    width: 130px;
+}
+.smtimebar .collectbox .showcoll.curr {
+    border-radius: 5px 5px 0 0;
+}
+.smtimebar .collectbox .showcoll strong .ico_t_collsec {
+    margin-top: -9px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+.smtimebar .collectbox .showcoll.curr strong .ico_t_collsec {
+    background-position: -461px -3px;
+}
+.smtimebar .collectbox .showcoll strong {
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    display: block;
+    padding: 8px 0 8px 20px;
+    position: relative;
+}
+.smtimebar .collectbox .showcoll p a {
+    color: #333;
+    display: block;
+    padding: 8px 0 8px 20px;
+    width: auto;
+}
+.smtimebar .collectbox .showcoll p {
+    border-top: 1px solid #ccc;
+}
+.smtimebar .collectbox .showcoll p a:hover {
+    background: #e5f2fb none repeat scroll 0 0;
+    color: #0084d1;
+}
+.smtimebar .collectbox .showcoll .hidbox {
+    display: none;
+    height: 205px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.smtimebar .collectbox .showcoll.curr p {
+    display: block;
+}
+.smtimebar .collectbox .showcoll.curr .hidbox {
+    display: block;
+}
+.smtimebar .collectbox .showcoll strong {
+    font-size: 14px;
+    line-height: 20px;
+}
+.smtimebar .collectbox .showcoll p {
+    padding: 0;
+}
+.smtimebar .addcollsec {
+    border-top: 1px solid #ccc;
+}
+.smtimebar .addcollsec .colltxt {
+    height: 24px;
+    width: 60px;
+}
+.smtimebar .addcollsec .btn {
+    background-position: -524px -75px;
+    height: 26px;
+}
+.smtimebar .collectbox .ico_t_coll {
+    background-position: -435px -29px;
+    height: 20px;
+    width: 20px;
+}
+.smtimebar .messagebar .baron {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    display: block;
+    line-height: 300px;
+}
+.smtimebar .onlycollect {
+    height: 36px;
+    overflow: hidden;
+}
+.smtimebar .onlycollect p {
+    padding: 6px 0 0;
+    text-align: center;
+}
+.peoppic .pic, .peoppic .pic img, .moviepic pic, .moviepic .pic img {
+    border-radius: 10px;
+}
+.loading {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2011/loading.gif") no-repeat scroll center center;
+    display: block;
+    height: 66px;
+    left: 50%;
+    margin-left: -33px;
+    margin-top: -33px;
+    position: absolute;
+    top: 50%;
+    width: 66px;
+}
+.w270 {
+    width: 270px;
+}
+.w340 {
+    width: 340px;
+}
+.l_arrow, .r_arrow, .tl_arrow, .tr_arrow, .bl_arrow, .br_arrow, .ico_quot, .ico_like {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.ico_quot {
+    background-position: -463px -27px;
+    height: 21px;
+    width: 20px;
+}
+.l_arrow, .r_arrow {
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 21px;
+}
+.l_arrow {
+    background-position: -135px -137px;
+    left: -21px;
+}
+.r_arrow {
+    background-position: -158px -137px;
+    right: -21px;
+}
+.tl_arrow, .tr_arrow, .bl_arrow, .br_arrow {
+    height: 21px;
+    position: absolute;
+    width: 40px;
+}
+.tl_arrow {
+    background-position: -185px -135px;
+    left: 30px;
+    top: -21px;
+}
+.tr_arrow {
+    background-position: -185px -135px;
+    right: 30px;
+    top: -21px;
+}
+.bl_arrow {
+    background-position: -316px -140px;
+    bottom: -21px;
+    left: 30px;
+}
+.br_arrow {
+    background-position: -316px -140px;
+    bottom: -21px;
+    right: 30px;
+}
+.tr_arrow_s {
+    background-position: -185px -125px;
+}
+.br_arrow_s {
+    background-position: -185px -168px;
+}
+.edit_up {
+    left: auto;
+    right: 30px;
+}
+.edit_dn {
+    left: auto;
+    right: 30px;
+}
+.ico_like {
+    background-position: -498px -30px;
+    height: 17px;
+    width: 21px;
+}
+.minfo {
+    padding: 20px;
+}
+.minfo .slink {
+    padding-left: 15px;
+}
+.infomovie h2 {
+    font-size: 18px;
+    line-height: 30px;
+}
+.infomovie h2 a {
+    color: #333;
+}
+.infomovie .score {
+    background: #679c21 none repeat scroll 0 0;
+    color: #fff;
+    display: inline-block;
+    font-family: helvetica;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+.infomovie h3 {
+    color: #777;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 26px;
+}
+.infomovie p {
+    color: #333;
+    line-height: 22px;
+}
+.mticket {
+    border-top: 1px solid #ebebeb;
+    height: 32px;
+    margin: 10px -20px -10px;
+    padding: 10px;
+    position: relative;
+}
+.mticket .mtxt {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 32px;
+}
+.mticket .mtxt a {
+    color: #333;
+    margin: 0 2px;
+}
+.mticket .mtxt a:hover {
+    text-decoration: none;
+}
+.mticket b {
+    font-family: helvetica;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.mticket .bm_ticket {
+    background: #0081bc none repeat scroll 0 0;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    width: 140px;
+}
+.mticket .bm_ticket:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    text-decoration: none;
+}
+.mticket .not_bm_ticket, .mticket .not_bm_ticket:hover {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #d8d8d8;
+    font-weight: normal;
+}
+.mticket .not_bm_ticket a:hover {
+    text-decoration: none;
+}
+.mticket .not_bm_ticket {
+    color: #777;
+    font-family: helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+}
+.mticket .not_bm_ticket span {
+    border-left: 1px solid #d7d7d7;
+    color: #08c;
+    display: inline-block;
+    line-height: 32px;
+    margin-left: 10px;
+    padding-left: 10px;
+    vertical-align: top;
+}
+.mticket .not_bm_ticket i {
+    font-family: "黑体";
+    padding-right: 5px;
+}
+.addlink {
+    color: #333;
+    font-size: 14px;
+}
+.messpop {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 12px 17px;
+    position: absolute;
+    z-index: 25;
+}
+.btn_on, .btn_off {
+    border-radius: 20px;
+    color: #333;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    vertical-align: middle;
+    width: 80px;
+}
+.btn_on {
+    background: #0081bc none repeat scroll 0 0;
+    color: #fff;
+}
+.btn_on:hover {
+    background: #0074a9 none repeat scroll 0 0;
+}
+.btn_off:hover {
+    background: #0081bc none repeat scroll 0 0;
+    color: #fff;
+}
+.btn_on:hover, .btn_off:hover {
+    text-decoration: none;
+}
+.messpop .br_arrow {
+    background-position: -185px -168px;
+}
+.movietip {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px 0 5px;
+}
+.movietip, .mticket .movietip a {
+    color: #777;
+}
+.mticket .bm_ticket {
+    float: right;
+}
+.infomovie .txtinfo {
+    font-size: 14px;
+    margin-top: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+.infomovie .txtinfo .ico_quot {
+    left: 0;
+    position: absolute;
+    top: -3px;
+}
+.moviepic .pic, .moviepic .infomovie {
+    display: inline;
+    float: left;
+}
+.moviepic .pic img {
+    border: 1px solid #c4c4c4;
+    vertical-align: top;
+}
+.moviepic .infomovie {
+    margin-left: 10px;
+    width: 190px;
+}
+.moviepic .infomovie h2 {
+    font-size: 16px;
+    line-height: 24px;
+}
+.moviepic .infomovie h3 {
+    color: #333;
+    line-height: 1;
+    margin-bottom: 8px;
+    padding: 0;
+}
+.moviepic .infomovie p a {
+    color: #333;
+}
+.moviepic .infomovie .infocolor, .peoppic .infomovie .glink, .peoppic .infomovie .glink a {
+    color: #777;
+}
+.peoppic .infomovie {
+    width: 182px;
+}
+.peoppic .infomovie .glink a {
+    margin: 0 8px 0 3px;
+}
+.ico_thefilm, .ico_upcoming {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #e7e7e7 -moz-use-text-color #e7e7e7 #e7e7e7;
+    border-image: none;
+    border-radius: 5px 0 0 5px;
+    border-style: solid none solid solid;
+    border-width: 1px 0 1px 1px;
+    color: #fff;
+    display: inline-block;
+    left: -24px;
+    line-height: 1.2;
+    overflow: hidden;
+    padding: 6px 0;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    vertical-align: middle;
+    width: 22px;
+}
+.ico_thefilm {
+    background: #d11538 none repeat scroll 0 0;
+}
+.ico_upcoming {
+    background: #ff6d00 none repeat scroll 0 0;
+}
+.mpeople .moviepic .infomovie {
+    margin-left: 10px;
+    width: 190px;
+}
+.mpeople .mticket {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}
+.link_upcoming a, .link_upcoming .slink {
+    color: #ff6d00;
+}
+.link_thefilm a, .link_thefilm .slink {
+    color: #d30d33;
+}
+.like {
+    color: #d11538;
+}
+.infomovie .like {
+    height: 17px;
+    line-height: 17px;
+    margin-left: 10px;
+    overflow: hidden;
+}
+.infomovie .like .ico_like {
+    margin-right: 3px;
+}
+.pagenav {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.pagenav a, .pagesize span, .pagenav .i_dot {
+    border: 0 none;
+    border-radius: 36px;
+    color: #323232;
+    display: inline-block;
+    font-family: helvetica,"微软雅黑","microsoft yahei";
+    font-size: 16px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 3px;
+    padding: 0;
+    text-align: center;
+    width: 36px;
+}
+.pagenav a.on, .pagenav a:hover {
+    background: #0096ff none repeat scroll 0 0;
+    border: 0 none;
+    color: #fff;
+    text-decoration: none;
+}
+.pagenav a.false {
+    display: none;
+}
+.pagenav a.next {
+    font-size: 12px;
+    margin: 0 3px;
+    padding: 0 10px;
+    width: 60px;
+}
+.pagenav .i_dot {
+    cursor: pointer;
+    font-family: "宋体";
+    width: 40px;
+}
+.pagenav .i_dot input {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1) inset;
+    font-size: 16px;
+    height: 25px;
+    padding: 0 4px;
+    text-align: center;
+    width: 30px;
+}
+.mpscore .btns {
+    text-align: center;
+}
+.mpscore .btns .btn_blue, .mpscore .btns .btn_gray {
+    border: 0 none;
+    border-radius: 5px;
+    color: #fff;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 80px;
+}
+.mpscore .btns .btn_blue {
+    background: #0195fa none repeat scroll 0 0;
+}
+.mpscore .btns .btn_blue:hover {
+    background: #0379c8 none repeat scroll 0 0;
+}
+.mpscore .btns .btn_gray {
+    background: #7b7b7b none repeat scroll 0 0;
+}
+.mpscore .btns .btn_gray:hover {
+    background: #6e6d6d none repeat scroll 0 0;
+}
+.maskbg {
+    background: #000 none repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 16;
+}
+.my_layer {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 17;
+}
+.my_layer .inner {
+    border: 0 none;
+    min-height: 60px;
+    position: relative;
+}
+.w600 {
+    border: 0 none;
+    box-shadow: none;
+    width: 600px;
+}
+.i_pop_close {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtipbar_num.png") no-repeat scroll -67px 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 42px;
+    overflow: hidden;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    vertical-align: middle;
+    width: 42px;
+    z-index: 1;
+}
+.i_pop_close:hover {
+    background-position: -108px 0;
+    text-decoration: none;
+}
+.innertit {
+    padding: 20px 20px 0;
+}
+.innertit h2 {
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 40px;
+}
+.my_layer .inner .popmid {
+    padding: 20px;
+}
+.txtbox {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+.popbtns {
+    margin: 20px 0 0;
+    text-align: center;
+}
+.popbtns .btn_blue, .popbtns .btn_gray, .tip_btnbox .btn_blue, .tip_btnbox .btn_gray, .btn_square_hover, .btn_square, .box_yellow .btn_gray2, .box_yellow a, .t_btn_gray_i, .my_layer .btn_blue {
+    border: 0 none;
+    border-radius: 20px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 5px;
+    overflow: hidden;
+    padding: 0 12px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+}
+.popbtns .btn_blue, .tip_btnbox .btn_blue, .btn_square_hover, .box_yellow .btn_gray2, .my_layer .btn_blue {
+    background: #0081bc none repeat scroll 0 0;
+}
+.popbtns .btn_blue:hover, .tip_btnbox .btn_blue:hover, .btn_square_hover:hover, .box_yellow .btn_gray2:hover, .my_layer .btn_blue:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    text-decoration: none;
+}
+.popbtns .btn_gray, .tip_btnbox .btn_gray, .btn_square, .box_yellow a, .t_btn_gray_i {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    color: #333;
+}
+.popbtns .btn_gray:hover, .tip_btnbox .btn_gray:hover, .btn_square:hover, .box_yellow a:hover, .t_btn_gray_i:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    border: 1px solid #0074a9;
+    color: #fff;
+    text-decoration: none;
+}
+.box_yellow .btn_gray2, .box_yellow a {
+    padding: 0;
+    width: 95px;
+}
+.editshare {
+    position: relative;
+}
+.editshare span {
+    color: #878787;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: -30px;
+}
+.editshare textarea {
+    background: #fff url("http://static1.mtime.cn/20160825145005/images/2014/editshare.gif") no-repeat scroll right bottom;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    color: #ccc;
+    font-size: 13px;
+    height: 110px;
+    line-height: 24px;
+    width: 99%;
+}
+.editshare textarea.curr {
+    color: #333;
+    line-height: 22px;
+}
+.i_share_select, .i_share_video, .i_share_pic, .i_share_pic, .i_share_play, .i_share_prev, .i_share_next, .i_sharecurr {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.i_share_video {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/share_video.png") no-repeat scroll 0 0;
+    height: 25px;
+    width: 24px;
+}
+.i_share_select, .i_share_pic, .i_share_play, .i_share_prev, .i_share_next {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/sharemid.gif") no-repeat scroll 0 0;
+}
+.i_share_select {
+    background-position: -29px 0;
+    height: 12px;
+    width: 26px;
+}
+.i_share_pic, .i_share_play {
+    height: 13px;
+    width: 17px;
+}
+.i_share_pic {
+    background-position: -56px -1px;
+}
+.i_share_play {
+    background-position: -74px -2px;
+}
+.i_share_prev, .i_share_next {
+    height: 60px;
+    width: 24px;
+}
+.i_share_prev {
+    background-position: 0 -27px;
+}
+.i_share_prev:hover {
+    background-position: -50px -27px;
+}
+.i_share_next {
+    background-position: -25px -27px;
+}
+.i_share_next:hover {
+    background-position: -75px -27px;
+}
+.i_sharecurr {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtipbar_num.png") no-repeat scroll -152px -2px;
+    height: 18px;
+    width: 18px;
+}
+.i_share_mask {
+    background: #000 none repeat scroll 0 0;
+    height: 20px;
+    opacity: 0.7;
+    width: 100%;
+}
+.boxshare, .infoshare {
+    padding: 20px 0;
+}
+.boxshare .picmid, .boxshare .txtmid {
+    display: inline;
+    float: left;
+}
+.boxshare .picmid {
+    position: relative;
+}
+.boxshare .picmid img {
+    border: 1px solid #c4c4c4;
+    vertical-align: top;
+}
+.boxshare .picmid .i_share_video, .boxshare .picmid .i_share_mask {
+    position: absolute;
+}
+.boxshare .picmid .i_share_video {
+    bottom: 10px;
+    left: 50%;
+    margin-left: -12px;
+    z-index: 1;
+}
+.boxshare .picmid .i_share_mask {
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+.boxshare .txtmid {
+    color: #333;
+    margin-left: 10px;
+    width: 360px;
+}
+.boxshare .txtmid h2, .boxshare .txtmid h2 a, .boxshare .txtmid h2 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+.boxshare .txtmid h2 {
+    font-size: 16px;
+    line-height: 26px;
+}
+.boxshare .txtmid h3 {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 3px 0;
+}
+.boxshare .txtmid ul {
+    color: #777;
+    font-size: 12px;
+    line-height: 22px;
+}
+.boxshare .txtmid p {
+    font-size: 14px;
+    line-height: 24px;
+}
+.infoshare h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 30px;
+    padding: 0 0 8px;
+}
+.infoshare h2 a {
+    color: #333;
+}
+.infotab li {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    font-size: 14px;
+    margin-right: 30px;
+    position: relative;
+}
+.infotab li .i_share_select {
+    bottom: -22px;
+    display: none;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+}
+.infotab li.curr {
+    font-weight: bold;
+}
+.infotab li.curr .i_share_select {
+    display: block;
+}
+.infotab .i_share_pic, .infotab .i_share_play {
+    margin: 0 2px 0 0;
+}
+.infoslist {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/infoshare.png") no-repeat scroll 0 0;
+    margin: 20px 0 0;
+    min-height: 60px;
+    padding: 10px 0;
+}
+.infoslist .i_share_prev, .infoslist .i_share_next {
+    margin-top: -30px;
+    position: absolute;
+    top: 50%;
+}
+.infoslist .i_share_prev {
+    left: 0;
+}
+.infoslist .i_share_next {
+    right: 0;
+}
+.infoslist .infoscroll {
+    min-height: 60px;
+    position: relative;
+}
+.infoslist .scrollmid {
+    margin: 20px auto 0;
+    min-height: 122px;
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+}
+.infoslist .scrollmid ul {
+    width: 2000px;
+}
+.infoslist .scrollmid li {
+    cursor: pointer;
+    display: inline;
+    float: left;
+    margin-right: 8px;
+    position: relative;
+}
+.infoslist .scrollmid li img {
+    border: 1px solid #c4c4c4;
+    display: block;
+}
+.infoslist .scrollmid li .i_sharecurr {
+    bottom: 5px;
+    display: none;
+    position: absolute;
+    right: 5px;
+}
+.infoslist .scrollmid li.curr .i_sharecurr {
+    display: block;
+}
+.btnshare {
+    border-top: 1px solid #ededed;
+    padding: 50px 0 0;
+    text-align: right;
+}
+.btnshare .sharelink {
+    background: #0081bc none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    width: 176px;
+}
+.btnshare .sharelink:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    text-decoration: none;
+}
+.my_layer .newsharebar {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    min-height: 36px;
+    width: 235px;
+}
+.my_layer .newsharebar .smtimebar {
+    border: 0 none;
+    position: inherit;
+    top: 0;
+}
+.my_layer .newsharebar .sharebox {
+    border: 0 none;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+    position: inherit;
+    top: 0;
+    width: 222px;
+}
+.w500 {
+    width: 500px;
+}
+.loginpopbox .logintool {
+    padding: 0 47px 30px 50px;
+    position: relative;
+}
+.loginpopbox .logintool dt {
+    background-position: -3px -334px;
+    height: 73px;
+    margin: auto;
+    width: 370px;
+}
+.loginpopbox .logintool .name, .loginpopbox .logintool .password, .loginpopbox .logintool .code {
+    height: 60px;
+}
+.loginpopbox .logintool .name {
+    background-position: -245px -192px;
+}
+.loginpopbox .logintool .password {
+    background-position: -304px -192px;
+}
+.loginpopbox .logintool .userlogin input {
+    font-size: 14px;
+}
+.loginpopbox .logintool .code {
+    background-position: -362px -193px;
+}
+.loginpopbox .logintool .userlogin .false input {
+    font-size: 14px;
+    width: 250px;
+}
+.loginpopbox .btn_login, .loginpopbox .btn_regist {
+    height: 40px;
+    line-height: 40px;
+    width: 170px;
+}
+.loginpopbox .logintool .userlogin li input {
+    padding: 0 10px;
+    width: 275px;
+}
+.loginpopbox .logintool .userlogin li.codetxt {
+    margin: 10px 0 0 5px;
+}
+.loginpopbox .logintool .userlogin ul {
+    overflow: hidden;
+}
+.loginpopbox .usertip .ico_m_check {
+    left: 0;
+    margin-top: -12px;
+    position: absolute;
+    top: 50%;
+    vertical-align: middle;
+}
+.loginpopbox .usertip {
+    clear: both;
+    height: 24px;
+    line-height: 24px;
+    padding: 10px 0 10px 40px;
+    position: relative;
+}
+.logintool .btn_login, .logintool .btn_regist {
+}
+.load48, .load40, .load32, .load24, .load16, .load104 i.loadimg {
+    animation: 0.7s linear 0.1s normal none infinite running sopacity;
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/load.png") no-repeat scroll 0 0;
+    display: block;
+    height: 104px;
+    width: 104px;
+}
+.load104 {
+    height: 104px;
+    position: relative;
+    width: 104px;
+}
+.load104 i.logo {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/load.png") no-repeat scroll -104px -48px;
+    height: 16px;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 47px;
+}
+.load48 {
+    background-position: -104px 0;
+    height: 48px;
+    width: 48px;
+}
+.load40 {
+    background-position: -152px 0;
+    height: 40px;
+    width: 40px;
+}
+.load32 {
+    background-position: -192px 0;
+    height: 32px;
+    width: 32px;
+}
+.load24 {
+    background-position: -224px 0;
+    height: 24px;
+    width: 24px;
+}
+.load16 {
+    background-position: -248px 0;
+    height: 16px;
+    width: 16px;
+}
+.load104 i.loadimg {
+}
+.load104 i.logo {
+}
+.load104_b i.loadimg {
+}
+.load104_b i.logo {
+}
+.load48 {
+}
+.load40 {
+}
+.load32 {
+}
+.load24 {
+}
+.load16 {
+}
+@media not all, not all {
+.load104 i.loadimg {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/load.png") no-repeat scroll 0 0;
+    height: 104px;
+    position: relative;
+    width: 104px;
+}
+.load104 i.logo {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/load.png") no-repeat scroll -104px -48px;
+    height: 16px;
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 47px;
+}
+}
+@keyframes sopacity {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+@keyframes sopacity {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+@keyframes sopacity {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(-360deg);
+}
+}
+.my_layer .load48 {
+    left: 50%;
+    margin-left: -24px;
+    margin-top: -24px;
+    position: absolute;
+    top: 50%;
+}
+.none {
+    display: none;
+}
+.starbox .main_actor dd {
+    font-size: 12px;
+    margin-top: 10px;
+    min-height: 57px;
+    padding: 0 62px;
+    position: relative;
+}
+.starbox .main_actor dd img.per {
+    left: 0;
+}
+.starbox .main_actor dd img {
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+}
+.starbox .main_actor dd img.cha {
+    border: 0 none;
+    border-radius: 30px;
+    right: 0;
+}
+.tostar {
+    padding: 20px;
+}
+.tostar h2 {
+    font-size: 14px;
+}
+.plot, .starbox {
+    height: 319px;
+    overflow: hidden;
+}
+.plot .txtinfo {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 4px 0 0;
+}
+.showfilm {
+    height: auto;
+    margin: 0;
+    position: inherit;
+}
+.showfilm .showtime_tip .share_tit {
+    z-index: 2;
+}
+.showfilm .showtime_tip {
+    border: 1px solid #fff;
+}
+.showfilm span.cityletter a {
+    border: 0 none;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+}
+.showfilm .showtime_tip .p15 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border-top: 1px solid #d2d3d5;
+    margin: 0 15px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 0;
+}
+.showfilm .showtime_tip a {
+    color: #333;
+}
+.showfilm .cityletter b {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/indexicon.gif") no-repeat scroll -222px -175px;
+    bottom: -12px;
+    height: 15px;
+    width: 28px;
+}
+.showfilm .city_list2 ul {
+    width: auto !important;
+}
+.showfilm .city_list2 li {
+    width: 64px;
+}
+.ele_bbstitbox {
+    background: #fff none repeat scroll 0 0;
+    padding-top: 100px;
+    position: relative;
+}
+.ele_bbstitbox .sharp {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/static/images/2014/icon24.png") no-repeat scroll 0 -445px;
+    bottom: -45px;
+    height: 45px;
+    left: 50%;
+    margin-left: -385px;
+    position: absolute;
+    width: 119px;
+}
+.ele_bbstit {
+    margin: 0 auto;
+    width: 1000px;
+}
+.ele_bbstit h2 {
+    border-left: 9px solid #d01538;
+    font-size: 28px;
+    line-height: 1em;
+    padding-left: 15px;
+}
+.ele_bbstit h2 a {
+    color: #000;
+}
+.ele_bbstit h2 span {
+    color: #999;
+    font-size: 24px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+.ele_bbstit .newsnote {
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.4em;
+    padding: 30px 0 30px 45px;
+    position: relative;
+}
+.ele_bbstit .icon_note {
+    height: 25px;
+    left: 30px;
+    position: absolute;
+    top: 30px;
+    width: 12px;
+}
+@font-face {
+    font-family: "icomoon";
+    font-style: normal;
+    font-weight: normal;
+    src: url("http://static1.mtime.cn/static/fonts/icomoon.eot?#iefixrf25xo") format("embedded-opentype"), url("http://static1.mtime.cn/static/fonts/icomoon.woff?rf25xo") format("woff"), url("http://static1.mtime.cn/static/fonts/icomoon.ttf?rf25xo") format("truetype"), url("http://static1.mtime.cn/static/fonts/icomoon.svg?rf25xo#icomoon") format("svg");
+}
+.icon-add {
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "icomoon";
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin-right: 5px;
+    text-transform: none;
+    vertical-align: middle;
+}
+.icon-add::before {
+    content: "";
+}
+.icon-add em {
+    display: none;
+}
+.ele_bbstit p {
+    font-size: 14px;
+    padding: 0 0 30px 45px;
+}
+.ele_bbscont {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/static/images/2014/html_bg.jpg") repeat scroll 0 0;
+    padding-top: 55px;
+    position: relative;
+}
+.ele_bbscont .sharp {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/icon24.png") no-repeat scroll 0 -445px;
+    height: 45px;
+    left: 50%;
+    margin-left: -385px;
+    position: absolute;
+    top: 0;
+    width: 119px;
+}
+.ele_bbsconter {
+    margin: 0 auto;
+    width: 1000px;
+}
+.ele_bbsleft {
+    display: inline;
+    float: left;
+    width: 690px;
+}
+.ele_bbsleft h3 {
+    color: #999;
+    font-size: 24px;
+    font-weight: normal;
+    height: 45px;
+    line-height: 1.2em;
+    overflow: hidden;
+}
+.ele_bbsleft h3 a {
+    color: #999;
+}
+.ele_bbsarea {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/static/images/bg/ffffff_50.png") repeat scroll 0 0;
+    padding: 35px 30px;
+}
+.ele_bbsuser {
+    float: left;
+    text-align: center;
+    width: 80px;
+}
+.ele_bbsuser img {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/per_none.jpg") no-repeat scroll -585px -69px;
+    border: 1px solid #c4c4c4;
+    display: inline-block;
+    font-size: 0;
+    height: 48px;
+    line-height: 0;
+    position: relative;
+    width: 48px;
+}
+.ele_bbstextarea {
+    float: right;
+    text-align: right;
+    width: 530px;
+}
+.ele_textarea {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    height: 50px;
+    padding: 5px;
+    resize: none;
+    width: 518px;
+}
+.ele_bbstextarea .btn_dblue {
+    margin-left: 12px;
+    text-align: center;
+    width: 80px;
+}
+.ele_bbslist {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 9px;
+    padding: 12px 35px;
+}
+.ele_bbslist dd {
+    border-bottom: 1px dotted #ccc;
+    clear: both;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+}
+.ele_bbslist dd .line {
+    background: #ccc none repeat scroll 0 0;
+    height: 85px;
+    left: 90px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    width: 1px;
+}
+.ele_bbslist dt {
+    font-size: 14px;
+    padding: 15px 0;
+    text-align: right;
+}
+.ele_bbslist dt em {
+    font-size: 24px;
+}
+.ele_bbslist .user_box {
+    display: inline;
+    float: left;
+    overflow-wrap: break-word;
+    text-align: center;
+    width: 80px;
+    word-break: break-all;
+}
+.ele_bbslist .user_box img {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/per_none.jpg") no-repeat scroll -585px -69px;
+    border: 1px solid #c4c4c4;
+    display: inline-block;
+    font-size: 0;
+    height: 48px;
+    line-height: 0;
+    position: relative;
+    width: 48px;
+}
+.ele_bbslist .user_cont {
+    float: right;
+    width: 510px;
+}
+.ele_bbslist .ele_replay .textarea {
+    width: 320px;
+}
+.ele_bbslist .ele_replay {
+    margin-top: 15px;
+    position: relative;
+}
+.ele_bbslist .user_cont div.mt6 {
+    width: 332px;
+}
+.db_comtool i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/static/images/2014/allicon24.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 15px;
+    margin-right: 3px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: text-bottom;
+    width: 17px;
+}
+.db_comtool a {
+    color: #7f7f7f;
+    font-size: 14px;
+    margin-left: 15px;
+}
+.db_comtool a:hover, .db_comtool a.on {
+    color: #0073c6;
+    text-decoration: none;
+}
+.db_comtool a.com_good i {
+    background-position: -34px 0;
+}
+.db_comtool a.com_good:hover i, .db_comtool a.com_good.on i {
+    background-position: -34px -15px;
+}
+.db_comtool a.com_share i {
+    background-position: -17px 0;
+}
+.db_comtool a.com_share:hover i {
+    background-position: -17px -15px;
+}
+.db_comtool a.com_bbs i {
+    background-position: 0 0;
+}
+.db_comtool a.com_bbs:hover i {
+    background-position: 0 -15px;
+}
+.ele_bbslist .db_comtool {
+    margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 9px;
+}
+.ele_bbslist ul {
+    overflow: hidden;
+    position: relative;
+}
+.ele_bbslist li {
+    font-size: 12px;
+    padding: 20px 0 0 45px;
+    position: relative;
+}
+.ele_bbslist li .user_box {
+    left: 0;
+    position: absolute;
+    top: 20px;
+    width: 32px;
+}
+.ele_bbslist li .user_box img {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 1px solid #c4c4c4;
+    height: 32px;
+    width: 32px;
+}
+.ele_bbsright {
+    display: inline;
+    float: right;
+    padding-top: 45px;
+    width: 300px;
+}
+.ele_bbsright .news_weekhot {
+    background: #fff none repeat scroll 0 0;
+    border: 0 none;
+}
+.ele_bbsright h4.news_tvtit {
+    left: 0;
+}
+.ele_bbsright .news_weekhot dd {
+    padding-right: 12px;
+}
+.ele_bbsright p.tr {
+    padding-right: 15px;
+}
+.otherlogin {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #ddd;
+    margin: 0 -20px -20px;
+    padding: 30px 20px;
+}
+.otherlogin dt {
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+.otherlogin dd {
+    padding: 30px 0 0;
+    text-align: center;
+}
+.otherlogin dd a.o_qq {
+    margin: 0 45px;
+}
+.o_sina, .o_qq, .o_alipay {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 54px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 52px;
+}
+.o_sina {
+    background-position: -3px -441px;
+}
+.o_qq {
+    background-position: -60px -441px;
+}
+.o_alipay {
+    background-position: -114px -439px;
+}
+.loginpop .otherlogin {
+    margin-top: 20px;
+}
+.loginpop .otherlogin dt {
+    font-size: 14px;
+}
+.loginpop .otherlogin dd {
+    padding: 15px 0 0;
+}
+.loginpop .otherlogin .o_sina, .loginpop .otherlogin .o_qq, .loginpop .otherlogin .o_alipay {
+    height: 42px;
+    width: 42px;
+}
+.loginpop .otherlogin .o_sina {
+    background-position: -170px -437px;
+}
+.loginpop .otherlogin .o_qq {
+    background-position: -214px -437px;
+    margin: 0 25px;
+}
+.loginpop .otherlogin .o_alipay {
+    background-position: -256px -437px;
+}
+.new_otherlogin .otherlogin dd .o_sina, .new_otherlogin .otherlogin dd .o_qq, .new_otherlogin .otherlogin dd .o_alipay {
+    height: 63px;
+    width: 63px;
+}
+.new_otherlogin .otherlogin dd .o_sina {
+    background-position: 0 -495px;
+}
+.new_otherlogin .otherlogin dd .o_qq {
+    background-position: -64px -495px;
+}
+.new_otherlogin .otherlogin dd .o_alipay {
+    background-position: -127px -495px;
+}
+.menubar:hover {
+    text-decoration: none;
+}
+#topbar {
+    color: #333;
+    font: 12px/150% helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+}
+.topline {
+    background: #e5e5e5 url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll center 8px;
+    height: 13px;
+    overflow: hidden;
+}
+.bigtopline {
+    background-position: center 0;
+    height: 5px;
+}
+#topbar .menubar {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    position: relative;
+    z-index: 18;
+}
+.menubg {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbg.png") repeat-x scroll 0 0;
+    height: 82px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#topbar .menumid {
+    height: 50px;
+    margin: auto;
+    padding: 19px 0 0;
+    width: 1000px;
+}
+.nline {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #240406;
+    height: 4px;
+    margin: 0 -10px;
+    overflow: hidden;
+}
+#topbar .mtimelogo {
+    background: #e5e5e5 none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+    height: 60px;
+    left: 50%;
+    margin-left: -105px;
+    position: absolute;
+    top: -9px;
+    width: 210px;
+    z-index: 1;
+}
+#topbar .mtimelogo a, #topbar .mtimelogo a:hover {
+    background: transparent url("http://static1.mtime.cn/20160825145005/images/2014/mtipbar_num.png") repeat scroll 5px -55px;
+    display: block;
+    height: 46px;
+    line-height: 300px;
+    margin: 8px auto 0;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    width: 128px;
+}
+.navbar, .navbar li, .navbar li a {
+    display: inline;
+    float: left;
+}
+.navbar {
+}
+.navbar li {
+    margin: 0 10px;
+}
+.navbar li a {
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 5px;
+    position: relative;
+}
+.navbar li a:hover {
+    border-bottom: 4px solid #fff;
+    text-decoration: none;
+}
+.navbar li span {
+    color: #fff;
+    left: 5px;
+    position: absolute;
+    top: -1px;
+    z-index: 0;
+}
+.navbar li em {
+    z-index: 1;
+}
+.navbar li.curr {
+    border-bottom: 1px solid #240406;
+}
+.navbar li.curr a {
+    border-bottom: 4px solid #fff;
+}
+.navbar li .i_new {
+    background-position: -388px -180px;
+    height: 14px;
+    left: 27px;
+    overflow: hidden;
+    top: -9px;
+    width: 23px;
+}
+.topsearch input {
+    border: 0 none;
+    display: inline-block;
+    padding: 0;
+    vertical-align: top;
+}
+#topbar .bartop {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") repeat-x scroll left -409px;
+    height: 106px;
+}
+#topbar .searchshadow {
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) inset;
+    height: 39px;
+    padding-left: 90px;
+    position: relative;
+}
+#topbar .topmid {
+    margin: auto;
+    padding: 30px 0 0;
+    position: relative;
+    width: 1000px;
+    z-index: 22;
+}
+#topbar .topmid .topsearch .button {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") repeat scroll 0 0;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+#topbar .topmid .topsearch {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 1);
+    height: 39px;
+    margin: auto;
+    position: relative;
+    width: 580px;
+    z-index: 2;
+}
+#topbar .topmid .topsearch .text {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    color: #898989;
+    display: inline-block;
+    font-size: 14px;
+    height: 28px;
+    margin: 4px 0 0;
+    padding: 0 20px;
+    vertical-align: middle;
+    width: 81%;
+}
+#topbar .topmid .topsearch .button {
+    background-position: 0 -110px;
+    border: 0 none;
+    border-radius: 20px;
+    cursor: pointer;
+    height: 30px;
+    margin: 5px 0 0;
+    width: 45px;
+}
+#topbar .topmid .searcurr .text {
+    color: #333;
+}
+#topbar .topmid .searcurr .button {
+    background-position: -343px -107px;
+    margin-top: 5px;
+}
+#topbar .topmid .searchlink {
+    cursor: default;
+    display: block;
+    height: 106px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1000px;
+    z-index: 0;
+}
+#topbar .topmid .searchlink:hover, #topbar .menupop a {
+    text-decoration: none;
+}
+#topbar .topmid .linkpoint {
+    cursor: pointer;
+}
+.scrolltop {
+    position: absolute;
+    width: 100%;
+    z-index: 101;
+}
+.scrolltop .menubg {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbg_sc.png") repeat-x scroll 0 0;
+}
+.selctsearch {
+    height: 38px;
+    left: 0;
+    line-height: 38px;
+    padding-left: 13px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 95px;
+}
+.selctsearch strong, .selctsearch i, .selctsearch span {
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.selctsearch i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -381px -339px;
+    height: 5px;
+    width: 11px;
+}
+.selctsearch strong {
+    width: 45px;
+}
+.selctsearch span {
+    background: #dbdbdb none repeat scroll 0 0;
+    height: 14px;
+    margin: 0 0 0 10px;
+    width: 1px;
+}
+.selectshow {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(51, 51, 51, 0.3);
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 44px;
+    width: 95px;
+}
+.selectshow li, .selectshow li a {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+}
+.selectshow li {
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    padding: 5px 0 6px;
+}
+.selectshow li:hover {
+    background: #e5f2fb none repeat scroll 0 0;
+}
+.mdsearch .cate {
+    color: #999;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+.mdsearch .price {
+    padding: 5px 0 0;
+}
+.mdsearch .price strong, .mdsearch .price span {
+    display: inline-block;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.mdsearch .price strong {
+    color: #df4949;
+    font-size: 14px;
+}
+.mdsearch .price span {
+    color: #999;
+    padding: 0 5px;
+    text-decoration: line-through;
+}
+.showsearch {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    left: 50%;
+    line-height: 21px;
+    margin-left: -185px;
+    position: absolute;
+    top: 75px;
+    width: 470px;
+    z-index: 10;
+}
+#topbar .mdsearch li {
+    border-bottom: 1px solid #eee;
+    color: #333;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 20px;
+    position: relative;
+}
+.mdsearch li.first {
+    border-radius: 5px 5px 0 0;
+}
+.mdsearch .pic, .mdsearch .txt {
+    display: inline;
+    float: left;
+}
+.mdsearch .pic img {
+    border: 1px solid #c3c3c3;
+    vertical-align: top;
+}
+.mdsearch .txt {
+    margin-left: 15px;
+    width: 335px;
+}
+.mdsearch .txt h2, .mdsearch .txt h3, .mdsearch .txt p {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+}
+.mdsearch .txt p {
+    line-height: 1.4;
+}
+.mdsearch .mdbg {
+    background: #e5f2fb none repeat scroll 0 0;
+}
+.mdsearch .more {
+    font-size: 13px;
+    line-height: 1;
+    padding: 10px 20px;
+    text-align: right;
+}
+.mdsearch .more, #topbar .mdsearch .more a, #topbar .mdsearch.more a:hover {
+    color: #323232;
+}
+.mdsearch .more .song {
+    font-family: "宋体";
+    padding-left: 10px;
+}
+.mdsearch .more a .song {
+    padding: 0;
+}
+.mdsearch li.first .ico_currmovie {
+    border-radius: 0 5px 0 0;
+}
+#topbar .mdsearch li a:hover {
+    text-decoration: none;
+}
+#topbar .mdsearch li.more a:hover {
+    text-decoration: underline;
+}
+.mdsearch {
+    position: relative;
+    z-index: 10;
+}
+.navsearch .showsearch {
+    margin-left: -70px;
+    top: 31px;
+    width: 240px;
+}
+#topbar .navsearch .showsearch li {
+    padding: 5px 10px;
+}
+.navsearch .showsearch .txt {
+    margin-left: 10px;
+    width: 160px;
+}
+.navsearch .showsearch .more {
+    font-size: 12px;
+}
+.navsearch .showsearch .txt h2, .navsearch .showsearch .txt p {
+    font-size: 12px;
+    line-height: 1.2;
+}
+.navsearch .showsearch .txt h2 {
+    padding-bottom: 6px;
+}
+.navsearch .movieplay .txt .time {
+    margin-left: -15px;
+}
+.navsearch .movieplay .txt .time a {
+    margin-left: 15px;
+    padding: 3px 5px;
+}
+.navsearch .mdsearch li .ico_currmovie {
+    background-position: -453px -189px;
+    height: 46px;
+    width: 46px;
+}
+.navsearch .searchshadow {
+    box-shadow: none;
+    height: 29px;
+}
+#topbar .navsearch .showsearch .txt h2 a:hover, #topbar .navsearch .showsearch .txt h2 a, #topbar .navsearch .showsearch .more a, #topbar .navsearch .showsearch .more a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    color: #333;
+    text-decoration: none;
+}
+#topbar .navsearch .showsearch .mdbg .txt h2 a {
+    color: #0084d1;
+}
+#topbar .navsearch .showsearch .more a:hover {
+    text-decoration: underline;
+}
+.navsearch .showsearch .moviefilm .icobox {
+    width: 30px;
+}
+.navsearch .showsearch .moviefilm .txt {
+    width: 160px;
+}
+.navsearch .showsearch .moviefilm h2 {
+    line-height: 18px;
+    min-height: 22px;
+    padding: 0 0 5px;
+    position: relative;
+}
+.navsearch .showsearch .moviefilm h2 .ico_stat {
+    bottom: -15px;
+    position: absolute;
+    right: 0;
+}
+.navsearch .showsearch .moviefilm p {
+    line-height: 18px;
+}
+.moviepeop .txt h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0 5px;
+}
+.moviepeop .txt h2 a, .moviepeop .txt h2 a:hover {
+    color: #323232;
+}
+.moviepeop .txt p {
+    color: #999;
+}
+.moviename .txt h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0;
+}
+.moviename .txt h2 a, .moviepeop .txt h2 a:hover {
+    color: #323232;
+}
+.moviename .txt p, .moviename .txt h3 {
+    color: #999;
+}
+.moviename .txt h3 {
+    padding-bottom: 10px;
+}
+.moviename .mdbg h2 a, .moviename .mdbg h2 a:hover, .moviename .mdbg h3, .moviename .mdbg p {
+    color: #0084d1;
+}
+.ico_stat, .ico_map, #topbar .navsearch .showsearch .txt h2 a.ico_stat {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/newfilm_ico.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.ico_stat, #topbar .navsearch .showsearch .txt h2 a.ico_stat {
+    background-position: -30px 0;
+    display: none;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    text-indent: 25px;
+    width: 72px;
+}
+.ico_stat:hover, .moviefilm .txt h2 a.currstar, .moviefilm .txt h2 a.ico_stat:hover, #topbar .navsearch .showsearch .txt h2 a.ico_stat:hover, #topbar .navsearch .showsearch .txt h2 a.currstar {
+    background-position: -103px 0;
+    color: #fff;
+}
+.ico_map {
+    background-position: -54px -56px;
+    height: 42px;
+    width: 23px;
+}
+.moviefilm .icobox {
+    display: inline;
+    float: left;
+    text-align: center;
+    width: 45px;
+}
+.moviefilm .icobox .ico_map {
+    margin: auto;
+}
+.moviefilm .mdbg .ico_map {
+    background-position: -30px -56px;
+}
+.mdsearch .mdbg .ico_stat {
+    display: inline-block;
+}
+.moviefilm .txt h2 {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 0 0 5px;
+}
+.moviefilm .txt h2 a.ico_stat {
+    margin-left: 5px;
+}
+.moviefilm .txt h2 a, .moviefilm .txt h2 a:hover {
+    color: #323232;
+}
+.moviefilm .txt p {
+    color: #999;
+}
+.movieplay .txt h2 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.movieplay .txt h2 a, .movieplay .txt h2 a:hover, .movieplay .txt .time a {
+    color: #323232;
+}
+.movieplay .txt .time {
+    margin-left: -10px;
+    position: relative;
+}
+.movieplay .txt .time a {
+    background: #f1f1f1 none repeat scroll 0 0;
+    border-radius: 3px;
+    color: #999;
+    display: inline;
+    float: left;
+    margin: 5px 0 0 10px;
+    padding: 5px 10px;
+}
+.movieplay .mdbg .txt .time a {
+    background: #fff none repeat scroll 0 0;
+}
+.history li.first a {
+    float: right;
+}
+.navsearch {
+    min-width: 300px;
+    position: relative;
+}
+.navsearch, .navsearch .menuicon, .navsearch .topsearch {
+    display: inline;
+    float: left;
+}
+.navsearch .menuicon {
+    background: #fff url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -133px -155px;
+    border-radius: 4px;
+    height: 29px;
+    width: 34px;
+}
+.navsearch .currmenuicon, #topbar .navsearch .menuicon:hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -316px -156px;
+    border-color: #e7e7e7 #e7e7e7 -moz-use-text-color;
+    border-image: none;
+    border-radius: 4px 4px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    height: 25px;
+    padding-bottom: 10px;
+    position: relative;
+    width: 32px;
+    z-index: 1;
+}
+.navsearch .topsearch {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: none;
+    height: 27px;
+    margin-left: 5px;
+    padding: 0 0 0 70px;
+    position: relative;
+    width: 230px;
+}
+.navsearch .topsearch .text {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border-radius: 3px;
+    color: #fff;
+    height: 27px;
+    line-height: 27px;
+    margin: 0;
+    text-shadow: 1px 1px 1px #000;
+    width: 197px;
+}
+.navsearch .topsearch .button {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar_01.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 23px;
+    margin: 2px 0 0;
+    width: 32px;
+}
+.navsearch .topsearch .searcurr .button {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -187px -107px;
+    border-radius: 5px;
+}
+.navsearch .selctsearch {
+    height: 29px;
+    line-height: 29px;
+    padding-left: 1px;
+    width: 70px;
+}
+.navsearch .selctsearch strong, .navsearch .selctsearch i, .navsearch .selctsearch span {
+    color: #fff;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px #000;
+}
+.navsearch .selctsearch i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -381px -363px;
+    height: 5px;
+    width: 11px;
+}
+.navsearch .selctsearch strong {
+    height: 29px;
+    line-height: 29px;
+    width: 35px;
+}
+.navsearch .selctsearch span {
+    height: 10px;
+    margin: 0 0 0 5px;
+    width: 1px;
+}
+.navsearch .selectshow {
+    top: 30px;
+    width: 55px;
+}
+.navsearch .selectshow li {
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px 0 9px;
+}
+.ico_user, .ico_email, .ico_city, .ico_n_index, .ico_n_news, .ico_n_ticket, .ico_n_bbs, .ico_m_check, .ico_currmovie, .ico_n_find, .ico_shop, .ico_n_mall {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.ico_user {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar_03.png") no-repeat scroll 0 0;
+    height: 22px;
+    width: 28px;
+}
+.ico_email {
+    background-position: -48px -119px;
+    height: 12px;
+    width: 16px;
+}
+.ico_city {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar_02.png") no-repeat scroll 0 0;
+    height: 27px;
+    width: 11px;
+}
+.ico_m_check {
+    background-position: -174px -158px;
+    cursor: pointer;
+    height: 24px;
+    vertical-align: top;
+    width: 25px;
+}
+.ico_m_currcheck {
+    background-position: -202px -158px;
+}
+.ico_currmovie {
+    background-position: -429px -107px;
+    height: 71px;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 71px;
+}
+.ico_shop {
+    background-position: -363px -155px;
+    height: 16px;
+    width: 16px;
+}
+.userbar, .loginbox, .emailbox, .citybox, .shopbox {
+    display: inline;
+    float: right;
+}
+.userbar {
+    font-size: 14px;
+    height: 29px;
+    line-height: 1;
+    min-width: 600px;
+}
+.userbar {
+    position: relative;
+}
+.loginbox, .emailbox, .citybox, .shopbox {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.loginpic img {
+    background: #cde4ec none repeat scroll 0 0;
+}
+.loginbox {
+    position: relative;
+}
+.logintxt, .loginpic {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.logintxt {
+    color: #fff;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 5px 0 10px;
+    text-align: center;
+}
+.loginpic {
+    border-left: 1px solid rgba(255, 255, 255, 0.8);
+    height: 27px;
+    padding-left: 0;
+    position: relative;
+    width: 27px;
+}
+.loginpic img {
+    border-radius: 0 3px 3px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.loginpic .ico_user {
+    margin: 3px auto 0;
+    padding-left: 1px;
+}
+.currlogin {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #e7e7e7 #e7e7e7 -moz-use-text-color;
+    border-image: none;
+    border-radius: 3px 3px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    padding-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+.currlogin .logintxt {
+    color: #777;
+}
+.currlogin .ico_user {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -302px -107px;
+    border-left: 1px solid #e6e6e6;
+    padding: 0;
+}
+.currlogin .loginpic {
+}
+.emailbox {
+    border-radius: 5px 0 0 5px;
+    height: 27px;
+    padding: 0 5px;
+    position: relative;
+}
+.emailbox .ico_email {
+    margin: 7px auto 0;
+}
+.emailnum {
+    background: #d90000 none repeat scroll 0 0;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    position: absolute;
+    right: -5px;
+    text-align: center;
+    top: -5px;
+    width: 16px;
+}
+.curremail .ico_email {
+    background-position: -48px -136px;
+}
+.citybox {
+    padding: 0 8px;
+}
+.citybox .currcity {
+    color: #fff;
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+}
+.oncity {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #e7e7e7 #e7e7e7 -moz-use-text-color;
+    border-image: none;
+    border-radius: 5px 5px 0 0;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    padding-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+.oncity .currcity {
+    color: #333;
+}
+.oncity .ico_city {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -268px -158px;
+}
+.menupop {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e7e7e7;
+    position: absolute;
+    z-index: 0;
+}
+.navpop {
+    border-radius: 0 5px 5px;
+    font-size: 14px;
+    left: 0;
+    line-height: 1;
+    top: 35px;
+    width: 120px;
+}
+.navpop ul {
+    margin-bottom: -1px;
+}
+.navpop li {
+    border-bottom: 1px solid #f2f2f2;
+    margin: 0 5px;
+}
+#topbar .navpop li a {
+    color: #333;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+#topbar .navpop li a:hover {
+    background: #fff none repeat scroll 0 0;
+    color: #0085e5;
+    text-decoration: none;
+}
+.navpop li a i {
+    height: 48px;
+    width: 40px;
+}
+.ico_n_index {
+    background-position: 0 -284px;
+}
+.ico_n_news {
+    background-position: -51px -284px;
+}
+.ico_n_ticket {
+    background-position: -102px -282px;
+}
+.ico_n_bbs {
+    background-position: -153px -282px;
+}
+.ico_n_find {
+    background-position: -408px -333px;
+}
+.ico_n_mall {
+    background-position: -460px -336px;
+}
+.navpop li a:hover .ico_n_index {
+    background-position: -204px -284px;
+}
+.navpop li a:hover .ico_n_news {
+    background-position: -255px -284px;
+}
+.navpop li a:hover .ico_n_ticket {
+    background-position: -306px -282px;
+}
+.navpop li a:hover .ico_n_bbs {
+    background-position: -357px -282px;
+}
+.navpop li a:hover .ico_n_find {
+    background-position: -408px -282px;
+}
+.navpop li a:hover .ico_n_mall {
+    background-position: -460px -285px;
+}
+.loginpop {
+    border-radius: 5px 0 5px 5px;
+    cursor: default;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 245px;
+}
+.logintool dt {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") repeat scroll 0 -205px;
+    height: 48px;
+    line-height: 400px;
+    overflow: hidden;
+    width: 242px;
+}
+.logintool .name, .logintool .password, .logintool .code {
+    background: #f9f9f9 url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll 0 0;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid #d7d7d7;
+    display: inline-block;
+    height: 36px;
+    left: 0;
+    line-height: 155px;
+    overflow: hidden;
+    top: 0;
+    vertical-align: middle;
+    width: 55px;
+}
+.logintool .name {
+    background-position: -245px -205px;
+}
+.logintool .code {
+    background-position: -362px -205px;
+}
+.ico_false {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -206px -186px;
+    display: none;
+    height: 13px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 13px;
+}
+.logintool .password {
+    background-position: -304px -203px;
+}
+.logintool .userlogin li {
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    margin: 10px 0 0;
+}
+.logintool .userlogin li input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    padding: 0 5px;
+    width: 165px;
+}
+.logintool .userlogin li input.tip {
+    color: #949494;
+}
+.logintool .userlogin li.codetxt {
+    border: 0 none;
+    height: 45px;
+    margin: 2px 0 0 57px;
+}
+.btn_login, .btn_regist {
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    line-height: 26px;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 112px;
+}
+.logintool .userlogin input.btn_login {
+    background: #0081bc none repeat scroll 0 0;
+    border: 1px solid #0081bc;
+    font-size: 16px;
+}
+.my_layer .logintool .userlogin input.btn_login {
+    margin-right: 10px;
+}
+.logintool .userlogin .btn_login:hover {
+    background: #0074a9 none repeat scroll 0 0;
+}
+.logintool .userlogin .btn_regist, #topbar .loginexit .btn_exit {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    color: #333;
+}
+#topbar .logintool .userlogin input.btn_regist {
+    font-size: 16px;
+    margin-left: 16px;
+}
+#topbar .logintool .userlogin .btn_regist:hover, #topbar .loginexit .btn_exit:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.loginexit .btn_exit {
+    border-radius: 30px;
+    display: inline-block;
+    float: right;
+    padding: 0 30px;
+    vertical-align: middle;
+}
+#topbar .logintool .userlogin .usertip {
+    color: #333;
+    line-height: 24px;
+    margin: 10px 0 15px;
+}
+#topbar .logintool .userlogin .usertip a {
+    color: #333;
+}
+#topbar .userlogin input {
+    font-family: helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+}
+.loginpopbox .logintool .userlogin li {
+    height: 60px;
+    position: relative;
+}
+.logintool .userlogin .usertip .ico_m_check {
+    margin-right: 5px;
+}
+.logintool .userlogin .false input {
+    width: 150px;
+}
+.logintool .userlogin .false .ico_false {
+    display: inline-block;
+    margin-top: -6px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+.loginexit {
+    margin: 0 -15px -15px;
+}
+#topbar .loginexit li {
+    border-top: 1px solid #f1f1f1;
+    color: #333;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 10px 10px 10px 15px;
+}
+.loginexit li.first {
+    border: 0 none;
+}
+.loginexit li em {
+    color: #f1f1f1;
+    padding: 0 8px;
+}
+#topbar .loginexit li a, #topbar .loginexit li a:hover {
+    background: transparent none repeat scroll 0 0;
+    color: #333;
+}
+#topbar .loginexit .btn_exit:hover {
+    background: #0074a9 none repeat scroll 0 0;
+    color: #fff;
+    text-decoration: none;
+}
+.citypop {
+    border-radius: 5px;
+    cursor: default;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 560px;
+}
+.citylist {
+    background: #fafafa url("http://static1.mtime.cn/20160825145005/images/2014/citybg.png") no-repeat scroll center top;
+}
+.citylist ul {
+    margin-left: 25px;
+}
+.citylist li {
+    display: inline;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+    margin-left: 10px;
+    width: 64px;
+}
+#topbar .citylist li a {
+    color: #333;
+}
+.citysearch {
+    background: #f7f7f7 none repeat scroll 0 0;
+    border: 1px solid #c4c4c4;
+    border-radius: 20px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1) inset;
+    float: right;
+    height: 30px;
+    padding: 0 8px;
+    width: 205px;
+}
+.citysearch input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    vertical-align: top;
+}
+.citysearch input.text {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border-radius: 3px;
+    color: #d0d0d0;
+    height: 27px;
+    line-height: 27px;
+    margin: 0;
+    width: 170px;
+}
+.citysearch input.button {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -155px -106px;
+    cursor: pointer;
+    height: 23px;
+    margin: 2px 0 0;
+    width: 32px;
+}
+.citytab .citylistbox, .citytab .citylistbox li {
+    display: inline;
+    float: left;
+}
+.citytab .citylistbox li {
+    line-height: 32px;
+    position: relative;
+    text-align: center;
+    width: 50px;
+}
+.citytab {
+    padding: 20px;
+}
+.citytab .citylistbox li b {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -172px -183px;
+    bottom: -24px;
+    display: none;
+    height: 15px;
+    left: 50%;
+    margin-left: -13px;
+    overflow: hidden;
+    position: absolute;
+    width: 26px;
+}
+.citytab .citylistbox li.curr {
+    color: #66aad9;
+}
+.citytab .citylistboxt li.curr b {
+    display: block;
+}
+.citymid {
+    padding: 5px 0;
+    position: relative;
+}
+.citymid .tit {
+    font-weight: bold;
+    left: 10px;
+    position: absolute;
+    top: 14px;
+}
+.userbar .citytab .showsearch {
+    left: auto;
+    margin-left: 0;
+    right: 20px;
+    top: 55px;
+    width: 220px;
+}
+.userbar .searchcity {
+    font-size: 13px;
+}
+.userbar .searchcity dt {
+    line-height: 30px;
+    padding: 0 10px;
+}
+#topbar .loginexit a, #topbar .city_list2 a {
+    color: #333;
+    text-decoration: none;
+}
+#topbar .city_list2 a:hover {
+    background: #fafafa none repeat scroll 0 0;
+    color: #333;
+    text-decoration: underline;
+}
+#topbar .loginexit a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+#topbar .userbar .searchcity dd a {
+    color: #333;
+    display: block;
+    line-height: 20px;
+    padding: 5px 10px;
+}
+#topbar .userbar .searchcity dd a span {
+    float: right;
+}
+#topbar .userbar .searchcity dd a:hover {
+    background: #e5f2fb none repeat scroll 0 0;
+    text-decoration: none;
+}
+.userbar .showtime_tip {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    z-index: 0;
+}
+.userbar .showtime_tip .share_tit {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    font-size: 12px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 35px;
+    overflow: inherit;
+    padding: 5px 15px;
+    position: relative;
+}
+.userbar .showtime_tip .share_tit input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    margin-top: 0;
+}
+.userbar .showtime_tip .share_tit span.cityletter {
+    left: 10px;
+    position: absolute;
+    top: 8px;
+    z-index: 5;
+}
+#topbar .userbar .showtime_tip a {
+    color: #333;
+}
+.userbar .showtime_tip .citysearch {
+    margin: 3px 0 0;
+}
+.userbar .showtime_tip span.mt5 {
+    left: 5px;
+    margin-top: 8px;
+    position: absolute;
+    top: 0;
+    width: auto;
+}
+#topbar .userbar span.cityletter a {
+    border: 0 none;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: 50px;
+}
+#topbar .userbar span.cityletter a.on, #topbar .userbar span.cityletter a:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    color: #66aad9;
+    text-decoration: none;
+}
+.userbar .cityletter b {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -172px -183px;
+    bottom: -14px;
+    display: none;
+    height: 15px;
+    left: 50%;
+    margin-left: -13px;
+    overflow: hidden;
+    position: absolute;
+    width: 26px;
+}
+.userbar span.cityletter a.on b, .userbar span.cityletter a:hover b {
+    display: block;
+}
+.userbar .showtime_tip .btn_close {
+    cursor: pointer;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    text-indent: -999em;
+    top: 12px;
+}
+.userbar .showtime_tip .city_list2 {
+    position: relative;
+}
+.userbar .showtime_tip .city_list2 ul {
+    margin-left: 25px;
+    width: 505px;
+}
+.userbar .showtime_tip .city_list2 ul li {
+    display: inline;
+    float: left;
+    line-height: 2.2em;
+    margin-right: 5px;
+    width: 58px;
+}
+.userbar .showtime_tip .area_list li {
+    display: inline;
+    float: left;
+    line-height: 2em;
+    margin-right: 5px;
+    width: 75px;
+}
+#topbar .userbar .showtime_tip .area_list li.on a {
+    color: #000;
+    font-weight: bold;
+}
+.userbar .showtime_tip .city_list li {
+    display: inline;
+    float: left;
+    line-height: 2.2em;
+    margin-right: 5px;
+    width: 75px;
+}
+.userbar .showtime_tip .p15 {
+    background: #fafafa url("http://static1.mtime.cn/20160825145005/images/2014/citybg.png") no-repeat scroll center top;
+    position: relative;
+    z-index: 1;
+}
+.userbar .showtime_tip .overflow {
+    height: 410px;
+    overflow-y: auto;
+}
+.userbar .showtime_tip {
+    font-family: helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+}
+.userbar .sou_window .fl {
+    float: right;
+}
+.userbar .sou_window .fr {
+    float: left;
+}
+.userbar .sou_window {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    left: auto;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    top: -8px;
+    width: 210px;
+    z-index: 10;
+}
+.userbar .sou_note {
+    color: #333;
+    line-height: 20px;
+    padding: 5px;
+}
+.userbar .sou_city {
+    margin: 5px 0;
+}
+.userbar .sou_city li {
+    clear: both;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 1px;
+    overflow: hidden;
+    padding: 3px 6px;
+}
+.userbar .sou_city li.on, .userbar .sou_city li.mouseover {
+    background-color: #eef7ff;
+}
+.footout {
+    background: #f7f7f7 none repeat scroll 0 0;
+    font-family: helvetica,"微软雅黑","microsoft yahei",verdana,lucida,arial,sans-serif,"黑体";
+    position: relative;
+}
+.footout .topline {
+    background: #337fab url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll center 0;
+    height: 4px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.footinner {
+    font-size: 13px;
+    margin: 0 auto;
+    padding-top: 40px;
+    width: 1000px;
+}
+.footinner a {
+    color: #333;
+}
+.footinner a:hover {
+    color: #08c;
+    text-decoration: none;
+}
+.footinner .fotlogo {
+    display: inline;
+    float: left;
+    min-height: 157px;
+    position: relative;
+    width: 200px;
+}
+.fotlogo .line, .fotmap .line {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -495px -9px;
+    display: block;
+    height: 157px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+}
+.fotlogo dl {
+    padding: 0 20px;
+}
+.fotlogo dt {
+    padding-bottom: 10px;
+}
+.fotlogo dt a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 0;
+    display: block;
+    font-size: 0;
+    height: 44px;
+    line-height: 0;
+    overflow: hidden;
+    width: 136px;
+}
+.fotlogo dd {
+    line-height: 1.8em;
+}
+.footinner .fotmap {
+    display: inline;
+    float: left;
+    min-height: 157px;
+    position: relative;
+    width: 401px;
+}
+.fotmap dl {
+    display: inline;
+    float: left;
+    line-height: 2em;
+    margin-left: 33px;
+}
+.fotmap dd {
+    font-size: 16px;
+    line-height: 2em;
+}
+.fotmap .sina, .fotmap .weixin, .fotmap .rss {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -140px -9px;
+    display: block;
+    font-size: 0;
+    height: 30px;
+    line-height: 0;
+    margin-top: 8px;
+    overflow: hidden;
+    width: 30px;
+}
+.fotmap .weixin {
+    background-position: -170px -9px;
+}
+.fotmap .rss {
+    background-position: -200px -9px;
+}
+.fotmap .my_layer {
+    left: 380px;
+    top: -30px;
+}
+.fotmap .my_layer i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -640px -9px;
+    display: block;
+    height: 151px;
+    margin: 15px auto;
+    width: 151px;
+}
+.footinner .fotweek {
+    display: inline;
+    float: left;
+    min-height: 157px;
+    width: 230px;
+}
+.fotweek dl {
+    margin: 0 auto;
+    width: 172px;
+}
+.fotweek dt strong {
+    font-size: 18px;
+    font-weight: normal;
+}
+.fotweek dt span {
+    color: #7d7d7d;
+    padding-top: 3px;
+}
+.fotweek img {
+    border: 1px solid #ccc;
+}
+.fotweek dd {
+    margin-top: 10px;
+}
+.fotweek .input {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -330px -35px;
+    height: 25px;
+    padding-top: 1px;
+    position: relative;
+    width: 163px;
+}
+.fotweek .input input {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    height: 22px;
+    margin-left: 12px;
+    text-align: center;
+    width: 100px;
+}
+.fotweek .input a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -330px -9px;
+    color: #fff;
+    height: 25px;
+    line-height: 25px;
+    position: absolute;
+    right: -10px;
+    text-align: center;
+    text-decoration: none;
+    top: 1px;
+    width: 54px;
+}
+.fotweek .input a:hover {
+    background-position: -384px -9px;
+}
+.footinner .fothr {
+    display: inline;
+    float: right;
+    min-height: 157px;
+    text-align: center;
+    width: 155px;
+}
+.fothr i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/foot.png") no-repeat scroll -795px -9px;
+    display: block;
+    height: 99px;
+    margin: 0 auto;
+    width: 99px;
+}
+.fothr dt {
+    color: #7d7d7d;
+}
+.fothr dt strong {
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1em;
+}
+.fothr dd {
+    margin-top: 12px;
+}
+.db_foot {
+    background: #f7f7f7 none repeat scroll 0 0;
+    color: #7e7e7f;
+    font-family: verdana,"宋体";
+    line-height: 2em;
+    padding: 30px 0 20px;
+    text-align: center;
+}
+.db_foot a {
+    color: #7e7e7f;
+}
+.db_foot a:hover {
+    color: #08c;
+    text-decoration: none;
+}
+.credible {
+    padding-top: 12px;
+    text-align: center;
+}
+.credible a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon.gif") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 25px;
+    margin-right: 15px;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 68px;
+}
+.credible a.goodfaith {
+    background-position: -68px -120px;
+    width: 70px;
+}
+.credible a.credibler {
+    background-position: 0 -120px;
+}
+.m_message_notice {
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #fff, #f8f8f8) repeat scroll 0 0;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 17;
+}
+.emailbox {
+    border-radius: 2px;
+}
+.m_message_notice {
+    font-size: 12px;
+    left: 50%;
+    line-height: 24px;
+    margin-left: -110px;
+    top: 41px;
+    width: 220px;
+}
+.m_message_notice em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll -185px -125px;
+    display: inline-block;
+    height: 21px;
+    left: 50%;
+    margin-left: -20px;
+    overflow: hidden;
+    position: absolute;
+    top: -21px;
+    vertical-align: middle;
+    width: 40px;
+}
+.close_btn {
+    color: #000;
+    cursor: pointer;
+    font-family: tahoma,"宋体";
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.l_arrow {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/mtimebar.png") no-repeat scroll 0 0;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.l_arrow {
+    height: 40px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 21px;
+}
+.l_arrow {
+    background-position: -135px -137px;
+    left: -21px;
+}
+.shopbox {
+    border-radius: 0 2px 2px 0;
+    height: 27px;
+    margin-left: -1px;
+    padding: 0 5px;
+    position: relative;
+}
+.shopbox .ico_shop {
+    margin: 5px 0 0;
+}
+.shopbox .emailnum {
+    background: #df4949 none repeat scroll 0 0;
+    top: -2px;
+}
+.scroll1024 .shopbox .emailnum {
+    right: 0;
+}
+.currshop {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #e7e7e7 #e7e7e7 -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    padding-bottom: 10px;
+    z-index: 5;
+}
+.currshop .ico_shop {
+    background-position: -363px -176px;
+}
+.currshop .emailnum {
+    background: #df4949 none repeat scroll 0 0;
+}
+.m_shopcart {
+    border-radius: 5px 0 5px 5px;
+    border-top: 0 none;
+    padding: 0 10px;
+    right: -1px;
+    top: 33px;
+    width: 325px;
+    z-index: 2;
+}
+.m_shopcart li {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 14px 0;
+}
+.m_shopcart li a {
+    color: #333;
+}
+.m_shopcart li a:hover {
+    text-decoration: none;
+}
+.m_shopcart .shop_pic {
+    width: 56px;
+}
+.m_shopcart .shop_txt {
+    margin: 0 5px 0 10px;
+    width: 175px;
+}
+.m_shopcart .shop_txt dt {
+    padding: 5px 0 0;
+}
+.m_shopcart .shop_txt dt, .m_shopcart .shop_txt dd {
+    font-size: 14px;
+    line-height: 22px;
+}
+.m_shopcart .shop_txt dd {
+    color: #999;
+}
+.m_shopcart .shop_price {
+    text-align: center;
+    width: 75px;
+}
+.m_shopcart .shop_price dt {
+    padding: 10px 0 0;
+}
+.m_shopcart .shop_price dt, .m_shopcart .shop_price dd {
+    font-size: 14px;
+    line-height: 18px;
+}
+.m_shopcart .shop_btns {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 15px 0;
+}
+.m_shopcart .shop_btns span {
+    color: #df4949;
+}
+.m_shopcart .shop_btns .shoplink, #topbar .m_shopcart .shop_btns .shoplink {
+    background: #df4949 none repeat scroll 0 0;
+    color: #fff;
+    float: right;
+    font-size: 16px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    width: 140px;
+}
+.m_shopcart .shop_btns .shoplink:hover, #topbar .m_shopcart .shop_btns .shoplink:hover {
+    background: #ce2f2e none repeat scroll 0 0;
+    text-decoration: none;
+}
+.m_shopcart .tips {
+    color: #999;
+    font-size: 14px;
+    padding: 100px 0;
+    text-align: center;
+}
+.m_shopcart .shop_price a:hover, .m_shopcart .shop_txt a:hover {
+    color: #0084d1;
+}
+.otherlogin {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #ddd;
+    margin: 0 -20px -20px;
+    padding: 30px 20px;
+}
+.otherlogin dt {
+    color: #999;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+.otherlogin dd {
+    padding: 30px 0 0;
+    text-align: center;
+}
+.otherlogin dd a.o_qq {
+    margin: 0 45px;
+}
+.o_sina, .o_qq, .o_alipay {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll 0 0;
+    display: inline-block;
+    height: 54px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 52px;
+}
+.o_sina {
+    background-position: -3px -441px;
+}
+.o_qq {
+    background-position: -60px -441px;
+}
+.o_alipay {
+    background-position: -114px -439px;
+}
+.loginpop .otherlogin {
+    margin-top: 20px;
+}
+.loginpop .otherlogin dt {
+    font-size: 14px;
+}
+.loginpop .otherlogin dd {
+    padding: 15px 0 0;
+}
+.loginpop .otherlogin .o_sina, .loginpop .otherlogin .o_qq, .loginpop .otherlogin .o_alipay {
+    height: 42px;
+    width: 42px;
+}
+.loginpop .otherlogin .o_sina, #topbar .loginpop .otherlogin .o_sina:hover {
+    background-position: -170px -437px;
+}
+.loginpop .otherlogin .o_qq, #topbar .loginpop .otherlogin .o_qq:hover {
+    background-position: -214px -437px;
+    margin: 0 25px;
+}
+.loginpop .otherlogin .o_alipay, #topbar .loginpop .otherlogin .o_alipay:hover {
+    background-position: -256px -437px;
+}
+.new_otherlogin .otherlogin dd .o_sina, .new_otherlogin .otherlogin dd .o_qq, .new_otherlogin .otherlogin dd .o_alipay {
+    height: 63px;
+    width: 63px;
+}
+.new_otherlogin .otherlogin dd .o_sina {
+    background-position: 0 -495px;
+}
+.new_otherlogin .otherlogin dd .o_qq {
+    background-position: -64px -495px;
+}
+.new_otherlogin .otherlogin dd .o_alipay {
+    background-position: -127px -495px;
+}
+#group_body #topbar .loginpop .otherlogin a:hover, #topbar .loginpop .otherlogin a:hover {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/allicon24.png") no-repeat scroll 0 0;
+}
+.onlyshop {
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.i_new {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -388px -166px;
+    color: #fff;
+    display: block;
+    height: 11px;
+    line-height: 30px;
+    overflow: hidden;
+    position: absolute;
+    right: -18px;
+    top: -8px;
+    width: 29px;
+}
+.my_name {
+    margin-right: -15px;
+    min-height: 96px;
+    padding-left: 105px;
+    position: relative;
+}
+.my_name .my_pic {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.my_name .my_pic, .my_name .my_pic img {
+    border-radius: 70px;
+    height: 96px;
+    width: 96px;
+}
+.my_name dl {
+    padding: 20px 0 0;
+}
+.my_name dt a {
+    color: #333;
+    font-size: 16px;
+}
+.my_name dt a span {
+    border: 1px solid #d7211c;
+    border-radius: 50%;
+    color: #d7211c;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 3px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 24px;
+}
+.my_name dd {
+    font-size: 14px;
+    padding: 8px 0;
+}
+.my_name dd {
+    color: #f1f1f1;
+}
+.my_name dd a, .my_name dd a:hover {
+    color: #333;
+}
+.my_business {
+    padding-bottom: 18px;
+}
+.my_business dd {
+    float: left;
+    font-size: 14px;
+    padding-top: 16px;
+    width: 50%;
+}
+.my_business dd a {
+    color: #333;
+}
+.my_couptip {
+    background: #fffcdb none repeat scroll 0 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: -10px -15px 18px;
+    padding: 10px;
+    position: relative;
+}
+.my_couptip b {
+    color: #df4949;
+}
+.my_couptip em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar_add.png") no-repeat scroll 0 -5px;
+    cursor: pointer;
+    height: 7px;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    width: 7px;
+}
+.my_couptip i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar_add.png") no-repeat scroll 0 0;
+    height: 5px;
+    left: 20px;
+    position: absolute;
+    top: -5px;
+    width: 19px;
+}
+#topbar .menupop .my_name a:hover, #topbar .menupop .my_business dd a:hover {
+    text-decoration: underline;
+}
+.scroll1024 .m_message_notice {
+    margin: -200px;
+}
+.gifttit {
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+}
+.itar {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -390px -113px;
+    color: #dd4a4d;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 36px;
+}
+.gifttit b {
+    color: #dd4a4d;
+    font-weight: normal;
+}
+.gifttit span {
+    display: inline-block;
+    float: right;
+    font-size: 14px;
+    margin-right: 20px;
+    width: 50px;
+}
+.suit {
+    height: auto;
+    line-height: 1;
+    padding: 0 0 10px;
+    position: relative;
+}
+.suit .i_jiao {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/topbar.png") no-repeat scroll -172px -184px;
+    bottom: -5px;
+    height: 16px;
+    left: 30px;
+    position: absolute;
+    width: 25px;
+}
+.suit b {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.suit span {
+    text-align: center;
+}
+.suit span a {
+    display: block;
+}
+.giftmid {
+    background: #f8f8f8 none repeat scroll 0 0;
+    border-bottom: 0 none;
+    border-top: 1px solid #e6e6e6;
+    margin-bottom: -14px;
+    padding: 0 10px 14px;
+}
+.giftmid .shop_pic, .giftmid .shop_txt, .giftmid .shop_price {
+    margin-top: 14px;
+}
+.giftmid .shop_txt {
+    width: 158px;
+}
+.m_shopcart .shop_pic {
+    position: relative;
+}
+.m_shopcart .shop_pic i.sg_tiger, .m_shopcart .shop_pic i.ys_tiger {
+    background: #df4949 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 12px;
+    height: 16px;
+    left: 0;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 32px;
+}
+.m_shopcart .shop_pic i.ys_tiger {
+    background: #48c275 none repeat scroll 0 0;
+}
+#headbar {
+    font-size: 14px;
+}
+#headbar .headtool a {
+    text-decoration: none;
+}
+#headbar .headtool a:hover {
+    background-color: transparent;
+}
+#headbar .headtip a {
+    color: #333;
+    text-decoration: none;
+}
+#headbar .headtip a:hover {
+    background-color: transparent;
+    color: #08c;
+    text-decoration: none;
+}
+#headbar .headtip .btnblue, #headbar .headtip .btngreen, #headbar .headtip .btnfalse, #headbar .headtip .btngrey {
+    background: #1e7dd7 none repeat scroll 0 0;
+    border-radius: 50px;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 115px;
+}
+#headbar .headtip .btnblue:hover {
+    background: #1870c9 none repeat scroll 0 0;
+    color: #fff;
+}
+#headbar .headtip .btngreen {
+    background: #74ab34 none repeat scroll 0 0;
+}
+#headbar .headtip .btngreen:hover {
+    background: #5b9122 none repeat scroll 0 0;
+}
+#headbar .headtip .btngrey {
+    background: #f4f4f4 none repeat scroll 0 0;
+    border: 1px solid #d9d9d9;
+    color: #333;
+}
+#headbar .headtip .btngrey:hover {
+    background: #1e7dd7 none repeat scroll 0 0;
+    border-color: #1e7dd7;
+    color: #fff;
+}
+#headbar .headtip .btnfalse, #headbar .headtip .btnfalse:hover {
+    background: #ccc none repeat scroll 0 0;
+    color: #666;
+    cursor: default;
+}
+#topbar {
+    position: relative;
+    z-index: 50;
+}
+.fixed {
+    left: 0;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#headbar .headtip .message-tip a {
+    color: #237fd7;
+}
+#headbar .headbarnav dd a, #headbar .headqr, #headbar .headunlogin a, #headbar .headlogin a em {
+    background-color: transparent;
+    color: #c8c8c8;
+    text-decoration: none;
+}
+#headbar .headqr {
+    color: #fff;
+}
+#headbar .headbarnav dd a:hover, #headbar .headqr:hover, #headbar .headunlogin a.cur, #headbar .headunlogin a:hover {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+}
+#headbar .searchshadow, #headbar .topsearch {
+    position: relative;
+    z-index: 11;
+}
+.message-tip p::after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.headbar, .message-tip p {
+    display: block;
+}
+.tophead, .topmenu .topmenuer {
+    margin: 0 auto;
+    width: 1200px;
+}
+.headbarnav dd a, .headlogin a, .headlogin em, .headmessage .ico-message, .headqr, .headqr .ico-app, .headunlogin a, .headunlogin em, .headzoom em, .logintool .code, .logintool .name, .logintool .password, .logintool .usertip .ico-check, .logintool .usertip .ico-checkend, .my-name dt a span, .otherlogin a, .selctsearch i, .selctsearch span, .selctsearch strong, .showsearch .searhtiper .moviefilm .ico_map {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+#headbar .topsearch {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    box-shadow: 0 0 3px #fff;
+    height: 38px;
+    margin: auto;
+    z-index: 2;
+}
+#headbar .searchshadow {
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1) inset;
+    height: 39px;
+    padding-left: 100px;
+}
+#headbar .selectshow, #headbar .showsearch {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+#headbar .selctsearch, #headbar .selectshow, #headbar .showsearch, #headbar a.button, #headbar a.button i {
+    position: absolute;
+}
+#headbar .selctsearch {
+    color: #999;
+    height: 38px;
+    left: 0;
+    line-height: 38px;
+    text-align: center;
+    top: 0;
+    width: 100px;
+}
+#headbar .selctsearch i, .selctsearch span, .selctsearch strong {
+    cursor: pointer;
+}
+#headbar .selctsearch i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -152px 0;
+    height: 7px;
+    width: 11px;
+}
+#headbar .selctsearch strong {
+    font-weight: 400;
+    width: 45px;
+}
+#headbar .selctsearch span {
+    background: #dbdbdb none repeat scroll 0 0;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    margin: 0 0 0 10px;
+    width: 1px;
+}
+#headbar .selectshow {
+    background: #fff none repeat scroll 0 0;
+    left: 0;
+    overflow: hidden;
+    top: 41px;
+    width: 95px;
+}
+#headbar .selectshow li {
+    border-top: 1px solid #eee;
+    cursor: pointer;
+    line-height: 2.4;
+    text-align: center;
+}
+#headbar .selectshow li:hover {
+    background: #e5f2fc none repeat scroll 0 0;
+    color: #267dd7;
+}
+#headbar .topsearch input.text {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    font-size: 13px;
+    line-height: 24px;
+    padding: 7px 0;
+    width: 80%;
+}
+#headbar .topsearch a.button {
+    border-radius: 20px;
+    height: 32px;
+    right: 3px;
+    top: 3px;
+    width: 54px;
+}
+#headbar .topsearch a.button i {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -115px -45px;
+    height: 19px;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    top: 50%;
+    width: 19px;
+}
+#headbar .topsearch a.button.cur {
+    background: #1e7dd7 none repeat scroll 0 0;
+}
+#headbar .topsearch a.button.cur i {
+    background-position: -134px -45px;
+}
+#headbar .showsearch {
+    background: #fff none repeat scroll 0 0;
+    font-size: 12px;
+    left: 0;
+    line-height: 21px;
+    margin-left: 0;
+    right: 0;
+    top: 41px;
+    width: 100%;
+    z-index: 10;
+}
+#headbar .showsearch .searhtiper li {
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px 45px 10px 65px;
+    position: relative;
+}
+#headbar .showsearch .searhtiper li:hover {
+    background: #e5f2fc none repeat scroll 0 0;
+    color: #267dd7;
+}
+#headbar .showsearch .searhtiper .cate {
+    color: #999;
+    font-size: 13px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+#headbar .showsearch .searhtiper .pic {
+    border: 1px solid #e9e9e9;
+    left: 20px;
+    position: absolute;
+    top: 10px;
+}
+#headbar .showsearch .searhtiper .txt {
+    float: left;
+    margin-left: 15px;
+    min-height: 60px;
+    width: auto;
+}
+#headbar .showsearch .searhtiper .txt h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0;
+}
+#headbar .showsearch .searhtiper .txt h2 a:hover {
+    color: #333;
+}
+#headbar .showsearch .searhtiper .txt h3, .showsearch .searhtiper .txt p {
+    color: #999;
+}
+#headbar .showsearch .searhtiper .txt h3 {
+    font-weight: 400;
+}
+#headbar .showsearch .searhtiper .more {
+    font-size: 12px;
+    line-height: 1;
+    padding: 10px 20px;
+    text-align: right;
+}
+#headbar .showsearch .searhtiper .history li {
+    padding: 10px 20px;
+}
+#headbar .showsearch .searhtiper .history li.first a {
+    color: #267dd7;
+    float: right;
+}
+#headbar .showsearch .searhtiper .moviefilm .icobox {
+    left: 20px;
+    padding-top: 10px;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 45px;
+}
+#headbar .showsearch .searhtiper .moviefilm .ico_map {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -148px -150px;
+    height: 26px;
+    width: 20px;
+}
+.tophead {
+    background: rgba(0, 0, 0, 0) none no-repeat scroll center center;
+    height: 62px;
+    padding-top: 30px;
+    position: relative;
+    z-index: 4;
+}
+.tophead .searchlink {
+    cursor: default;
+    height: 92px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1200px;
+    z-index: 0;
+}
+.topmenu {
+    height: 89px;
+    position: relative;
+    z-index: 4;
+}
+.topmenu .topmenuer {
+    padding-top: 22px;
+}
+.topmenu .menunav {
+    float: left;
+    margin: 3px 0 0 18px;
+}
+.topmenu .menunav dd {
+    float: left;
+    font-size: 16px;
+    margin-right: 50px;
+}
+.topmenu .menunav dd a {
+    border-bottom: 3px solid #fff;
+    display: inline-block;
+    font-weight: 700;
+    padding: 8px 0 5px;
+}
+.topmenu .menunav dd.on a {
+    border-bottom-color: #333;
+    color: #333;
+}
+.topmenu .topsearch {
+    float: right;
+}
+.headbarnav dd a i, .headlogin a i, .headmessage i, .headqr i, .headunlogin a i {
+    border-bottom: 5px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    bottom: 0;
+    display: none;
+    height: 0;
+    left: 50%;
+    margin-left: -7px;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+}
+.headbar {
+    background: #192332 none repeat scroll 0 0;
+    height: 60px;
+    min-width: 1092px;
+    padding: 0 88px 0 20px;
+    position: relative;
+    z-index: 5;
+}
+.headbar h1 {
+    height: 36px;
+    left: 50%;
+    margin-left: -58px;
+    margin-top: -18px;
+    position: absolute;
+    top: 50%;
+    width: 117px;
+}
+#headbar h1 a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 -315px;
+    display: block;
+    font-size: 0;
+    height: 36px;
+    line-height: 0;
+    width: 117px;
+}
+#headbar h1 a:hover {
+    background: transparent url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 -315px;
+}
+.headtip {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: -moz-use-text-color #f5f5f5 #f5f5f5;
+    border-image: none;
+    border-style: none solid solid;
+    border-width: 0 1px 1px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+.headbarnav dd.cur a i, .headcart:hover .headtip, .headunlogin a.cur i {
+    display: block;
+}
+.headbarnav {
+    float: left;
+    font-size: 14px;
+}
+.headbarnav dd {
+    float: left;
+}
+.headbarnav dd a {
+    color: #c8c8c8;
+    line-height: 60px;
+    margin-right: 30px;
+    position: relative;
+}
+#headbar .headbarnav dd.cur a, #headbar .headbarnav dd a:hover {
+    color: #fff;
+    font-weight: 700;
+}
+.headbarnav dd a em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -165px 0;
+    font-size: 0;
+    height: 14px;
+    line-height: 0;
+    position: absolute;
+    right: -26px;
+    top: 15px;
+    width: 28px;
+}
+.headcart {
+    background: #e83729 none repeat scroll 0 0;
+    height: 62px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 62px;
+    z-index: 2;
+}
+.headcart .icocart {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 -45px;
+    height: 20px;
+    left: 18px;
+    position: absolute;
+    top: 21px;
+    width: 26px;
+}
+.headcart .numcart {
+    background: #fff none repeat scroll 0 0;
+    border: 3px solid #e83729;
+    border-radius: 50%;
+    color: #e83729;
+    font-size: 13px;
+    height: 18px;
+    left: 34px;
+    line-height: 18px;
+    position: absolute;
+    text-align: center;
+    top: 9px;
+    width: 18px;
+}
+.headcart-tip {
+    border-top: 3px solid #e83729;
+    right: 0;
+    width: 350px;
+}
+.headcart-tip .tips {
+    color: #999;
+    padding: 100px 0;
+    text-align: center;
+}
+.headcart-tip ul {
+    padding: 0 15px;
+}
+.headcart-tip li {
+    border-bottom: 1px solid #e6e6e6;
+    clear: both;
+    overflow: hidden;
+    padding: 14px 0;
+    position: relative;
+}
+.headcart-tip .shop-pic {
+    float: left;
+    position: relative;
+    width: 56px;
+}
+.headcart-tip .shop-pic .ys-tiger, .headcart-tip .shop-pic .sg-tiger {
+    background: #df4949 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 12px;
+    left: 0;
+    line-height: 16px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 32px;
+}
+.headcart-tip .shop-pic .ys-tiger {
+    background: #48c273 none repeat scroll 0 0;
+}
+.headcart-tip .shop-txt {
+    float: left;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 5px 0 10px;
+    width: 150px;
+}
+.headcart-tip .shop-txt dt {
+    padding: 5px 0 0;
+}
+.headcart-tip .shop-txt dd {
+    color: #999;
+}
+.headcart-tip .shop-price {
+    float: left;
+    text-align: center;
+    width: 75px;
+}
+.headcart-tip .shop-btns {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 15px;
+}
+.headcart-tip .shop-btns span {
+    color: #df4949;
+}
+#headbar .headcart-tip .shop-btns .btnblue {
+    background: #dd4a4d none repeat scroll 0 0;
+    color: #fff;
+    float: right;
+}
+#headbar .headcart-tip .shop-btns .btnblue:hover {
+    background: #e83729 none repeat scroll 0 0;
+    color: #fff;
+}
+.headtool {
+    float: right;
+    padding: 0 18px;
+    position: relative;
+}
+.headtool .line {
+    border-left: 1px solid #141c28;
+    border-right: 1px solid #303947;
+    height: 60px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.headunlogin {
+    padding: 0 17px;
+    position: relative;
+}
+.headunlogin a {
+    color: #c9c9c9;
+    line-height: 60px;
+}
+.headunlogin a.cur, .headunlogin a:hover {
+    color: #fff;
+}
+.headunlogin em {
+    border-left: 1px solid #303947;
+    height: 16px;
+    margin: 0 23px;
+    width: 0;
+}
+.login-tip {
+    padding: 20px;
+    right: 0;
+    width: 245px;
+}
+#headbar .logintool dt {
+    color: #9b9b9b;
+    font-size: 16px;
+    text-align: center;
+}
+#headbar .logintool dt strong {
+    color: #333;
+    display: block;
+    font-size: 0;
+    font-weight: lighter;
+    line-height: 0;
+    padding-bottom: 3px;
+}
+#headbar .logintool .code, #headbar .logintool .name, #headbar .logintool .password {
+    background: #f9f9f9 url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 0;
+    border-radius: 5px 0 0 5px;
+    border-right: 1px solid #d7d7d7;
+    font-size: 0;
+    height: 36px;
+    line-height: 0;
+    width: 55px;
+}
+#headbar .logintool .name {
+    background-position: 0 -75px;
+}
+#headbar .logintool .password {
+    background-position: -58px -75px;
+}
+#headbar .logintool .code {
+    background-position: -117px -75px;
+}
+#headbar .logintool .ico-false {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -60px -120px;
+    display: none;
+    height: 13px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    width: 13px;
+}
+.headlogin a.cur i, .headmessage.cur i, .headqr.cur i, .headqr:hover i, .headtool:hover .qrcode-tip {
+    display: block;
+}
+#headbar .logintool .userlogin li {
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+    margin: 10px 0 0;
+    position: relative;
+}
+#headbar .logintool .userlogin li input {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    border: 0 none;
+    padding: 0 5px;
+    width: 165px;
+}
+#headbar .logintool .userlogin li input.tip {
+    color: #949494;
+}
+#headbar .logintool .userlogin li.codetxt {
+    border: 0 none;
+    height: 45px;
+    margin: 2px 0 0 57px;
+}
+#headbar .logintool .usertip {
+    color: #333;
+    line-height: 24px;
+    margin: 10px 0 15px;
+}
+#headbar .logintool .usertip .ico-check, .logintool .usertip .ico-checkend {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 -120px;
+    height: 27px;
+    margin-right: 4px;
+    top: -2px;
+    width: 27px;
+}
+#headbar .logintool .usertip .ico-checkend {
+    background-position: -28px -120px;
+}
+#headbar .logintool .btnblue {
+    height: 30px;
+    line-height: 30px;
+    width: 112px;
+}
+#headbar .logintool .btngrey {
+    height: 28px;
+    line-height: 28px;
+    margin-left: 10px;
+    width: 110px;
+}
+#headbar .otherlogin {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #ddd;
+    margin: 20px -20px -20px;
+    padding: 20px;
+}
+#headbar .otherlogin dt {
+    color: #999;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+}
+#headbar .otherlogin dd {
+    padding: 20px 0 0;
+    text-align: center;
+}
+#headbar .otherlogin a {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll 0 0;
+    height: 42px;
+    margin: 0 13px;
+    width: 42px;
+}
+#headbar .otherlogin a.ico-qq {
+    background-position: -44px -150px;
+}
+#headbar .otherlogin a.ico-sina {
+    background-position: 0 -150px;
+}
+#headbar .otherlogin a.ico-alipay {
+    background-position: -90px -150px;
+}
+.headqr {
+    color: #fff;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 15px;
+}
+.headqr .ico-app {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -54px -45px;
+    height: 20px;
+    margin-right: 5px;
+    width: 13px;
+}
+.headqr b {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -140px 0;
+    height: 4px;
+    margin-top: -2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7px;
+}
+.headqr.cur, .headqr:hover {
+    color: #fff;
+}
+.headqr.cur .ico-app, .headqr.cur b, .headqr:hover .ico-app, .headqr:hover b {
+    opacity: 1;
+}
+.qrcode-tip {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    box-shadow: none;
+    right: -20px;
+}
+.qrcode-tip .qrcode {
+    display: block;
+}
+.qrcode-tip p {
+    line-height: 1;
+    margin-top: 10px;
+}
+.headlogin a, .headmessage {
+    line-height: 60px;
+}
+.headmessage .ico-message {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -30px -45px;
+    height: 15px;
+    margin-top: -9px;
+    opacity: 0.7;
+    top: 50%;
+    width: 20px;
+}
+.headmessage:hover .ico-message {
+    opacity: 1;
+}
+.headmessage.cur .ico-message {
+    opacity: 1;
+}
+.message-tip {
+    color: #666;
+    font-size: 12px;
+    padding: 12px 15px;
+    right: -90px;
+    width: 200px;
+}
+.message-tip p em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -140px -5px;
+    cursor: pointer;
+    float: right;
+    height: 12px;
+    width: 12px;
+}
+.message-tip a {
+    color: #237fd7;
+}
+.headlogin {
+    position: relative;
+}
+.headlogin a {
+    color: #c9c9c9;
+    padding-right: 15px;
+}
+.headlogin a.cur, .headlogin a:hover {
+    color: #fff;
+}
+.headlogin a b {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -140px 0;
+    height: 4px;
+    margin-top: -2px;
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 7px;
+}
+.headlogin a img {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #c9c9c9;
+    border-radius: 50%;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 28px;
+}
+.headlogin a:hover img {
+    border-color: #fff;
+}
+.user-tip {
+    display: none;
+    padding: 20px 20px 0;
+    right: 0;
+    width: 245px;
+    z-index: 3;
+}
+.headtool:hover .qrcode-tip, .headtool:hover .user-tip, .headtool:hover .headqr i, .headtool:hover .headlogin a i {
+    display: block;
+}
+.my-name {
+    margin-right: -15px;
+    min-height: 96px;
+    padding-left: 105px;
+    position: relative;
+}
+.my-name .mlr5 {
+    color: #a5a5a5;
+    margin: 0 5px;
+}
+.my-name .my-pic {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.my-name .my-pic img {
+    border-radius: 70px;
+    height: 96px;
+    width: 96px;
+}
+.my-name dl {
+    padding: 20px 0 0;
+}
+.my-name dt a {
+    color: #333;
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+.my-name dt a span {
+    border: 1px solid #d7211c;
+    border-radius: 50%;
+    color: #d7211c;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 3px;
+    text-align: center;
+    width: 24px;
+}
+.my-name dd {
+    color: #f1f1f1;
+    font-size: 14px;
+    padding: 8px 0;
+}
+.my-business {
+    padding-bottom: 18px;
+}
+.my-business dd {
+    float: left;
+    font-size: 14px;
+    padding-top: 16px;
+    width: 49%;
+}
+.my-couptip {
+    background: #fffcdb none repeat scroll 0 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    font-size: 12px;
+    margin: -10px 0 18px;
+    padding: 10px;
+    position: relative;
+}
+.my-couptip b {
+    color: #df4949;
+}
+.my-couptip em {
+    cursor: pointer;
+    height: 7px;
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    width: 7px;
+}
+.my-couptip a {
+    color: #1e7dd7;
+}
+.my-app li {
+    border-top: 1px solid #f1f1f1;
+    color: #333;
+    line-height: 32px;
+    padding: 10px 0;
+}
+.my-app li em {
+    color: #f1f1f1;
+    padding: 0 8px;
+}
+.my-app .btngrey {
+    float: right;
+    height: 32px;
+    line-height: 32px;
+    width: 90px;
+}
+.head-mini, .head-mini .headtool .line {
+    height: 60px;
+}
+.head-mini .headbarnav dd a {
+    line-height: 60px;
+}
+.head-mini .headbarnav dd a:hover {
+    color: #fff;
+}
+.head-mini .headlogin a, .head-mini .headmessage, .head-mini .headqr, .head-mini .headunlogin a, .headzoom {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+}
+.head-mini .headtip {
+    top: 60px;
+}
+.head-mini .headcart {
+    height: 62px;
+}
+.head-mini .headcart .icocart {
+    top: 19px;
+}
+.headzoom em {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -75px -45px;
+    height: 16px;
+    margin-top: -10px;
+    opacity: 0.7;
+    top: 50%;
+    width: 16px;
+}
+.headzoom em.cancel {
+    background-position: -95px -45px;
+}
+.headzoom:hover em {
+    opacity: 1;
+}
+.headsearch {
+    padding-top: 10px;
+    position: absolute;
+    right: 50px;
+    top: 0;
+}
+.headsearch .topsearch {
+    width: auto;
+}
+.headsearch .showsearch {
+    width: 100%;
+}
+.headsearch .showsearch .searhtiper .txt {
+    width: 285px;
+}
+.headcart-tip .giftmid .shop-pic, .headcart-tip .giftmid .shop-price, .headcart-tip .giftmid .shop-txt {
+    margin-top: 14px;
+}
+.headcart-tip .shop-btns {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 15px;
+}
+.headcart-tip .shop-btns span {
+    color: #df4949;
+}
+.headcart-tip .shop-btns .btnblue {
+    background: #dd4a4d none repeat scroll 0 0;
+    float: right;
+}
+.headcart-tip .shop-btns .btnblue:hover {
+    background: #e83729 none repeat scroll 0 0;
+}
+#headbar .headmessage, #headbar .headlogin a {
+    display: inline-block;
+    height: 60px;
+    position: relative;
+}
+.message-tip {
+    padding: 15px 15px 12px;
+}
+.message-tip p em {
+    display: none;
+}
+.message-tip .close {
+    background: rgba(0, 0, 0, 0) url("http://static1.mtime.cn/20160825145005/images/2014/head.png") no-repeat scroll -140px -5px;
+    cursor: pointer;
+    height: 12px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 12px;
+}
+@media screen and (max-width: 1400px) {
+.headlogin a em {
+    display: none;
+}
+.headlogin img {
+    margin-top: -17px;
+    position: relative;
+    top: 50%;
+}
+}
