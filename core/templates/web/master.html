@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="{% block keywords %}{% endblock %}"/>
+    <meta name="description" content="{% block description %}{% endblock %}"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico">
+
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    <link href="/static/css/fuck.css" rel='stylesheet' type='text/css'/>
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-top">
+
+        <div class="wp clearfix header-top-con">
+            <h1 class="f1 logo">
+                <a href="http://www.dyhell.com">
+                    <img src="/static/images/dyhelllogo.png" height="27px" width="88px">
+                </a>
+            </h1>
+            <ul>
+
+            </ul>
+            <div class="fr download-app">
+
+            </div>
+            <div id="search-box" class="fr search-box">
+
+            </div>
+        </div>
+    </div>
+    <nav id="nav" class="wp nav">
+        <div class="clearfix wp nav-parent">
+             <ul class = "clearfix">
+                <li class="">
+                    <a href="#">首页</a>
+                </li>
+                <li>
+                    <a href="#">电影</a>
+                </li>
+                <li>
+                    <a href="#">电视剧</a>
+                </li>
+                <li>
+                    <a href="#">动漫</a>
+                </li>
+             </ul>
+
+        </div>
+{#        <div class="nav-sub">#}
+{##}
+{#        </div>#}
+    </nav>
+    <div class="header-banner">
+
+    </div>
+</div>
+</body>
+</html>
