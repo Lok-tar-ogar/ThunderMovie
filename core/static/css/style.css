@@ -124,7 +124,7 @@ textarea {
     outline-offset: -2px;
 }
 .footer {
-    background-color: #262426;
+    background-color: #192332;
     margin: 82px auto 0;
     min-width: 1200px;
     padding: 56px 0;
@@ -227,7 +227,7 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
     width: 100%;
     z-index: 999;
     flex: 0 0 auto;
-    opacity:0.8;
+    /*opacity:0.8;*/
 }
 .header .header-inner {
     height: 60px;
@@ -240,7 +240,7 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
 .header .logo {
     background: rgba(0, 0, 0, 0) url('../../static/images/dyhelllogo.png') no-repeat scroll 0 center / contain ;
     float: left;
-    margin-top:10px;
+    margin-top:5px;
     height: 60px;
     width: 133px;
     margin-left:100px;
@@ -259,12 +259,13 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
 .header .nav .navbar li a {
     color: #333;
     display: inline-block;
-    font-size: 15px;
-    height: 80px;
-    line-height: 80px;
+    font-size: 14px;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
     width: 80px;
-    font-weight:600;
+    font-weight:500;
+    font-family: "Microsoft YaHei";
 }
 .header .nav .navbar li a:hover {
     color: #ef4238;
@@ -277,7 +278,7 @@ a:hover .textcolor_blue, a:hover .textcolor_orange, a:hover .textcolor_red {
 }
 .header #form1 {
     float: right;
-    margin: 20px 100px 0 0;
+    margin: 15px 100px 0 0;
     position: relative;
 }
 .header #form1 input {
