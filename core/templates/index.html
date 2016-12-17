@@ -191,7 +191,7 @@
         <div class="container">
             {% for film in filmpaged %}
                 <div class="col-xs-2 col-md-2 col-lg-2" style="height: 350px;">
-                    <a href="/movie/{{ film.id }}" class="thumbnail">
+                    <a href="/movie/{{ film.id }}" target="_blank" class="thumbnail">
                         <img src="{{ film.cover_img_link }}" alt="{{ film.film_name }}" style="width:100%;">
                     </a>
                     <div class="caption">
