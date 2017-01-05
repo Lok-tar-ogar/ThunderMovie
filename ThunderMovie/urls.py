@@ -30,11 +30,4 @@ urlpatterns = [
     url(r'^updatesitemap', views.sitemap),
     url(r'^douban/(?P<start>\d+)/(?P<end>\d+)', views.douban),
 
-
-
-url(r'^news$', views.news),
-url(r'^newsdetail$', views.newsdetail),
-
-    url(r'newmovie$', views.new_movie),
-
 ]

@@ -2,6 +2,9 @@
 import httplib2
 from urllib.parse import urlencode
 import json
+import random
+import string
+
 
 
 class douban:
@@ -18,7 +21,8 @@ class douban:
         try:
             h = httplib2.Http()
             data = {
-                "q": name
+                "q": name,
+                # "cookie":"bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
             }
             resp, content = h.request("https://api.douban.com/v2/movie/search", "POST", urlencode(data, encoding="utf-8"),
                                          headers={'Content-Type': 'application/x-www-form-urlencoded'})
@@ -50,7 +54,11 @@ class douban:
         try:
             h = httplib2.Http()
             urls = "https://api.douban.com/v2/movie/subject/"+douban_id
-            resp, content = h.request(urls, "POST", headers={'Content-Type': 'application/x-www-form-urlencoded'})
+            data = {
+                # "cookie": "bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
+            }
+            resp, content = h.request(urls, "POST", urlencode(data, encoding="utf-8"),
+                                      headers={'Content-Type': 'application/x-www-form-urlencoded'})
             content = json.loads(str(content, encoding="utf-8"))
             return content
         except:

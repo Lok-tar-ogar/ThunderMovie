@@ -13,6 +13,7 @@ import urllib.parse
 import urllib.request
 import http.client as httplib
 from ThunderMovie.status import *
+import logging
 from ThunderMovie.douban import douban as doubanclass
 
 
@@ -331,15 +332,6 @@ def douban(req, start, end):
             else:
                 continue
     except Exception as e:
-        return HttpResponse(e)
-    return HttpResponse('获取豆瓣成功\n')
+        logging.warning("获取失败")
+    logging.warning("获取成功")
 
-
-def new_movie(request):
-    '''
-     新版电影页
-    :param request:
-    :return:
-    '''
-
-    return render(request, 'web/movie.html', locals())
