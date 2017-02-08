@@ -85,12 +85,21 @@ def index(req):
         page = argGet.get('page')
         try:
             filmpaged = paginator.page(page)
+            lastpagenum=paginator.num_pages
+            page=int(page)
+
+            rangedpages=[page-2 if page-2 >1 else 1,page-1 if page >2 else 1,page,page+1,page+2,page+3,page+4]
+            rangedpages=list(set(rangedpages))
         except PageNotAnInteger:
             # If page is not an integer, deliver first page.
             filmpaged = paginator.page(1)
+            lastpagenum = paginator.num_pages
+            rangedpages = [1,2,3,4,5]
         except EmptyPage:
             # If page is out of range (e.g. 9999), deliver last page of results.
             filmpaged = paginator.page(paginator.num_pages)
+            lastpagenum = paginator.num_pages
+            rangedpages = [lastpagenum-4,lastpagenum - 2, lastpagenum - 1, lastpagenum]
 
     except:
         page = 1
@@ -145,12 +154,21 @@ def indextvseries(req):
         page = argGet.get('page')
         try:
             tvseriespaged = paginator.page(page)
+            page = int(page)
+
+            rangedpages = [page - 2 if page - 2 > 1 else 1, page - 1 if page > 2 else 1, page, page + 1, page + 2,
+                           page + 3, page + 4]
+            rangedpages = list(set(rangedpages))
         except PageNotAnInteger:
             # If page is not an integer, deliver first page.
             tvseriespaged = paginator.page(1)
+            lastpagenum = paginator.num_pages
+            rangedpages = [1, 2, 3, 4, 5]
         except EmptyPage:
             # If page is out of range (e.g. 9999), deliver last page of results.
             tvseriespaged = paginator.page(paginator.num_pages)
+            lastpagenum = paginator.num_pages
+            rangedpages = [lastpagenum - 4, lastpagenum - 2, lastpagenum - 1, lastpagenum]
     except Exception as e:
         page = 1
         return HttpResponse(e)

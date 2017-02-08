@@ -232,21 +232,23 @@
   <ul class="list-pager">
 
 
-
+<li><a href="?page=1&m_type={{ m_type }}&area={{ country }}&year={{ year }}">首页</a></li>
    {% if tvseriespaged.has_previous %}
       <li><a href="?page={{ tvseriespaged.previous_page_number }}">上一页</a></li>
         {% endif %}
 
-{#      <li class="active">#}
-{#    <a style="cursor: default" href="javascript:void(0);" class="page_1">{{ tvseriespaged.number }}</a>#}
-{##}
-{#</li>#}
+{% for p in rangedpages %}
+
+<li><a href="?page={{ p }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">{{ p }}页</a></li>
+
+  {% endfor %}
 
 <li>第 {{ tvseriespaged.number }} 页, 共 {{ tvseriespaged.paginator.num_pages }} 页</li>
 
 {% if tvseriespaged.has_next %}
            <li> <a href="?page={{ tvseriespaged.next_page_number }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">下一页</a></li>
         {% endif %}
+    <li><a href="?page={{ lastpagenum }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">尾页</a></li>
 </ul>
 
 
