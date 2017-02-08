@@ -28,6 +28,6 @@ urlpatterns = [
     url(r'^movie/(?P<fid>\d+)$',views.single),
     url(r'^$', views.index),
     url(r'^updatesitemap', views.sitemap),
-    url(r'^douban/(?P<start>\d+)/(?P<end>\d+)', views.douban),
+    url(r'^douban', views.douban),
 
 ]

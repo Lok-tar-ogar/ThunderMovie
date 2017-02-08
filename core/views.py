@@ -15,7 +15,7 @@ import http.client as httplib
 from ThunderMovie.status import *
 import logging
 from ThunderMovie.douban import douban as doubanclass
-
+import time
 
 def postBaiDu(filecontent, domain):
     URL = "/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh"
@@ -323,7 +323,7 @@ def seolist(req):
     return render(req, 'index.html', locals())
 
 
-def douban(req, start, end):
+def douban(req):
     '''
     id  from 18387 to 29120
     :param request:
@@ -331,18 +331,32 @@ def douban(req, start, end):
     '''
     try:
         count = 0
-        for i in range(int(start), int(end) + 1):
-            film = FILM.objects.get(id=i)
+        start = FILM.objects.filter(stars__isnull=True)
+        for i in start:
+            time.sleep(10)
+            film = FILM.objects.get(id=i.id)
             if film:
                 db = doubanclass()
                 douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
                 if douban_id == "error":
-                    logging.warning('id为：'+ str(i) + "的电影从豆瓣导出失败！")
+                    logging.warning('id为：'+ str(i.id) + "的电影从豆瓣导出失败！")
                     # douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
+                    film.stars = "update"
+                    film.ratings_count = "update"
+                    film.reviews_count = "update"
+                    film.comments_count = "update"
+                    film.wish_count = "update"
+                    film.film_intro = "update"
                     continue
                 douban_film = db.get_film_detail(douban_id)
                 if douban_film is None:
-                    logging.warning('id为：' + str(i) + "的电影从豆瓣导出失败！")
+                    logging.warning('id为：' + str(i.id) + "的电影从豆瓣导出失败！")
+                    film.stars = "update"
+                    film.ratings_count = "update"
+                    film.reviews_count = "update"
+                    film.comments_count = "update"
+                    film.wish_count = "update"
+                    film.film_intro = "update"
                     continue
                 film.stars = douban_film["rating"]["average"]
                 film.ratings_count = douban_film["ratings_count"]
@@ -352,7 +366,7 @@ def douban(req, start, end):
                 film.film_intro = douban_film["summary"]
                 film.save()
                 count += 1
-                logging.warning('id为：'+ str(i) + "的电影从豆瓣获取成功")
+                logging.warning('id为：'+ str(i.id) + "的电影从豆瓣获取成功")
             else:
                 continue
         return HttpResponse('总共有'+ str(count) +'条成功更新\n')
