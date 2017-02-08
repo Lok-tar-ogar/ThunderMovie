@@ -312,16 +312,20 @@ def douban(req, start, end):
     :return:
     '''
     try:
+        count = 0
         for i in range(int(start), int(end) + 1):
             film = FILM.objects.get(id=i)
             if film:
                 db = doubanclass()
                 douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
-                if douban_id == "":
-                    return HttpResponse('未从' + film.film_name + '，电影id:' + str(film.id) + '获取豆瓣id')
-                while douban_id == "error":
-                    douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
+                if douban_id == "error":
+                    logging.warning('id为：'+ str(i) + "的电影从豆瓣导出失败！")
+                    # douban_id = db.get_film_douban_id(film.film_name, film.film_pub_year)
+                    continue
                 douban_film = db.get_film_detail(douban_id)
+                if douban_film is None:
+                    logging.warning('id为：' + str(i) + "的电影从豆瓣导出失败！")
+                    continue
                 film.stars = douban_film["rating"]["average"]
                 film.ratings_count = douban_film["ratings_count"]
                 film.reviews_count = douban_film["reviews_count"]
@@ -329,9 +333,12 @@ def douban(req, start, end):
                 film.wish_count = douban_film["wish_count"]
                 film.film_intro = douban_film["summary"]
                 film.save()
+                count += 1
+                logging.warning('id为：'+ str(i) + "的电影从豆瓣获取成功")
             else:
                 continue
+        return HttpResponse('总共有'+ str(count) +'条成功更新\n')
     except Exception as e:
-        logging.warning("获取失败")
-    logging.warning("获取成功")
+        logging.warning(e)
+        return HttpResponse('更新失败\n')
 
