@@ -83,6 +83,10 @@
                {% for i in film.download_link  %}
                    {{ i | ispwd | safe }}
                {% endfor %}
+
+            {% for i in film.download_link2  %}
+                   {{ i | ispwd | safe }}
+               {% endfor %}
             </div>
 
 
