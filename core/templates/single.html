@@ -84,9 +84,7 @@
                    {{ i | ispwd | safe }}
                {% endfor %}
 
-            {% for i in film.download_link2  %}
-                   {{ i | ispwd | safe }}
-               {% endfor %}
+            <li class="list-group-item"><a href='{{ film.download_link2 }}' target="_blank" >  {{ film.film_name }}</a></li>
             </div>
 
 
