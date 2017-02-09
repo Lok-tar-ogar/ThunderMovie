@@ -18,6 +18,8 @@ class FILM(models.Model):
     tags=models.ManyToManyField(TAG_FILM)
     cover_img_link=models.CharField('封面图片链接',max_length=500,null=True)
     download_link=models.CharField('下载链接',max_length=5000,null=True)
+    download_link2 = models.CharField('下载链接2', max_length=500, null=True)
+    download_link3 = models.CharField('下载链接3', max_length=500, null=True)
     film_intro = models.CharField('电影剧情简介',max_length=5000, null=True)
     film_director = models.CharField('导演', max_length=50, null=True)
     film_actors=models.CharField('演员们',max_length=500,null=True)
