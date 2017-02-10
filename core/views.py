@@ -209,7 +209,11 @@ def single(req, fid=0):
         film = FILM.objects.get(id=fid)
 
         tags = film.tags.all()
-        film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
+        try:
+            film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
+        except:
+            film.download_link ='\n'
+        #film.download_link2 = [tuple(x.split(',')) for x in film.download_link2.split('\n')]
         return render(req, 'single.html', locals())
     except Exception as e:
         return HttpResponseNotFound()
