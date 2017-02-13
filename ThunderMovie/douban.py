@@ -18,7 +18,7 @@ class douban:
         :return: 豆瓣id
         '''
 
-        douban_id = ""
+        douban_movie = ""
         try:
             h = httplib2.Http()
             # data = {
@@ -41,19 +41,19 @@ class douban:
 
             for item in content['subjects']:
                 if year == item['year']:
-                    douban_id = item['id']
+                    douban_movie = item
                     break
 
-            if douban_id == "":
+            if douban_movie == "":
                 for item in content['subjects']:
                     if name == item['title']:
-                        douban_id = item['id']
+                        douban_movie = item
                         break
 
         except Exception as e:
-            douban_id = "error"
-            return douban_id
-        return douban_id
+            douban_movie = "error"
+            return douban_movie
+        return douban_movie
 
     def get_film_detail(self, douban_id):
         '''
