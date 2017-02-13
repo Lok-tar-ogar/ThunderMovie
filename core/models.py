@@ -77,6 +77,8 @@ class FILM(models.Model):
     small_douban_image = models.CharField('豆瓣电影小海报图', max_length=200, null=True)
     middle_douban_image = models.CharField('豆瓣电影中海报图', max_length=200, null=True)
     big_douban_image = models.CharField('豆瓣电影大海报图', max_length=200, null=True)
+    actors = models.ManyToManyField(ACTORS)
+    directors = models.ManyToManyField(DIRECTORS)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
 
     def __str__(self):
