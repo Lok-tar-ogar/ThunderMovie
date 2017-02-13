@@ -25,18 +25,18 @@ class douban:
             #     "q": name
             # }
 
-            headers = {
-                # "User-Agent": spider.make_random_useragent("pc"),
-                # "Host": "movie.douban.com",
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-                "Accept-Encoding": "gzip, deflate, sdch, br",
-                "Accept-Language": "zh-CN, zh; q=0.8, en; q=0.6",
-                "Cookie": "bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
-            }
+            # headers = {
+            #     # "User-Agent": spider.make_random_useragent("pc"),
+            #     # "Host": "movie.douban.com",
+            #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            #     "Accept-Encoding": "gzip, deflate, sdch, br",
+            #     "Accept-Language": "zh-CN, zh; q=0.8, en; q=0.6",
+            #     "Cookie": "bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
+            # }
             # resp, content = h.request("https://api.douban.com/v2/movie/search", "POST", urlencode(data, encoding="utf-8"),
             #                              headers={'Content-Type': 'application/x-www-form-urlencoded'})
             urlstr = 'https://api.douban.com/v2/movie/search' + '?q=' + name
-            resp, content = h.request(urlstr, headers=headers)
+            resp, content = h.request(urlstr)
             content = json.loads(str(content, encoding="utf-8"))
 
             for item in content['subjects']:
@@ -68,16 +68,16 @@ class douban:
             # }
             # resp, content = h.request(urls, "POST", urlencode(data, encoding="utf-8"),
             #                           headers={'Content-Type': 'application/x-www-form-urlencoded'})
-            headers = {
-                # "User-Agent": spider.make_random_useragent("pc"),
-                # "Host": "movie.douban.com",
-                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-                "Accept-Encoding": "gzip, deflate, sdch, br",
-                "Accept-Language": "zh-CN, zh; q=0.8, en; q=0.6",
-                "Cookie": "bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
-            }
+            # headers = {
+            #     # "User-Agent": spider.make_random_useragent("pc"),
+            #     # "Host": "movie.douban.com",
+            #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            #     "Accept-Encoding": "gzip, deflate, sdch, br",
+            #     "Accept-Language": "zh-CN, zh; q=0.8, en; q=0.6",
+            #     "Cookie": "bid=%s" % "".join(random.sample(string.ascii_letters + string.digits, 11))
+            # }
 
-            resp,content = h.request(urls, headers=headers)
+            resp,content = h.request(urls)
             content = json.loads(str(content, encoding="utf-8"))
             if content['rating']:
                 return content
