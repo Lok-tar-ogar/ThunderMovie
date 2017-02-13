@@ -343,12 +343,12 @@ def douban(req):
         while start_id <= end:
             film = FILM.objects.get(id=start_id)
             if film:
-                # time.sleep(8)
+                time.sleep(25)
                 db = doubanclass()
                 douban_movie = db.get_film_douban_id(film.film_name, film.film_pub_year)
                 if douban_movie == "error" or douban_movie == "":
                     logging.warning('id为：'+ str(start_id) + "的电影从豆瓣导出失败！")
-                    # film.if_useapi = "1"
+                    film.if_useapi = "1"
                     film.save()
                     start_id += 1
                     continue
@@ -362,7 +362,7 @@ def douban(req):
                 film.collect_count = douban_movie["collect_count"]
                 film.origin_title = douban_movie["original_title"]
                 film.alt = douban_movie["alt"]
-                # film.if_useapi = "1"
+                film.if_useapi = "1"
                 film.douban_id = douban_movie["id"]
                 film.douban_title = douban_movie["title"]
                 film.film_pub_year = douban_movie["year"]
@@ -375,20 +375,36 @@ def douban(req):
                     for item in douban_movie["casts"]:
                         actor = ACTORS.objects.filter(douban_id=item["id"])
                         if actor:
-                            film.actors.add(actor)
+                            if film.actors.filter(film__actors__douban_id=actor[0].douban_id) is None:
+                                film.actors.add(actor)
                         else:
-                            actors = ACTORS()
-                            actors.douban_id = item["id"]
-                            actors.alt = item["alt"]
-                            actors.name = item["name"]
+                            act = ACTORS()
+                            act.douban_id = item["id"]
+                            act.alt = item["alt"]
+                            act.name = item["name"]
                             if item["avatars"]:
-                                actors.small_douban_image = item["avatars"]["small"]
-                                actors.middle_douban_image = item["avatars"]["medium"]
-                                actors.large_douban_image = item["avatars"]["large"]
-                            actors.save()
-                            film.actors.add(actors)
+                                act.small_douban_image = item["avatars"]["small"]
+                                act.middle_douban_image = item["avatars"]["medium"]
+                                act.big_douban_image = item["avatars"]["large"]
+                            act.save()
+                            film.actors.add(act)
                 if douban_movie["directors"]:
-                    pass
+                    for item in douban_movie["directors"]:
+                        director = DIRECTORS.objects.filter(douban_id=item["id"])
+                        if director:
+                            if film.directors.filter(film__directors__douban_id=director[0].douban_id) is None:
+                                film.directors.add(director)
+                        else:
+                            direct = DIRECTORS()
+                            direct.douban_id = item["id"]
+                            direct.alt = item["alt"]
+                            direct.name = item["name"]
+                            if item["avatars"]:
+                                direct.small_douban_image = item["avatars"]["small"]
+                                direct.middle_douban_image = item["avatars"]["medium"]
+                                direct.big_douban_image = item["avatars"]["large"]
+                                direct.save()
+                            film.directors.add(direct)
                 film.save()
                 count += 1
                 logging.warning('id为：'+ str(start_id) + "的电影从豆瓣获取成功")
