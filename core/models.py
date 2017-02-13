@@ -79,6 +79,7 @@ class FILM(models.Model):
     big_douban_image = models.CharField('豆瓣电影大海报图', max_length=200, null=True)
     actors = models.ManyToManyField(ACTORS)
     directors = models.ManyToManyField(DIRECTORS)
+    if_useapi = models.CharField('是否调用过api', max_length=50, null=True)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
 
     def __str__(self):
