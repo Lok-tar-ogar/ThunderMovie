@@ -336,14 +336,14 @@ def douban(req):
         count = 0
         start = FILM.objects.filter(if_useapi=1).order_by('-id')
         if start:
-            start_id = start[0].id
+            start_id = start[0].id+1
         else:
             start_id = FILM.objects.all().order_by('id')[0].id
         end = FILM.objects.all().order_by('-id')[0].id
         while start_id <= end:
             film = FILM.objects.get(id=start_id)
             if film:
-                time.sleep(25)
+                time.sleep(26)
                 db = doubanclass()
                 douban_movie = db.get_film_douban_id(film.film_name, film.film_pub_year)
                 if douban_movie == "error" or douban_movie == "":
@@ -373,38 +373,73 @@ def douban(req):
 
                 if douban_movie["casts"]:
                     for item in douban_movie["casts"]:
-                        actor = ACTORS.objects.filter(douban_id=item["id"])
-                        if actor:
-                            if film.actors.filter(film__actors__douban_id=actor[0].douban_id) is None:
-                                film.actors.add(actor)
+                        if item["id"] is None:
+                            actor = ACTORS.objects.filter(name=item["name"])
+                            if actor:
+                                if film.actors.filter(film__actors__name=actor[0].name) is None:
+                                    film.actors.add(actor)
+                            else:
+                                act = ACTORS()
+                                act.douban_id = item["id"]
+                                act.alt = item["alt"]
+                                act.name = item["name"]
+                                if item["avatars"]:
+                                    act.small_douban_image = item["avatars"]["small"]
+                                    act.middle_douban_image = item["avatars"]["medium"]
+                                    act.big_douban_image = item["avatars"]["large"]
+                                act.save()
+                                film.actors.add(act)
                         else:
-                            act = ACTORS()
-                            act.douban_id = item["id"]
-                            act.alt = item["alt"]
-                            act.name = item["name"]
-                            if item["avatars"]:
-                                act.small_douban_image = item["avatars"]["small"]
-                                act.middle_douban_image = item["avatars"]["medium"]
-                                act.big_douban_image = item["avatars"]["large"]
-                            act.save()
-                            film.actors.add(act)
+                            actor = ACTORS.objects.filter(douban_id=item["id"])
+                            if actor:
+                                if film.actors.filter(film__actors__douban_id=actor[0].douban_id) is None:
+                                    film.actors.add(actor)
+                            else:
+                                act = ACTORS()
+                                act.douban_id = item["id"]
+                                act.alt = item["alt"]
+                                act.name = item["name"]
+                                if item["avatars"]:
+                                    act.small_douban_image = item["avatars"]["small"]
+                                    act.middle_douban_image = item["avatars"]["medium"]
+                                    act.big_douban_image = item["avatars"]["large"]
+                                act.save()
+                                film.actors.add(act)
                 if douban_movie["directors"]:
                     for item in douban_movie["directors"]:
-                        director = DIRECTORS.objects.filter(douban_id=item["id"])
-                        if director:
-                            if film.directors.filter(film__directors__douban_id=director[0].douban_id) is None:
-                                film.directors.add(director)
-                        else:
-                            direct = DIRECTORS()
-                            direct.douban_id = item["id"]
-                            direct.alt = item["alt"]
-                            direct.name = item["name"]
-                            if item["avatars"]:
-                                direct.small_douban_image = item["avatars"]["small"]
-                                direct.middle_douban_image = item["avatars"]["medium"]
-                                direct.big_douban_image = item["avatars"]["large"]
+                        if item["id"] is None:
+                            director = DIRECTORS.objects.filter(name=item["name"])
+                            if director:
+                                if film.directors.filter(film__directors__name=director[0].name) is None:
+                                    film.directors.add(director)
+                            else:
+                                direct = DIRECTORS()
+                                direct.douban_id = item["id"]
+                                direct.alt = item["alt"]
+                                direct.name = item["name"]
+                                if item["avatars"]:
+                                    direct.small_douban_image = item["avatars"]["small"]
+                                    direct.middle_douban_image = item["avatars"]["medium"]
+                                    direct.big_douban_image = item["avatars"]["large"]
                                 direct.save()
-                            film.directors.add(direct)
+                                film.directors.add(direct)
+
+                        else:
+                            director = DIRECTORS.objects.filter(douban_id=item["id"])
+                            if director:
+                                if film.directors.filter(film__directors__douban_id=director[0].douban_id) is None:
+                                    film.directors.add(director)
+                            else:
+                                direct = DIRECTORS()
+                                direct.douban_id = item["id"]
+                                direct.alt = item["alt"]
+                                direct.name = item["name"]
+                                if item["avatars"]:
+                                    direct.small_douban_image = item["avatars"]["small"]
+                                    direct.middle_douban_image = item["avatars"]["medium"]
+                                    direct.big_douban_image = item["avatars"]["large"]
+                                direct.save()
+                                film.directors.add(direct)
                 film.save()
                 count += 1
                 logging.warning('id为：'+ str(start_id) + "的电影从豆瓣获取成功")
