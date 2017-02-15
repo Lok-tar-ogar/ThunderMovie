@@ -9,7 +9,7 @@ import time
 
 class douban:
     '''
-    获取电影 豆瓣信息
+    获取电影 豆瓣信息api
     '''
 
     def get_film_douban_id(self, name, year):
