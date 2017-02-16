@@ -35,9 +35,8 @@ class douban:
             # }
             # resp, content = h.request("https://api.douban.com/v2/movie/search", "POST", urlencode(data, encoding="utf-8"),
             #                              headers={'Content-Type': 'application/x-www-form-urlencoded'})
-            name = name.replace(" ", "")
-            name = name.replace("：", "")
-            name = name.replace(":", "")
+            name = self.stringformat(name)
+
             urlstr = "https://api.douban.com/v2/movie/search" + "?q=" + name
             resp, content = h.request(urlstr)
             content = json.loads(str(content, encoding="utf-8"))
@@ -49,7 +48,7 @@ class douban:
 
             if douban_movie == "":
                 for item in content['subjects']:
-                    if name == item['title']:
+                    if name == self.stringformat(item['title']):
                         douban_movie = item
                         break
 
@@ -88,6 +87,19 @@ class douban:
                 return None
         except:
             return None
+
+    def stringformat(self, name):
+        '''
+        字符串格式化
+        :param s:
+        :return:
+        '''
+
+        name = name.replace(" ", "")
+        name = name.replace("：", "")
+        name = name.replace(":", "")
+
+        return name
 
     def get_photos(self):
         '''

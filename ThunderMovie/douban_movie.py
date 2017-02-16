@@ -36,7 +36,7 @@ class DoubanInformation:
             while start_id <= end:
                 film = FILM.objects.get(id=start_id)
                 if film:
-                    time.sleep(27)
+                    time.sleep(26)
                     db = doubanclass()
                     douban_movie = db.get_film_douban_id(film.film_name, film.film_pub_year)
                     if douban_movie == "error" or douban_movie == "":
