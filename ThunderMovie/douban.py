@@ -35,7 +35,10 @@ class douban:
             # }
             # resp, content = h.request("https://api.douban.com/v2/movie/search", "POST", urlencode(data, encoding="utf-8"),
             #                              headers={'Content-Type': 'application/x-www-form-urlencoded'})
-            urlstr = 'https://api.douban.com/v2/movie/search' + '?q=' + name
+            name = name.replace(" ", "")
+            name = name.replace("：", "")
+            name = name.replace(":", "")
+            urlstr = "https://api.douban.com/v2/movie/search" + "?q=" + name
             resp, content = h.request(urlstr)
             content = json.loads(str(content, encoding="utf-8"))
 

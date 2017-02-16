@@ -32,10 +32,11 @@ class DoubanInformation:
             else:
                 start_id = FILM.objects.all().order_by('id')[0].id
             end = FILM.objects.all().order_by('-id')[0].id
+
             while start_id <= end:
                 film = FILM.objects.get(id=start_id)
                 if film:
-                    time.sleep(26)
+                    time.sleep(27)
                     db = doubanclass()
                     douban_movie = db.get_film_douban_id(film.film_name, film.film_pub_year)
                     if douban_movie == "error" or douban_movie == "":
