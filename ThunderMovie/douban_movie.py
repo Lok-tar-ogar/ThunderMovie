@@ -160,7 +160,7 @@ def main(argv):
                 di = DoubanInformation()
                 logging.warning(" get_movie_base_information is ready to start.")
                 di.get_movie_base_information()
-
+                logging.warning("Mission clear")
 
 if __name__ == '__main__':
     main(sys.argv[1:])
