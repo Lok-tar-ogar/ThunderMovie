@@ -99,7 +99,7 @@ class douban:
         name = name.replace(" ", "")
         name = name.replace("：", "")
         name = name.replace(":", "")
-
+        name = name.replace("~", "")
         return name
 
     def get_photos(self):
