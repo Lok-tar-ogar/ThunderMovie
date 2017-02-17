@@ -134,7 +134,7 @@ class DoubanInformation:
                                     film.directors.add(direct)
                     film.save()
                     count += 1
-                    print('id为：' + str(start_id) + "的电影从豆瓣获取成功")
+                    logging.warning('id为：' + str(start_id) + "的电影获取成功")
                     start_id += 1
                 else:
                     continue
