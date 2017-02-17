@@ -26,17 +26,16 @@ class DoubanInformation:
         '''
         try:
             count = 0
-            start = FILM.objects.filter(if_useapi=1).order_by('-id')
-            if start:
-                start_id = start[0].id + 1
-            else:
+            try:
+                start_id = FILM.objects.filter(if_useapi=1).order_by('-id')[0].id+1
+            except Exception as e:
                 start_id = FILM.objects.all().order_by('id')[0].id
             end = FILM.objects.all().order_by('-id')[0].id
 
             while start_id <= end:
                 film = FILM.objects.get(id=start_id)
                 if film:
-                    time.sleep(26)
+                    time.sleep(37)
                     db = doubanclass()
                     douban_movie = db.get_film_douban_id(film.film_name, film.film_pub_year)
                     if douban_movie == "error" or douban_movie == "":
@@ -135,7 +134,7 @@ class DoubanInformation:
                                     film.directors.add(direct)
                     film.save()
                     count += 1
-                    logging.warning('id为：' + str(start_id) + "的电影从豆瓣获取成功")
+                    print('id为：' + str(start_id) + "的电影从豆瓣获取成功")
                     start_id += 1
                 else:
                     continue
