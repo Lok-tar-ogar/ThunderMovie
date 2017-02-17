@@ -39,6 +39,7 @@ class douban:
 
             urlstr = "https://api.douban.com/v2/movie/search" + "?q=" + name
             resp, content = h.request(urlstr)
+            print(resp)
             content = json.loads(str(content, encoding="utf-8"))
 
             for item in content['subjects']:
