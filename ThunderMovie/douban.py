@@ -94,7 +94,8 @@ class douban:
         :param s:
         :return:
         '''
-
+        name = name.replace("!", "")
+        name = name.replace("/", "")
         name = name.replace(" ", "")
         name = name.replace("：", "")
         name = name.replace(":", "")

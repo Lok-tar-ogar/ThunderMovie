@@ -25,7 +25,6 @@ class DoubanInformation:
         :return:
         '''
         try:
-            count = 0
             try:
                 start_id = FILM.objects.filter(if_useapi=1).order_by('-id')[0].id+1
             except Exception as e:
@@ -133,7 +132,6 @@ class DoubanInformation:
                                     direct.save()
                                     film.directors.add(direct)
                     film.save()
-                    count += 1
                     logging.warning('id为：' + str(start_id) + "的电影获取成功")
                     start_id += 1
                 else:
