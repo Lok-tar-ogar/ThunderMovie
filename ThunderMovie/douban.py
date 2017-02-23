@@ -88,6 +88,7 @@ class douban:
         except:
             return None
 
+
     def stringformat(self, name):
         '''
         字符串格式化
@@ -96,6 +97,11 @@ class douban:
         '''
         name = name.replace("!", "")
         name = name.replace("/", "")
+        name = name.replace("～", "")
+        name = name.replace("·", "")
+        name = name.replace("~", "")
+        name = name.replace("[", "")
+        name = name.replace("]", "")
         name = name.replace(" ", "")
         name = name.replace("：", "")
         name = name.replace(":", "")
