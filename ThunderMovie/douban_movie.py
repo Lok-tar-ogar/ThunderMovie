@@ -32,7 +32,12 @@ class DoubanInformation:
             end = FILM.objects.all().order_by('-id')[0].id
 
             while start_id <= end:
-                film = FILM.objects.get(id=start_id)
+                try:
+                    film = FILM.objects.get(id=start_id)
+                except Exception as e:
+                    start_id += 1
+                    logging.warning("数据库不存在id为"+ start_id +"的数据！")
+                    continue
                 if film:
                     time.sleep(37)
                     db = doubanclass()
@@ -149,7 +154,10 @@ class DoubanInformation:
             movie = FILM.objects.filter(stars__isnull=True, if_useapi=1)
 
             for i in movie:
-                film = FILM.objects.get(id=i.id)
+                try:
+                    film = FILM.objects.get(id=i.id)
+                except Exception as e:
+                    continue
                 if film:
                     time.sleep(37)
                     db = doubanclass()
@@ -161,11 +169,7 @@ class DoubanInformation:
                         continue
 
                     film.stars = douban_movie["rating"]["average"]
-                    # film.ratings_count = douban_movie["ratings_count"]
-                    # film.reviews_count = douban_movie["reviews_count"]
-                    # film.comments_count = douban_movie["comments_count"]
-                    # film.wish_count = douban_movie["wish_count"]
-                    # film.film_intro = douban_movie["summary"]
+
                     film.collect_count = douban_movie["collect_count"]
                     film.origin_title = douban_movie["original_title"]
                     film.alt = douban_movie["alt"]
@@ -251,6 +255,37 @@ class DoubanInformation:
                     logging.warning('id为：' + str(i.id) + "的电影获取成功")
                 else:
                     continue
+        except Exception as e:
+            logging.warning(e)
+
+    def get_movie_detail(self):
+        '''
+        获取电影详情
+        :return:
+        '''
+        try:
+            try:
+                start_id = FILM.objects.filter(comments_count__isnull=False).order_by('-id')[0].id+1
+            except Exception as e:
+                start_id = FILM.objects.all().order_by('id')[0].id
+            end = FILM.objects.all().order_by('-id')[0].id
+
+            while start_id < end:
+                film = FILM.objects.filter(id=start_id)
+                if film[0].douban_id:
+                    db = doubanclass()
+                    douban_movie = db.get_film_detail(film[0].douban_id)
+                    if douban_movie is None:
+                        start_id += 1
+                        continue
+
+                    film.ratings_count = douban_movie["ratings_count"]
+                    film.reviews_count = douban_movie["reviews_count"]
+                    film.comments_count = douban_movie["comments_count"]
+                    film.wish_count = douban_movie["wish_count"]
+                    film.film_intro = douban_movie["summary"]
+                    start_id += 1
+
         except Exception as e:
             logging.warning(e)
 
