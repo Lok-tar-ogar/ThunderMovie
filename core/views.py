@@ -150,7 +150,7 @@ def indextvseries(req):
             tvseriess = tvseriess.filter(tvseries_pub_year__gte=1970, tvseries_pub_year__lte=1979)
         if tvyear == 'early':
             tvseriess = tvseriess.filter(tvseries_pub_year__lt=1970)
-        paginator = Paginator(tvseriess, 20)  # Show 5 contacts per page
+        paginator = Paginator(tvseriess, 24)  # Show 5 contacts per page
         page = argGet.get('page')
         try:
             tvseriespaged = paginator.page(page)
