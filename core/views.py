@@ -213,6 +213,10 @@ def single(req, fid=0):
             film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
         except:
             film.download_link ='\n'
+        try:
+            film.download_link4 = [tuple(x.split(',')) for x in film.download_link4.split('\n')]
+        except:
+            film.download_link4 ='\n'
         #film.download_link2 = [tuple(x.split(',')) for x in film.download_link2.split('\n')]
         return render(req, 'single.html', locals())
     except Exception as e:
