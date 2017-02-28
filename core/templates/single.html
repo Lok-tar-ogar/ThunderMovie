@@ -2,19 +2,19 @@
 {% load poll_extras %}
 {% block title %}
     [高清][迅雷下载][百度网盘][{{ film.film_pub_year }}][{{ film.film_name }}][HD-BD-DVD][中 英 字幕]
-    {% endblock %}
+{% endblock %}
 {% block keywords %}
     [高清][迅雷下载][百度网盘][{{ film.film_pub_year }}][{{ film.film_name }}][HD-BD-DVD][中 英 字幕]
-    {% endblock %}
+{% endblock %}
 {% block description %}
-{{ film.film_name }}
+    {{ film.film_name }}
     {{ film.film_intro }}
 {% endblock %}
 {% block head %}
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 {% block content %}
-     <div class="banner">
+    <div class="banner">
         <div style="height:60px;"></div>
         <div class= "wrapper clearfix">
             <div class="celeInfo-left">
@@ -31,17 +31,17 @@
                         <div class ="ename ellipsis">年代:{{ film.film_pub_year }}</div>
                     {% endif %}
                     <ul >
-                    {% if film.film_country %}
-                            国家:{{ film.film_country }} 
+                        {% if film.film_country %}
+                            国家:{{ film.film_country }}
 
                         {% endif  %}
                         {% if tags %}
-                        <li class="ellipsis">
-                        标签:
-                            {% for tag in tags %}
-                                <a href="/result?key={{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
-                            {% endfor %}
-                        </li>
+                            <li class="ellipsis">
+                                标签:
+                                {% for tag in tags %}
+                                    <a href="/result?key={{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
+                                {% endfor %}
+                            </li>
                         {% endif %}
                         {% if film.film_director %}
                             导演:
@@ -57,43 +57,62 @@
             <div class ="wrapper-bg">
 
             </div>
-       </div>
-     </div>
+        </div>
+    </div>
 
     <div class ="container" style="margin-top: 80px;">
         <div class="module">
-        <div class="mod-title">
+            <div class="mod-title">
                 <h3>觉得资源好,就分享支持一个吧~</h3>
             </div>
-        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
-        <wb:share-button appkey="3150087652" addition="full" type="button" default_text="骚猪电影网,http://dyhell.com-[高清][HD-BD-DVD][{{ film.film_pub_year }}][{{ film.film_name }}][迅雷下载][百度网盘][中 英 字幕]，天天更新。"></wb:share-button>
-        </div>
+            <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
+                <wb:share-button appkey="3150087652" addition="full" type="button" default_text="骚猪电影网,http://dyhell.com-[高清][HD-BD-DVD][{{ film.film_pub_year }}][{{ film.film_name }}][迅雷下载][百度网盘][中 英 字幕]，天天更新。"></wb:share-button>
+            </div>
             <div class="mod-title">
                 <h3>剧情介绍</h3>
             </div>
             <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
-                 {{ film.film_intro | safe }}
+                {{ film.film_intro | safe }}
             </div>
             <div class = "mod-title">
                 <h3>下载链接</h3>
             </div>
             <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
-            <div class="list-group">
+                <div class="list-group">
 
-               {% for i in film.download_link  %}
-                   {{ i | ispwd | safe }}
-               {% endfor %}
-{% if  film.download_link2 %}
-            <li class="list-group-item"><a href='{{ film.download_link2 }}' target="_blank" > 点击下载-- {{ film.film_name }}</a></li>
-            {% endif %}
-            {% if  film.download_link4 %}
-            {% for i in film.download_link4  %}
-                   {{ i | ispwd | safe }}
-               {% endfor %}
-            {% endif %}
+                    {% for i in film.download_link  %}
+                        {{ i | ispwd | safe }}
+                    {% endfor %}
+
+                    {% if  film.download_link2 %}
+                        <div class = "mod-title">
+                            <h3>下载链接2</h3>
+                        </div>
+                        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
+                            <div class="list-group">
+                                <li class="list-group-item"><a href='{{ film.download_link2 }}' target="_blank" > 点击下载-- {{ film.film_name }}</a></li>
+                            </div>
 
 
-            </div>
+                        </div>
+                    {% endif %}
+                    {% if  film.download_link4 %}
+                        <div class = "mod-title">
+                            <h3>下载链接</h3>
+                        </div>
+                        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
+                            <div class="list-group">
+                                {% for i in film.download_link4  %}
+                                    {{ i | ispwd | safe }}
+                                {% endfor %}
+                            </div>
+
+
+                        </div>
+                    {% endif %}
+
+
+                </div>
 
 
             </div>

@@ -69,7 +69,7 @@ def index(req):
 
         if movieyear == 'all':
             pass
-        if movieyear == '2016' or movieyear == '2015' or movieyear == '2014' or movieyear == '2013' or movieyear == '2012' or movieyear == '2011':
+        if movieyear == '2017' or movieyear == '2016' or movieyear == '2015' or movieyear == '2014' or movieyear == '2013' or movieyear == '2012' or movieyear == '2011':
             films = films.filter(film_pub_year=movieyear)
         if movieyear == '10':
             films = films.filter(film_pub_year__gte=2000, film_pub_year__lte=2010)
@@ -138,7 +138,7 @@ def indextvseries(req):
 
         if tvyear == 'all':
             pass
-        if tvyear == '2016' or tvyear == '2015' or tvyear == '2014' or tvyear == '2013' or tvyear == '2012' or tvyear == '2011':
+        if tvyear == '2017' or tvyear == '2016' or tvyear == '2015' or tvyear == '2014' or tvyear == '2013' or tvyear == '2012' or tvyear == '2011':
             tvseriess = tvseriess.filter(tvseries_pub_year=tvyear)
         if tvyear == '10':
             tvseriess = tvseriess.filter(tvseries_pub_year__gte=2000, tvseries_pub_year__lte=2010)
@@ -227,7 +227,14 @@ def singletvseries(req, fid=0):
     try:
         tvseries = TVSERIES.objects.get(id=fid)
         tags = tvseries.tags.split(' ')
-        tvseries.download_link = [tuple(x.split(',')) for x in tvseries.download_link.split('\n')]
+        try:
+            tvseries.download_link = [tuple(x.split(',')) for x in tvseries.download_link.split('\n')]
+        except:
+            tvseries.download_link = '\n'
+        try:
+            tvseries.download_link2 = [tuple(x.split(',')) for x in tvseries.download_link2.split('\n')]
+        except:
+            tvseries.download_link2 ='\n'
         return render(req, 'singletvseries.html', locals())
     except Exception as e:
         return HttpResponseNotFound()
