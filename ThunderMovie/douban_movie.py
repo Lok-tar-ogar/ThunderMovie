@@ -36,7 +36,7 @@ class DoubanInformation:
                     film = FILM.objects.get(id=start_id)
                 except Exception as e:
                     start_id += 1
-                    logging.warning("数据库不存在id为"+ start_id +"的数据！")
+                    logging.warning("数据库不存在id为"+ str(start_id) +"的数据！")
                     continue
                 if film:
                     time.sleep(37)
