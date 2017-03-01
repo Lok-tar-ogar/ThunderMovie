@@ -52,7 +52,7 @@ tv_type = {
     'youth': '青春',
     'motivational': '励志',
     'comic':'动画',
-    'commic2':'动漫',
+    'comic2':'动漫',
     'action':'动作',
     'variety':'综艺',
     'tvs':'电视剧',
