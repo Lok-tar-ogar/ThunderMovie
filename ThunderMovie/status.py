@@ -51,7 +51,7 @@ tv_type = {
     'crime': '犯罪',
     'youth': '青春',
     'motivational': '励志',
-    'comic':'动画',
+    'comic':'动',
     'variety':'综艺',
     'tvs':'电视剧',
     'all': 0,
