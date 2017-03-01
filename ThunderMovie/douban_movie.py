@@ -278,6 +278,7 @@ class DoubanInformation:
                     logging.warning("不存在id为" + str(start_id) + "的电影")
                     continue
                 if film.douban_id:
+                    time.sleep(37)
                     db = doubanclass()
                     douban_movie = db.get_film_detail(film.douban_id)
                     if douban_movie is None:
