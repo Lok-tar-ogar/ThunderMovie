@@ -2,16 +2,64 @@
 from django.db import models
 
 
-
 class TAG_FILM(models.Model):
-    tag_name=models.CharField('标签名称',max_length=50,null=False)
-    dim_date=models.DateTimeField(auto_now_add=True,null=True)
+
+    tag_name=models.CharField('标签名称', max_length=50, null=False)
+    dim_date=models.DateTimeField(auto_now_add=True, null=True)
+
     def __str__(self):
         return self.tag_name
 
     class Meta:
         verbose_name = "标签对照表"
         verbose_name_plural = "标签对照们"
+        ordering = ['id']
+
+
+class Film_genres(models.Model):
+    '''
+    豆瓣电影类型
+    '''
+    name = models.CharField('标签', max_length=100, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "标签对照表"
+        verbose_name_plural = "标签对照们"
+        ordering = ['id']
+
+
+class Countries(models.Model):
+    '''
+    豆瓣电影所属国家
+    '''
+    name = models.CharField('国家', max_length=100, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "国家表"
+        verbose_name_plural = "国家表们"
+        ordering = ['id']
+
+
+class AKA(models.Model):
+    '''
+    电影别名(方便搜索)
+    '''
+
+    name = models.CharField('别名', max_length=300, null=True)
+    dim_date = models.DateTimeField(auto_now_add=True, null=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "别名表"
+        verbose_name_plural = "别名表们"
         ordering = ['id']
 
 
@@ -80,15 +128,22 @@ class FILM(models.Model):
     big_douban_image = models.CharField('豆瓣电影大海报图', max_length=200, null=True)
     actors = models.ManyToManyField(ACTORS)
     directors = models.ManyToManyField(DIRECTORS)
+    douban_genres = models.ManyToManyField(Film_genres)
+    douban_country = models.ManyToManyField(Countries)
+    aka = models.ManyToManyField(AKA)
+    subtype = models.CharField('类型', max_length=200, null=True)
     if_useapi = models.CharField('是否调用过api', max_length=50, null=True)
     dim_date=models.DateTimeField(auto_now_add=True,null=True)
 
     def __str__(self):
         return self.film_name
+
     class Meta:
         verbose_name = "电影表"
         verbose_name_plural = "电影表们"
         ordering = ['-dim_date']
+
+
 class TVSERIES(models.Model):
     tvseries_name=models.CharField('电视剧名',max_length=50,null=False)
     tags=models.CharField('电视剧类型',max_length=100, null=True)
@@ -108,6 +163,5 @@ class TVSERIES(models.Model):
         verbose_name = "电视剧表"
         verbose_name_plural = "电视剧表们"
         ordering = ['-dim_date']
-
 
 

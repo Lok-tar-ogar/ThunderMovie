@@ -271,20 +271,65 @@ class DoubanInformation:
             end = FILM.objects.all().order_by('-id')[0].id
 
             while start_id < end:
-                film = FILM.objects.filter(id=start_id)
-                if film[0].douban_id:
+                try:
+                    film = FILM.objects.get(id=start_id)
+                except Exception as e:
+                    start_id += 1
+                    logging.warning("不存在id为" + str(start_id) + "的电影")
+                    continue
+                if film.douban_id:
                     db = doubanclass()
-                    douban_movie = db.get_film_detail(film[0].douban_id)
+                    douban_movie = db.get_film_detail(film.douban_id)
                     if douban_movie is None:
                         start_id += 1
                         continue
-
+                    film.film_name = douban_movie["title"]
                     film.ratings_count = douban_movie["ratings_count"]
                     film.reviews_count = douban_movie["reviews_count"]
                     film.comments_count = douban_movie["comments_count"]
                     film.wish_count = douban_movie["wish_count"]
                     film.film_intro = douban_movie["summary"]
+                    film.film_pub_year = douban_movie["year"]
+                    film.subtype = douban_movie["subtype"]
+                    if douban_movie["countries"]:
+                        for item in douban_movie["countries"]:
+                            country = Countries.objects.filter(name=item)
+                            if country:
+                                if film.douban_country.filter(film__douban_country__name=item) is None:
+                                    film.douban_country.add(country)
+                            else:
+                                coun = Countries()
+                                coun.name = item
+                                coun.save()
+                                film.douban_country.add(coun)
+
+                    if douban_movie["genres"]:
+                        for item in douban_movie["genres"]:
+                            genre = Film_genres.objects.filter(name=item)
+                            if genre:
+                                if film.douban_country.filter(film__douban_genres__name=item) is None:
+                                    film.douban_country.add(genre)
+                            else:
+                                gen = Film_genres()
+                                gen.name = item
+                                gen.save()
+                                film.douban_genres.add(gen)
+
+                    if douban_movie["aka"]:
+                        for item in douban_movie["aka"]:
+                            akas = AKA.objects.filter(name=item)
+                            if akas:
+                                if film.douban_country.filter(film__aka__name=item) is None:
+                                    film.douban_country.add(akas)
+                            else:
+                                a = AKA()
+                                a.name = item
+                                a.save()
+                                film.aka.add(a)
+
+                    film.save()
                     start_id += 1
+                    logging.warning(str(start_id)+"详情更新成功！")
 
         except Exception as e:
             logging.warning(e)
@@ -298,12 +343,14 @@ def main(argv):
         print("you need to input the function index that you want to run:  ")
         print("1.get_movie_base_information")
         print("2.check_error_movie")
+        print("3.get_movie_detail")
         sys.exit(2)
     for opt, arg in opts:
         if opt == "-h":
             print("you need to input the function index that you want to run:  ")
             print("1.get_movie_base_information")
             print("2.check_error_movie")
+            print("3.get_movie_detail")
         elif opt in ["-i", "--input"]:
             opt = arg
             if opt == "1":
@@ -316,7 +363,11 @@ def main(argv):
                 logging.warning(" check_error_movie is ready to start.")
                 di.check_error_movie()
                 logging.warning("Mission clear")
-
+            if opt == "3":
+                di = DoubanInformation()
+                logging.warning(" get_movie_detail is ready to start.")
+                di.get_movie_detail()
+                logging.warning("Mission clear")
 
 if __name__ == '__main__':
     main(sys.argv[1:])
