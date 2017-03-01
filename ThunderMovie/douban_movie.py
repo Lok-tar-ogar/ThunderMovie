@@ -72,8 +72,8 @@ class DoubanInformation:
                             if item["id"] is None:
                                 actor = ACTORS.objects.filter(name=item["name"])
                                 if actor:
-                                    if film.actors.filter(film__actors__name=actor[0].name) is None:
-                                        film.actors.add(actor)
+                                    if not film.actors.filter(film__actors__name=actor[0].name):
+                                        film.actors.add(actor[0])
                                 else:
                                     act = ACTORS()
                                     act.douban_id = item["id"]
@@ -88,8 +88,8 @@ class DoubanInformation:
                             else:
                                 actor = ACTORS.objects.filter(douban_id=item["id"])
                                 if actor:
-                                    if film.actors.filter(film__actors__douban_id=actor[0].douban_id) is None:
-                                        film.actors.add(actor)
+                                    if not film.actors.filter(film__actors__douban_id=actor[0].douban_id):
+                                        film.actors.add(actor[0])
                                 else:
                                     act = ACTORS()
                                     act.douban_id = item["id"]
@@ -106,8 +106,8 @@ class DoubanInformation:
                             if item["id"] is None:
                                 director = DIRECTORS.objects.filter(name=item["name"])
                                 if director:
-                                    if film.directors.filter(film__directors__name=director[0].name) is None:
-                                        film.directors.add(director)
+                                    if not film.directors.filter(film__directors__name=director[0].name):
+                                        film.directors.add(director[0])
                                 else:
                                     direct = DIRECTORS()
                                     direct.douban_id = item["id"]
@@ -123,8 +123,8 @@ class DoubanInformation:
                             else:
                                 director = DIRECTORS.objects.filter(douban_id=item["id"])
                                 if director:
-                                    if film.directors.filter(film__directors__douban_id=director[0].douban_id) is None:
-                                        film.directors.add(director)
+                                    if not film.directors.filter(film__directors__douban_id=director[0].douban_id):
+                                        film.directors.add(director[0])
                                 else:
                                     direct = DIRECTORS()
                                     direct.douban_id = item["id"]
@@ -187,8 +187,8 @@ class DoubanInformation:
                             if item["id"] is None:
                                 actor = ACTORS.objects.filter(name=item["name"])
                                 if actor:
-                                    if film.actors.filter(film__actors__name=actor[0].name) is None:
-                                        film.actors.add(actor)
+                                    if not film.actors.filter(film__actors__name=actor[0].name):
+                                        film.actors.add(actor[0])
                                 else:
                                     act = ACTORS()
                                     act.douban_id = item["id"]
@@ -203,8 +203,8 @@ class DoubanInformation:
                             else:
                                 actor = ACTORS.objects.filter(douban_id=item["id"])
                                 if actor:
-                                    if film.actors.filter(film__actors__douban_id=actor[0].douban_id) is None:
-                                        film.actors.add(actor)
+                                    if not film.actors.filter(film__actors__douban_id=actor[0].douban_id):
+                                        film.actors.add(actor[0])
                                 else:
                                     act = ACTORS()
                                     act.douban_id = item["id"]
@@ -221,8 +221,8 @@ class DoubanInformation:
                             if item["id"] is None:
                                 director = DIRECTORS.objects.filter(name=item["name"])
                                 if director:
-                                    if film.directors.filter(film__directors__name=director[0].name) is None:
-                                        film.directors.add(director)
+                                    if not film.directors.filter(film__directors__name=director[0].name):
+                                        film.directors.add(director[0])
                                 else:
                                     direct = DIRECTORS()
                                     direct.douban_id = item["id"]
@@ -238,8 +238,8 @@ class DoubanInformation:
                             else:
                                 director = DIRECTORS.objects.filter(douban_id=item["id"])
                                 if director:
-                                    if film.directors.filter(film__directors__douban_id=director[0].douban_id) is None:
-                                        film.directors.add(director)
+                                    if not film.directors.filter(film__directors__douban_id=director[0].douban_id):
+                                        film.directors.add(director[0])
                                 else:
                                     direct = DIRECTORS()
                                     direct.douban_id = item["id"]
@@ -295,8 +295,8 @@ class DoubanInformation:
                         for item in douban_movie["countries"]:
                             country = Countries.objects.filter(name=item)
                             if country:
-                                if film.douban_country.filter(film__douban_country__name=item) is None:
-                                    film.douban_country.add(country)
+                                if not film.douban_country.filter(film__douban_country__name=item):
+                                    film.douban_country.add(country[0])
                             else:
                                 coun = Countries()
                                 coun.name = item
@@ -307,8 +307,8 @@ class DoubanInformation:
                         for item in douban_movie["genres"]:
                             genre = Film_genres.objects.filter(name=item)
                             if genre:
-                                if film.douban_country.filter(film__douban_genres__name=item) is None:
-                                    film.douban_country.add(genre)
+                                if not film.douban_genres.filter(film__douban_genres__name=item):
+                                    film.douban_genres.add(genre[0])
                             else:
                                 gen = Film_genres()
                                 gen.name = item
@@ -319,17 +319,43 @@ class DoubanInformation:
                         for item in douban_movie["aka"]:
                             akas = AKA.objects.filter(name=item)
                             if akas:
-                                if film.douban_country.filter(film__aka__name=item) is None:
-                                    film.douban_country.add(akas)
+                                if not film.aka.filter(film__aka__name=item):
+                                    film.aka.add(akas[0])
                             else:
                                 a = AKA()
                                 a.name = item
                                 a.save()
                                 film.aka.add(a)
 
+                    if douban_movie["casts"]:
+                        for item in douban_movie["casts"]:
+                            if item["id"] is None:
+                                actor = ACTORS.objects.filter(name=item["name"])
+                                if actor:
+                                    if not film.actors.filter(film__actors__name=actor[0].name):
+                                        film.actors.add(actor[0])
+                            else:
+                                actor = ACTORS.objects.filter(douban_id=item["id"])
+                                if actor:
+                                    if not film.actors.filter(film__actors__douban_id=actor[0].douban_id):
+                                        film.actors.add(actor[0])
+                    if douban_movie["directors"]:
+                        for item in douban_movie["directors"]:
+                            if item["id"] is None:
+                                director = DIRECTORS.objects.filter(name=item["name"])
+                                if director:
+                                    if not film.directors.filter(film__directors__name=director[0].name):
+                                        film.directors.add(director[0])
+
+                            else:
+                                director = DIRECTORS.objects.filter(douban_id=item["id"])
+                                if director:
+                                    if not film.directors.filter(film__directors__douban_id=director[0].douban_id):
+                                        film.directors.add(director[0])
                     film.save()
+                    logging.warning(str(start_id) + "详情更新成功！")
                     start_id += 1
-                    logging.warning(str(start_id)+"详情更新成功！")
+
 
         except Exception as e:
             logging.warning(e)
