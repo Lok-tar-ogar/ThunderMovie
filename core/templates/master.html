@@ -57,13 +57,13 @@
         <div class="nav">
             <ul class="navbar">
                 <a class="logo" href="/"></a>
-                <li><a id="home" href="/">首页</a></li>
+                <li><a id="dylist" href="/">电影库</a></li>
 
-                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>
+{#                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>#}
 
                 {#                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>#}
-                <li><a id="dylist" data-act="movies-click" href="/movies">电影库</a></li>
-                <li><a id="tvlist" data-act="movies-click" href="/tvseries">电视剧库</a></li>
+{#                <li><a id="dylist" data-act="movies-click" href="/movies">电影库</a></li>#}
+                <li><a id="tvlist"  href="/tvseries">电视剧库</a></li>
                 {#                <li><a data-act="board-click" href="/">精选</a></li>#}
 
             </ul>
@@ -98,19 +98,27 @@
 {% endblock %}
 <div class="footer" style="visibility: visible;">
     <div class="container">
-        <p>
-            友情链接:  <a href="http://www.likewed.com/v/10319022" target="_blank">木马婚礼</a>
+        <div class = "col-xs-6 text-left">
+            <p style="font-size: 14px;font-weight: bold;color:#FFF;text-align: left">
+                dyhell电影网所有资源信息均从互联网搜索而来，本站不对显示的内容承担任何责任。
+            </p>
+            <p style="text-align: left">
+                如您认为本站页面信息侵犯了您的权益，请附上版权证明邮件告知，我们的邮箱：dyhell@foxmail.com
+            </p>
+        </div>
+        <div class="col-xs-6 text-left">
+            <p style="color:#FFF;text-align: left;">
+                友情链接:
+            </p>
+            <p style="text-align: left; margin-top: 10px;">
+                <a href="http://www.likewed.com/v/10319022" target="_blank" class="footer_tag">木马婚礼</a>
 
-        </p>
-        <p>
-            骚猪电影所有资源信息均从互联网搜索而来，本站不对显示的内容承担责任
-            如您认为本站页面信息侵犯了您的权益，请附上版权证明邮件告知，我们的邮箱：
-            dyhell@foxmail.com
-            本站尚在建设中,正处于Beta版本,如果建议和意见请发邮件至上邮箱。 我们会尽快回复。谢谢
-        </p>
-        <p> &copy;2016
-            骚猪电影 www.dyhell.com
-        </p>
+                <a href="http://www.hexedu.com" target="_blank" class="footer_tag">四川恒心前途教育咨询有限公司</a>
+            </p>
+        </div>
+
+
+{#        <p></p>#}
     </div>
 </div>
 </body>

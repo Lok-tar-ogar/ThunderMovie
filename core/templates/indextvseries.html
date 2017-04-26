@@ -204,33 +204,53 @@
     <div class="grid_1" style="margin-top:10px;">
         <div class="container">
             {% for tvseries in tvseriespaged %}
-                <div class="col-xs-2 col-md-2 col-lg-2" style="height: 450px;">
-                    <a href="/tv/{{ tvseries.id }}" class="thumbnail">
-                        <img src="{{ tvseries.cover_img_link }}" alt="{{ tvseries.tvseries_name }}" style="width:100%;">
-                    </a>
-                    <div class="caption">
-                        <p>[{{ tvseries.tags }}][{{ tvseries.tvseries_pub_year }}][<font style="color: #F1665E">{{ tvseries.tvseries_name }}</font>][迅雷下载][百度网盘][中 英 字幕]</p>
-                    </div>
+                {#                <div class="col-xs-2 col-md-2 col-lg-2" style="height: 450px;">#}
+                {#                    <a href="/tv/{{ tvseries.id }}" class="thumbnail">#}
+                {#                        <img src="{{ tvseries.cover_img_link }}" alt="{{ tvseries.tvseries_name }}" style="width:100%;">#}
+                {#                    </a>#}
+                {#                    <div class="caption">#}
+                {#                        <p class="text-center"><a href="/tv/{{ tvseries.id }}" >{{ tvseries.tvseries_name }}</a></p>#}
+                {#                        <p class="text-center">{{ tvseries.tvseries_pub_year }}年</p>#}
+                {#                        <p class="text-center">{{ tvseries.tags }}</p>#}
+                {#                    </div>#}
+                {#                </div>#}
+
+                <div class="col-xs-2" style="height: 420px;">
+                    <a href="/tv/{{ tvseries.id }}" target="_blank" >
+                        <div class="hexoco-project-item text-center" style="margin:0 auto; text-align:center">
+
+                            <img src="{{ tvseries.cover_img_link }}" style="width: 100%;" alt="{{ tvseries.tvseries_name  }}" class="img-responsive">
+
+                            <div class="hexoco-text">
+                                {#                            <a href="/tv/{{ tvseries.id }}" target="_blank">#}
+                                <h2>{{ tvseries.tvseries_name }}</h2>
+                                {#                            </a>#}
+                                <p>{{ tvseries.tvseries_pub_year }}年</p>
+                                <p>{{ tvseries.tags }}</p>
+                            </div>
+
+                        </div>
+                 </a>
                 </div>
             {% endfor %}
-        </div>
+    </div>
 
-        {#<ul class="web-paging" style="bottom: 10px;position:absolute; left: 40%">#}
-        {##}
-        {#                    {% if tvseriespaged.has_previous %}#}
-        {#           <li><a href="?page={{ tvseriespaged.previous_page_number }}">上一页</a></li>#}
-        {#        {% endif %}#}
-        {##}
-        {#        <span class="thisclass">#}
-        {#            <li>第 {{ tvseriespaged.number }} 页, 共 {{ tvseriespaged.paginator.num_pages }} 页</li>#}
-        {#        </span>#}
-        {##}
-        {#        {% if tvseriespaged.has_next %}#}
-        {#           <li> <a href="?page={{ tvseriespaged.next_page_number }}">下一页</a></li>#}
-        {#        {% endif %}#}
-        {#			 </ul>#}
+    {#<ul class="web-paging" style="bottom: 10px;position:absolute; left: 40%">#}
+    {##}
+    {#                    {% if tvseriespaged.has_previous %}#}
+    {#           <li><a href="?page={{ tvseriespaged.previous_page_number }}">上一页</a></li>#}
+    {#        {% endif %}#}
+    {##}
+    {#        <span class="thisclass">#}
+    {#            <li>第 {{ tvseriespaged.number }} 页, 共 {{ tvseriespaged.paginator.num_pages }} 页</li>#}
+    {#        </span>#}
+    {##}
+    {#        {% if tvseriespaged.has_next %}#}
+    {#           <li> <a href="?page={{ tvseriespaged.next_page_number }}">下一页</a></li>#}
+    {#        {% endif %}#}
+    {#			 </ul>#}
 
-        <div class="clearfix"></div>
+    <div class="clearfix"></div>
     </div>
     <div class="movies-pager" style=" text-align: center;">
 
@@ -238,23 +258,23 @@
         <ul class="list-pager">
 
 
-            <li><a href="?page=1&m_type={{ m_type }}&area={{ country }}&year={{ year }}">首页</a></li>
+            <li><a href="?page=1&m_type={{ m_type }}&area={{ country }}&year={{ year }}" class="btn btn-default">首页</a></li>
             {% if tvseriespaged.has_previous %}
-                <li><a href="?page={{ tvseriespaged.previous_page_number }}">上一页</a></li>
+                <li><a href="?page={{ tvseriespaged.previous_page_number }}" class="btn btn-default">上一页</a></li>
             {% endif %}
 
             {% for p in rangedpages %}
 
-                <li><a href="?page={{ p }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">{{ p }}页</a></li>
+                <li><a href="?page={{ p }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}" class="btn btn-default">{{ p }}</a></li>
 
             {% endfor %}
 
-            <li>第 {{ tvseriespaged.number }} 页, 共 {{ tvseriespaged.paginator.num_pages }} 页</li>
+            <li><a href="javascript:void(0)" class="btn btn-default">第 {{ tvseriespaged.number }} / {{ tvseriespaged.paginator.num_pages }} 页</a></li>
 
             {% if tvseriespaged.has_next %}
-                <li> <a href="?page={{ tvseriespaged.next_page_number }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">下一页</a></li>
+                <li> <a href="?page={{ tvseriespaged.next_page_number }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}" class="btn btn-default">下一页</a></li>
             {% endif %}
-            <li><a href="?page={{ lastpagenum }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}">尾页</a></li>
+            <li><a href="?page={{ lastpagenum }}&m_type={{ m_type }}&area={{ country }}&year={{ year }}" class="btn btn-default">尾页</a></li>
         </ul>
 
 

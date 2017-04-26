@@ -12,6 +12,11 @@
 {% endblock %}
 
 {% block content %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tvlist').prop('class', 'active');
+        });
+    </script>
     <div class="banner">
         <div style="height:60px;"></div>
         <div class= "wrapper clearfix">
@@ -26,28 +31,28 @@
                         {{ tvseries.tvseries_name }}
                     </h3>
                     {% if tvseries.tvseries_pub_year %}
-                        <div class ="ename ellipsis">年代:{{ tvseries.tvseries_pub_year }}</div>
+                        <div class ="ename ellipsis">年&nbsp;&nbsp;&nbsp;代:<span style="margin-left:15px;">{{ tvseries.tvseries_pub_year }}</span></div>
                     {% endif %}
                     <ul >
                         {% if tvseries.tvseries_country %}
-                            国家:{{ tvseries.tvseries_country }}
+                            国&nbsp;&nbsp;&nbsp;家:<span style="margin-left:15px;">{{ tvseries.tvseries_country }}</span>
 
                         {% endif  %}
                         {% if tags %}
                             <li class="ellipsis">
-                                标签:
+                                标&nbsp;&nbsp;&nbsp;签:
                                 {% for tag in tags %}
-                                    <a href="/result/{{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
+                                    <a href="/result/{{ tag }}" style="margin-right: 10px;" class="tag">{{ tag }}</a>
                                 {% endfor %}
                             </li>
                         {% endif %}
                         {% if tvseries.tvseries_director %}
-                            导演:
-                            <li class="ellipsis">{{ tvseries.tvseries_director }}</li>
+
+                            <li class="ellipsis">导&nbsp;&nbsp;&nbsp;演:&nbsp;<span style="margin-left:15px;">{{ tvseries.tvseries_director }}</span></li>
                         {% endif  %}
                         {% if tvseries.tvseries_actors %}
-                            演员表:
-                            <li class="ellipsis">{{ tvseries.tvseries_actors }}</li>
+                            演&nbsp;员&nbsp;表:
+                            <li class="ellipsis"><span style="margin-left:15px;">{{ tvseries.tvseries_actors | cut }}</span></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -63,8 +68,8 @@
             <div class="mod-title">
                 <h3>剧情介绍</h3>
             </div>
-            <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
-                {{ tvseries.tvseries_intro | safe }}
+            <div style ="text-indent: 2em; margin-top:2em; margin-bottom:2em;" class="brief">
+                {{ tvseries.tvseries_intro | safe  }}
             </div>
             <div class = "mod-title">
                 <h3>下载链接</h3>

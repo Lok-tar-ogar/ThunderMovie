@@ -191,9 +191,9 @@ def search(req):
             tvseries_actors__contains=keywords) | Q(
             tvseries_director__contains=keywords) | Q(tags__contains=keywords))
 
+    count = films.count() + tvseriess.count()
     # |Q(tags__tag_name__contains=keywords)
     return render(req, 'about.html', locals())
-
 
 def post(url, data):  # 封装post方法
     s = urllib.request.Request(url, urllib.parse.urlencode(data).encode('utf-8'))
@@ -211,12 +211,14 @@ def single(req, fid=0):
         tags = film.tags.all()
         try:
             film.download_link = [tuple(x.split(',')) for x in film.download_link.split('\n')]
+            if film.download_link[0][0] == "":
+                film.download_link = None
         except:
-            film.download_link ='\n'
+            film.download_link = None
         try:
             film.download_link4 = [tuple(x.split(',')) for x in film.download_link4.split('\n')]
         except:
-            film.download_link4 ='\n'
+            film.download_link4 = None
         #film.download_link2 = [tuple(x.split(',')) for x in film.download_link2.split('\n')]
         return render(req, 'single.html', locals())
     except Exception as e:
@@ -230,11 +232,11 @@ def singletvseries(req, fid=0):
         try:
             tvseries.download_link = [tuple(x.split(',')) for x in tvseries.download_link.split('\n')]
         except:
-            tvseries.download_link = '\n'
+            tvseries.download_link = None
         try:
             tvseries.download_link2 = [tuple(x.split(',')) for x in tvseries.download_link2.split('\n')]
         except:
-            tvseries.download_link2 ='\n'
+            tvseries.download_link2 = None
         return render(req, 'singletvseries.html', locals())
     except Exception as e:
         return HttpResponseNotFound()

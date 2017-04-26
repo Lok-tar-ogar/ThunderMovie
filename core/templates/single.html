@@ -12,6 +12,11 @@
 {% endblock %}
 
 {% block content %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#dylist').prop('class', 'active');
+        });
+    </script>
     <div class="banner">
         <div style="height:60px;"></div>
         <div class= "wrapper clearfix">
@@ -26,28 +31,29 @@
                         {{ film.film_name }}
                     </h3>
                     {% if film.film_pub_year %}
-                        <div class ="ename ellipsis">年代:{{ film.film_pub_year }}</div>
+                        <div class ="ellipsis" style="margin-bottom: 14px;">信&nbsp;&nbsp;&nbsp;息:</span><span style="margin-left:15px;">{{ film.film_pub_year }}</span></div>
                     {% endif %}
                     <ul >
                         {% if film.film_country %}
-                            国家:{{ film.film_country }}
+                            国&nbsp;&nbsp;&nbsp;家:<span style="margin-left:15px;">{{ film.film_country }}</span>
 
                         {% endif  %}
                         {% if tags %}
                             <li class="ellipsis">
-                                标签:
+                                 标&nbsp;&nbsp;&nbsp;签:
                                 {% for tag in tags %}
-                                    <a href="/result?key={{ tag }}" style="margin-right: 10px;">{{ tag }}</a>
+                                    <a href="/result?key={{ tag }}" style="color:#fff;" class="tag">{{ tag }}</a>
                                 {% endfor %}
                             </li>
                         {% endif %}
                         {% if film.film_director %}
-                            导演:
-                            <li class="ellipsis"><a href="/result?key={{ film.film_director }}" style="margin-right: 10px;">{{ film.film_director }}</a></li>
+
+                            <li class="ellipsis">
+                                 导&nbsp;&nbsp;&nbsp;演:&nbsp;<a href="/result?key={{ film.film_director }}" style="color:#fff;" class="tag">{{ film.film_director }}</a></li>
                         {% endif  %}
                         {% if film.film_actors %}
-                            演员表:
-                            <li class="ellipsis">{{ film.film_actors }}</li>
+                            演&nbsp;员&nbsp;表:
+                            <li class="ellipsis">{{ film.film_actors | cut }}</li>
                         {% endif %}
                     </ul>
                 </div>
@@ -64,9 +70,10 @@
             <div class="mod-title">
                 <h3>剧情介绍</h3>
             </div>
-            <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;">
+            <div style ="text-indent: 2em; margin-top:2em; margin-bottom:2em;" class="brief">
                 {{ film.film_intro | safe }}
             </div>
+            {% if film.download_link %}
             <div class = "mod-title">
                 <h3>下载链接</h3>
             </div>
@@ -76,44 +83,39 @@
                     {% for i in film.download_link  %}
                         {{ i | ispwd | safe }}
                     {% endfor %}
-</div>
-
-
-                        </div>
-                    {% if  film.download_link2 %}
-                        <div class = "mod-title">
-                            <h3>下载链接2</h3>
-                        </div>
-                        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
-                            <div class="list-group">
-                                <li class="list-group-item"><a href='{{ film.download_link2 }}' target="_blank" > 点击下载-- {{ film.film_name }}</a></li>
-                            </div>
-
-
-                        </div>
-                    {% endif %}
-                    {% if  film.download_link4 %}
-                        <div class = "mod-title">
-                            <h3>下载链接</h3>
-                        </div>
-                        <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
-                            <div class="list-group">
-                                {% for i in film.download_link4  %}
-                                    {{ i | ispwd | safe }}
-                                {% endfor %}
-                            </div>
-
-
-                        </div>
-                    {% endif %}
-
-
                 </div>
-
-
             </div>
+            {% endif %}
+            {% if  film.download_link2 %}
+                <div class = "mod-title">
+                    <h3>下载链接</h3>
+                </div>
+                <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
+                    <div class="list-group">
+                        <li class="list-group-item"><a href='{{ film.download_link2 }}' target="_blank" > 点击下载-- {{ film.film_name }}</a></li>
+                    </div>
+                </div>
+            {% endif %}
+            {% if  film.download_link4 %}
+                <div class = "mod-title">
+                    <h3>下载链接</h3>
+                </div>
+                <div style ="text-indent: 2em; margin-top:10px; margin-bottom:10px;color:#ef4238;word-break: break-all;word-wrap: break-word;">
+                    <div class="list-group">
+                        {% for i in film.download_link4  %}
+                            {{ i | ispwd | safe }}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+
 
         </div>
+
+
+    </div>
+
+    </div>
     </div>
 
 {% endblock %}
