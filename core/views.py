@@ -265,7 +265,7 @@ def homepage(request):
 
 
 def sitemap(req):
-    sitemaplist = ['www.dyhell.com', 'www.dyhell.com/random', 'www.dyhell.com/movies']
+    sitemaplist = ['www.dyhell.com', 'www.dyhell.com/movies']
     films = FILM.objects.all()
     tvs = TVSERIES.objects.all()
     for film in films:
@@ -275,15 +275,15 @@ def sitemap(req):
 
     try:
         f = open('core/static/sitemap.txt', 'w')
-        fsh = open('curlbaidu.sh', 'w')
+        # fsh = open('curlbaidu.sh', 'w')
         for line in sitemaplist:
             f.write(line + "\n")
-            fsh.write(
-                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
-            fsh.write(
-                " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
+        #     fsh.write(
+        #         " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/urls?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
+        #     fsh.write(
+        #         " curl -H 'Content-Type:text/plain' --data-binary %s 'http://data.zz.baidu.com/update?site=www.dyhell.com&token=uUABfymakG1cPdbh' \n" % line)
         f.close()
-        fsh.close()
+        # fsh.close()
         # msg=os.popen('sudo sh curlbaidu.sh').read()
     except Exception as e:
         return HttpResponse(e)
