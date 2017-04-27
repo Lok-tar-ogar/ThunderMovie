@@ -265,13 +265,13 @@ def homepage(request):
 
 
 def sitemap(req):
-    sitemaplist = ['www.dyhell.com', 'www.dyhell.com/movies']
+    sitemaplist = ['http://www.dyhell.com']
     films = FILM.objects.all()
     tvs = TVSERIES.objects.all()
     for film in films:
-        sitemaplist.append('www.dyhell.com/movie/' + str(film.id))
+        sitemaplist.append('http://www.dyhell.com/movie/' + str(film.id))
     for tv in tvs:
-        sitemaplist.append('www.dyhell.com/tv/' + str(tv.id))
+        sitemaplist.append('http://www.dyhell.com/tv/' + str(tv.id))
 
     try:
         f = open('core/static/sitemap.txt', 'w')
