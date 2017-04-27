@@ -6,23 +6,18 @@
     {% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="百度网盘,迅雷下载,最新电影,中英字幕{% block keywords %}
-
-    {% endblock %}">
-    <meta name="description" content="百度网盘,迅雷下载,最新电影,中英字幕{% block description %}
-
-{% endblock %} ">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}-百度网盘,迅雷下载,最新电影,中英字幕">
+    <meta name="description" content="{% block description %}{% endblock %}-百度网盘,迅雷下载,最新电影,中英字幕 ">
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-92771785-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+        ga('create', 'UA-92771785-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
@@ -30,11 +25,11 @@
     function hideURLbar() {
         window.scrollTo(0, 1);
     } </script>
-    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css'/>
+    <link href="/static/css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Custom Theme files -->
     <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <link href="/static/css/style.css" rel='stylesheet' type='text/css'/>
     <!-- Custom Theme files -->
     <!--webfont-->
@@ -44,7 +39,7 @@
         }
     </style>
 
-    <script src="/static/js/menu_jquery.js"></script>
+{#    <script src="/static/js/menu_jquery.js"></script>#}
 
     {% block head %}
     {% endblock %}
@@ -59,10 +54,10 @@
                 <a class="logo" href="/"></a>
                 <li><a id="dylist" href="/">电影库</a></li>
 
-{#                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>#}
+                {#                <li><a id="randomdy" data-act="home-click" href="/random">随便逛逛</a></li>#}
 
                 {#                <li><a id="dylist" data-act="movies-click" href="/">电影库</a></li>#}
-{#                <li><a id="dylist" data-act="movies-click" href="/movies">电影库</a></li>#}
+                {#                <li><a id="dylist" data-act="movies-click" href="/movies">电影库</a></li>#}
                 <li><a id="tvlist"  href="/tvseries">电视剧库</a></li>
                 {#                <li><a data-act="board-click" href="/">精选</a></li>#}
 
@@ -82,11 +77,11 @@
                         }
                     });
                     $("#search_button").click(
-                            function () {
+                        function () {
 
-                                location.replace('/result?key=' + $('#search_text').val())
+                            location.replace('/result?key=' + $('#search_text').val())
 
-                            });
+                        });
                 });
             </script>
         </div>
@@ -118,7 +113,7 @@
         </div>
 
 
-{#        <p></p>#}
+        {#        <p></p>#}
     </div>
 </div>
 </body>
