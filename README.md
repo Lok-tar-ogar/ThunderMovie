@@ -16,5 +16,5 @@
 
 
 
-![img](https://raw.githubusercontent.com/Lok-tar-ogar/ThunderMovie/master/core/static/images/content2.png)
+![img](https://raw.githubusercontent.com/Lok-tar-ogar/ThunderMovie/master/core/static/images/conten2.png)
 
